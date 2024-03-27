@@ -1,31 +1,20 @@
-import React, { useState } from "react";
-import {
-  Box,
-  Button,
-  Grid,
-  Heading,
-  Image,
-  Img,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Grid, Heading, Image, Text, VStack } from '@chakra-ui/react'
+import React from 'react'
 
-const TeamSection = () => {
-  const photos = [
-    "/assets/team1.jpg",
-    "/assets/team2.jpg",
-    "/assets/team3.jpg",
-    "/assets/team4.jpg",
-    "/assets/team5.jpg",
-    "/assets/team6.jpg",
-  ];
-
+const OurStaff = () => {
+    const photos = [
+        "/assets/team1.jpg",
+        "/assets/team2.jpg",
+        "/assets/team3.jpg",
+        "/assets/team4.jpg",
+        "/assets/team5.jpg",
+        "/assets/team6.jpg",
+      ];
   return (
-    <VStack p={20} bg="#7F7BE2" gap="50px">
-      <Heading color="white" fontSize="30px">
-        OUR TEAMS
-      </Heading>
-      <Grid gridTemplateColumns="repeat(3,1fr)" gap={50}>
+    <VStack gap={20} bg="rgba(50, 51, 51, 0.1)" p={100}>
+        <Heading color="#1b273d" fontSize={"40px"} fontWeight={600}>MEET OUR STAFF</Heading>
+        <Text>Welcome to our team</Text>
+        <Grid gridTemplateColumns="repeat(3,1fr)" gap={50} mt={20}>
         {photos.map((photo, index) => (
           <Box
             position={"relative"}
@@ -37,7 +26,7 @@ const TeamSection = () => {
             <Image
               key={index}
               src={photo}
-              w="200px"
+              w="300px"
               display={"block"}
               borderRadius="10px"
             />
@@ -68,24 +57,8 @@ const TeamSection = () => {
           </Box>
         ))}
       </Grid>
-      <Button
-        p="10px 30px"
-        bg={"white"}
-        color="#68CE65"
-        border="1px solid #68CE65"
-        cursor="pointer"
-        fontSize="16px"
-        _hover={{
-          color: "white",
-          bg: "#68CE65",
-          borderRadius: "20px",
-          transitionDuration: "1s",
-        }}
-      >
-        Daha çox
-      </Button>
     </VStack>
-  );
-};
+  )
+}
 
-export default TeamSection;
+export default OurStaff

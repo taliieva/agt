@@ -1,9 +1,9 @@
-import HomePage from "./pages/HomePage/page.tsx";
 import "./App.css"
+import Routers from "./Routers/Routers.tsx";
 function App() {
   return (
     <div className="App">
-     <HomePage/>
+      <Routers/>
     </div>
   );
 }

@@ -1,13 +1,13 @@
 import { Button, HStack, Heading, Image, Text, VStack } from "@chakra-ui/react";
 import React from "react";
-import { Link } from "react-router-dom";
 
-const AboutEvents = () => {
+const AboutUs = () => {
   return (
-    <HStack justifyContent="center" gap="40px" p={20}>
-      <VStack w="50%" alignItems="flex-start" textAlign="justify">
+    <HStack justifyContent="center" gap="40px" p={50} mt={100}>
+      <Image src="/assets/logo.png" w="20%" borderRadius="10px" />
+      <VStack w="50%" alignItems="flex-start" gap={20}>
         <Heading fontSize="30px">Azərbaycan Gənclər İttifaqı</Heading>
-        <Text>
+        <Text fontSize="18px">
           "Azərbaycan Gənclər İttifaqı" İctimai Birliyi 1994-cü ildən fəaliyyət
           göstərən yerli qeyri-hökümət təşkilatıdır. Təşkilatın əsas məqsədi
           Azərbaycanda gənclər siyasətini həyata keçirilməsi üçün effektli
@@ -19,28 +19,9 @@ const AboutEvents = () => {
           səhiyyə, təhsil, ekologiya, mədəniyyət və digər sahələrdə
           maarifləndirilməsindən ibarətdir.
         </Text>
-        <Link to="about">
-        <Button
-          p="10px 30px"
-          bg={"white"}
-          color="#68CE65"
-          border="1px solid #68CE65"
-          cursor="pointer"
-          fontSize="16px"
-          _hover={{
-            color: "white",
-            bg: "#68CE65",
-            borderRadius: "20px",
-            transitionDuration: "1s",
-          }}
-        >
-          Daha çox
-        </Button>
-        </Link>
       </VStack>
-      <Image src="/assets/about-sp.jpg" w="20%" borderRadius="10px" />
     </HStack>
   );
 };
 
-export default AboutEvents;
+export default AboutUs;
