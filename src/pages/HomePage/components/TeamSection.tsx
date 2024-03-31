@@ -21,7 +21,7 @@ const TeamSection = () => {
   ];
 
   return (
-    <VStack p={20} bg="#7F7BE2" gap="50px">
+    <VStack p="100px 0" bg="#7F7BE2" gap="50px">
       <Heading color="white" fontSize="30px">
         OUR TEAMS
       </Heading>

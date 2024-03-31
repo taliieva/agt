@@ -33,6 +33,9 @@ const ClientFeedback = () => {
     },
   ];
   return (
+    <VStack p="50px 0">
+    <Heading fontSize={40} color="#1b273d">WHAT CLIENTS SAY</Heading>
+    <Text fontSize={18}>Welcome to the dedicated to building remarkable Testimonials!</Text>
     <Swiper
       style={{
         padding: "100px 0",
@@ -60,14 +63,15 @@ const ClientFeedback = () => {
             justifyContent: "center",
           }}
         >
-          <VStack w={"80%"}>
-            <Text>{slide.comment}</Text>
-            <Text>{slide.quote}</Text>
+          <VStack w={"80%"} gap={20}>
+            <Text fontSize={18}>{slide.comment}</Text>
+            <Text fontSize={20} width="60%" textAlign={"center"}>{slide.quote}</Text>
             <Image src={slide.image} w="200px" borderRadius="50%" />
           </VStack>
         </SwiperSlide>
       ))}
     </Swiper>
+    </VStack>
   );
 };
 

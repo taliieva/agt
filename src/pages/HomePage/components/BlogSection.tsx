@@ -29,7 +29,7 @@ const BlogSection = () => {
     },
   ];
   return (
-    <VStack p={40} gap={50} w="100%">
+    <VStack p="100px 0" gap={50} w="100%">
       <Heading>OUR BLOGS</Heading>
       <HStack w="90%" justifyContent="center" alignItems="center" gap={30}>
         {blogPosts.map((blogs, index) => (

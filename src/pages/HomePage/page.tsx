@@ -4,6 +4,8 @@ import AboutEvents from "./components/AboutEvents.tsx";
 import TeamSection from "./components/TeamSection.tsx";
 import BlogSection from "./components/BlogSection.tsx";
 import Carousel from "./components/Carousel.tsx";
+import EventSection from "./components/EventSection.tsx";
+import SponsorSection from "./components/SponsorSection.tsx";
 
 const HomePage = () => {
   return (
@@ -12,6 +14,8 @@ const HomePage = () => {
       <AboutEvents/>
       <TeamSection/>
       <BlogSection/>
+      <EventSection/>
+      <SponsorSection/>
     </Layout>
   );
 };

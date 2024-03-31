@@ -12,7 +12,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <VStack bg="#9DC3DA" color={"white"} alignItems="center" gap="40px" p={20}>
+    <VStack bg="#9DC3DA" color={"white"} alignItems="center" gap="40px" p="100px 0">
       <Heading fontSize="40px">JOIN NEWSLETTER</Heading>
       <HStack alignSelf="center" w="40%">
         <Input

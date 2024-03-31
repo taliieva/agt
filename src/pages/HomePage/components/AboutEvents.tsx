@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const AboutEvents = () => {
   return (
-    <HStack justifyContent="center" gap="40px" p={20}>
-      <VStack w="50%" alignItems="flex-start" textAlign="justify">
+    <HStack justifyContent="center" gap="40px" p="100px 0">
+      <VStack w="40%" alignItems="flex-start" textAlign="justify" gap={40}>
         <Heading fontSize="30px">Azərbaycan Gənclər İttifaqı</Heading>
         <Text>
           "Azərbaycan Gənclər İttifaqı" İctimai Birliyi 1994-cü ildən fəaliyyət
