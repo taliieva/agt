@@ -37,7 +37,7 @@ const TeamSection = () => {
             <Image
               key={index}
               src={photo}
-              w="200px"
+              w="300px"
               display={"block"}
               borderRadius="10px"
             />

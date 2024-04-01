@@ -9,7 +9,7 @@ import "swiper/css/scrollbar";
 const Carousel = () => {
   return (
     <Swiper
-    style={{marginTop:"50px"}}
+    style={{marginTop:"80px"}}
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
       slidesPerView={1}

@@ -12,11 +12,6 @@ import React from "react";
 const AboutUs = () => {
   return (
     <VStack mt={100} alignItems="center">
-      <Box bg="rgba(50, 51, 51, 0.1)" w="100%" height="20vh" display="flex" alignItems="center">
-        <Heading fontSize="40px" width="50%" textAlign="center">
-          Haqqımızda
-        </Heading>
-      </Box>
       <HStack justifyContent="center" gap="40px" p="100px 0">
         <Image src="/assets/logo.png" w="20%" borderRadius="10px" />
         <VStack w="40%" alignItems="flex-start" gap={10}>
