@@ -31,14 +31,14 @@ const Header = () => {
           fontSize={18}
           flexDirection={{ md: "row", base: "column" }}
           alignItems="center"
-          justifyContent="center"
+          justifyContent="flex-end"
           display={{ md: "flex", base: openMenu ? "flex" : "none" }}
           position={{ base: "absolute", md: "initial" }}
-          bg="rgba(27, 39, 61, .95)"
+          bg={{base:"rgba(27, 39, 61, .95)", md:"none"}}
           width="100%"
           left="0"
           top={{ md: "90px", base: "50px" }}
-          padding={{ md: "20px 60px", base: "20px 0" }}
+          padding="20px 0"
         >
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
             <Text _hover={{ color: "#9DC3DA", cursor: "pointer" }}>

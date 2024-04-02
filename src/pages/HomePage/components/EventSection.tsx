@@ -41,11 +41,17 @@ const EventSection = () => {
   ];
   return (
     <VStack bg="#7F7BE2" p="100px 0">
-      <Heading fontSize="40px" fontWeight="700" color="white" mb={50}>Events</Heading>
+      <Heading fontSize="40px" fontWeight="700" color="white" mb="50px">
+        Events
+      </Heading>
       <HStack
+        _hover={{
+          // transform: "scale(1.1)",
+          boxShadow: "5px 5px 5px rgba(252, 187, 187, .8)",
+        }}
         bg="#CBC9C9"
-        w="80%"
-        p={20}
+        w={{lg:"80%",sm:"90%"}}
+        p="20px"
         borderRadius="20px"
         alignItems="flex-start"
       >
@@ -54,25 +60,25 @@ const EventSection = () => {
           <VStack
             bg="white"
             w="100%"
-            p={40}
+            p={{lg:"40px",base:"20px"}}
             borderRadius="20px"
             alignItems="flex-start"
           >
             <Text
               bg="#FCBBBB"
-              fontSize="16px"
+              fontSize={{lg:"16px", md:"14px", base:"12px"}}
               fontWeight={600}
-              p={5}
+              p="5px 10px"
               borderRadius="20px"
             >
               09.00 AM - 10.30 AM
             </Text>
-            <Text fontSize="24px" fontWeight={700} color="#1b273d">
+            <Text fontSize={{lg:"24px", md:"20px", base:"16px"}} fontWeight={700} color="#1b273d">
               Wait is Over! Stony Brook Captures Conference
             </Text>
             <Text fontSize="16px">By Riaz Sagar , Logichunt Inc.</Text>
           </VStack>
-          <VStack alignItems="flex-start" fontSize="18px">
+          <VStack alignItems="flex-start" fontSize={{lg:"18px", md:"16px", sm:"14px", base:"12px"}}>
             <Text color="#585555">
               Meh synth Schlitz, tempor duis single-origin coffee ea next level
               ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit
@@ -89,15 +95,25 @@ const EventSection = () => {
         </VStack>
       </HStack>
       {teams.map((team, index) => (
-        <Box bg="#CBC9C9" w="80%" p={20} borderRadius="20px">
-          <HStack bg="white" p="30px 20px" borderRadius="10px">
+        <Box
+          bg="#CBC9C9"
+          w="80%"
+          p="20px"
+          borderRadius="20px"
+          key={index}
+          _hover={{
+            // transform: "scale(1.1)",
+            boxShadow: "5px 5px 5px rgba(252, 187, 187, .8)",
+          }}
+        >
+          <HStack bg="white" p="40px" borderRadius="10px">
             <Image src={team.image} w="90px" borderRadius="50%" />
-            <VStack w="100%" p={30} borderRadius="20px" alignItems="flex-start">
+            <VStack w="100%" borderRadius="20px" alignItems="flex-start">
               <Text
                 bg="#FCBBBB"
                 fontSize="16px"
                 fontWeight={600}
-                p={5}
+                p="5px 10px"
                 borderRadius="20px"
               >
                 {team.time}

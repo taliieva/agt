@@ -1,4 +1,4 @@
-import { Button, HStack, Heading, Image, Text, VStack } from "@chakra-ui/react";
+import { Button, Flex, Grid, HStack, Heading, Image, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 
 const BlogSection = () => {
@@ -30,44 +30,47 @@ const BlogSection = () => {
   ];
   return (
     <VStack p="100px 0" gap={50} w="100%">
-      <Heading>OUR BLOGS</Heading>
-      <HStack w="90%" justifyContent="center" alignItems="center" gap={30}>
+      <Heading color="#1b273d">OUR BLOGS</Heading>
+      <Flex w="90%" flexDirection={{sm:"row", base:"column"}} justifyContent="center" alignItems="center" gap={30}>
         {blogPosts.map((blogs, index) => (
-          <VStack
+          <Flex
+          flexDirection="column"
+          cursor="pointer"
           key={index}
             alignItems="flex-start"
-            w="25%"
-            p={10}
+            w={{xl:"25%", md:"30%", sm:"40%", base:"70%"}}
+            p="10px"
             borderRadius="10px"
             boxShadow="0px 4px 6px rgba(0, 0, 0, 0.5)"
-            // gap={20}
+            gap="10px"
             _hover={{
               transform: 'scale(1.1)',
               boxShadow:"0px 10px 10px rgba(127, 123, 226, .95)"
             }}
           >
             <Image src={blogs.imageSrc} w="100%" />
-            <Text color="#6B6B6B">
+            <Text color="#6B6B6B" fontSize={{lg:"14px", md:"12px",base:"10px"}}>
               {blogs.date} | {blogs.author} | {blogs.category}
             </Text>
-            <Text fontSize="20px" fontWeight={600} color="#7F7BE2">
+            <Text fontSize={{lg:"18px", md:"16px", base:"12px"}} fontWeight={600} color="#7F7BE2">
               {blogs.content}
             </Text>
             <Button
-              padding={10}
+              padding="10px"
               border="none"
               bg={"white"}
               color="#7F7BE2"
               cursor={"pointer"}
               boxShadow="0px 4px 6px rgba(0, 0, 0, 0.3)"
-            
+              fontSize={{lg:"16px", base:"14px"}}
             >
               Read more
             </Button>
-          </VStack>
+          </Flex>
         ))}
-      </HStack>
+      </Flex>
       <Button
+      w={{xl:"10%", sm:"20%", base:"60%"}}
         padding="15px 30px"
         bg="#7F7BE2"
         color="white"
@@ -76,7 +79,7 @@ const BlogSection = () => {
         cursor="pointer"
         _hover={{
           borderRadius:"20px",
-          transitionDuration:"1s"
+          transitionDuration:"2000s"
         }}
       >
         Load more

@@ -28,6 +28,7 @@ const TeamSection = () => {
       <Grid gridTemplateColumns={{md:"repeat(3,1fr)", sm:"repeat(2,1fr)"}} gap={50}>
         {photos.map((photo, index) => (
           <Box
+          key={index}
             position={"relative"}
             width="100%"
             display={"flex"}
