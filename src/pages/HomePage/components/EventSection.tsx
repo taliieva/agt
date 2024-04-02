@@ -1,4 +1,12 @@
-import { HStack, Heading, VStack, Image, Text, Box } from "@chakra-ui/react";
+import {
+  HStack,
+  Heading,
+  VStack,
+  Image,
+  Text,
+  Box,
+  Flex,
+} from "@chakra-ui/react";
 import React from "react";
 
 const EventSection = () => {
@@ -44,41 +52,50 @@ const EventSection = () => {
       <Heading fontSize="40px" fontWeight="700" color="white" mb="50px">
         Events
       </Heading>
-      <HStack
+      <Flex
+        flexDirection={{ sm: "row", base: "column" }}
         _hover={{
           // transform: "scale(1.1)",
           boxShadow: "5px 5px 5px rgba(252, 187, 187, .8)",
         }}
         bg="#CBC9C9"
-        w={{lg:"80%",sm:"90%"}}
+        w={{ lg: "80%", sm: "90%" }}
         p="20px"
         borderRadius="20px"
         alignItems="flex-start"
+        gap="10px"
       >
-        <Image src="/assets/team1.jpg" w="90px" borderRadius="50%" mt="20px" />
+        <Image src="/assets/team1.jpg" w="100px" borderRadius="50%" mt="20px" />
         <VStack>
           <VStack
             bg="white"
             w="100%"
-            p={{lg:"40px",base:"20px"}}
+            p={{ lg: "40px", base: "20px" }}
             borderRadius="20px"
             alignItems="flex-start"
           >
             <Text
               bg="#FCBBBB"
-              fontSize={{lg:"16px", md:"14px", base:"12px"}}
+              fontSize={{ lg: "16px", md: "14px", base: "12px" }}
               fontWeight={600}
               p="5px 10px"
               borderRadius="20px"
             >
               09.00 AM - 10.30 AM
             </Text>
-            <Text fontSize={{lg:"24px", md:"20px", base:"16px"}} fontWeight={700} color="#1b273d">
+            <Text
+              fontSize={{ lg: "24px", md: "20px", base: "16px" }}
+              fontWeight={700}
+              color="#1b273d"
+            >
               Wait is Over! Stony Brook Captures Conference
             </Text>
             <Text fontSize="16px">By Riaz Sagar , Logichunt Inc.</Text>
           </VStack>
-          <VStack alignItems="flex-start" fontSize={{lg:"18px", md:"16px", sm:"14px", base:"12px"}}>
+          <VStack
+            alignItems="flex-start"
+            fontSize={{ lg: "18px", md: "16px", sm: "14px", base: "12px" }}
+          >
             <Text color="#585555">
               Meh synth Schlitz, tempor duis single-origin coffee ea next level
               ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit
@@ -93,11 +110,11 @@ const EventSection = () => {
             </Text>
           </VStack>
         </VStack>
-      </HStack>
+      </Flex>
       {teams.map((team, index) => (
         <Box
           bg="#CBC9C9"
-          w="80%"
+          w={{ lg: "80%", sm: "90%" }}
           p="20px"
           borderRadius="20px"
           key={index}
@@ -106,24 +123,34 @@ const EventSection = () => {
             boxShadow: "5px 5px 5px rgba(252, 187, 187, .8)",
           }}
         >
-          <HStack bg="white" p="40px" borderRadius="10px">
-            <Image src={team.image} w="90px" borderRadius="50%" />
+          <Flex
+            flexDirection={{ sm: "row", base: "column" }}
+            bg="white"
+            p={{ lg: "40px", base: "20px" }}
+            borderRadius="10px"
+            gap="20px"
+          >
+            <Image src={team.image} w="100px" borderRadius="50%" />
             <VStack w="100%" borderRadius="20px" alignItems="flex-start">
               <Text
                 bg="#FCBBBB"
-                fontSize="16px"
+                fontSize={{ lg: "16px", md: "14px", base: "12px" }}
                 fontWeight={600}
                 p="5px 10px"
                 borderRadius="20px"
               >
                 {team.time}
               </Text>
-              <Text fontSize="24px" fontWeight={700} color="#1b273d">
+              <Text
+                fontSize={{ lg: "24px", md: "20px", base: "16px" }}
+                fontWeight={700}
+                color="#1b273d"
+              >
                 {team.name}
               </Text>
               <Text fontSize="16px">{team.author}</Text>
             </VStack>
-          </HStack>
+          </Flex>
         </Box>
       ))}
     </VStack>

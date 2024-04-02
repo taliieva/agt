@@ -12,14 +12,15 @@ const Header = () => {
 
   return (
     <Box
-      height={{ md: "90px", sm: "50px" }}
+      w="100%"
+      height={{ md: "90px", base: "50px" }}
       position="fixed"
       top="0"
       left="0"
       right="0"
       bg="rgba(27, 39, 61, .95)"
       zIndex="1000"
-      mb={{md:"80px",base:"50px"}}
+      // mb={{ md: "80px", base: "0px" }}
     >
       <HStack p="10px 60px" justifyContent="space-between">
         <Image src="/assets/agi.png" width="13%" />
@@ -34,7 +35,7 @@ const Header = () => {
           justifyContent="flex-end"
           display={{ md: "flex", base: openMenu ? "flex" : "none" }}
           position={{ base: "absolute", md: "initial" }}
-          bg={{base:"rgba(27, 39, 61, .95)", md:"none"}}
+          bg={{ base: "rgba(27, 39, 61, .95)", md: "none" }}
           width="100%"
           left="0"
           top={{ md: "90px", base: "50px" }}

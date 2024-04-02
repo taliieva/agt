@@ -5,11 +5,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-
 const Carousel = () => {
   return (
     <Swiper
       // style={{ marginTop: "80px" }}
+      // style={{ marginTop: { md: "80px", base: "0px" } }}
+  
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       spaceBetween={50}
       slidesPerView={1}
