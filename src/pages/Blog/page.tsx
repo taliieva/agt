@@ -1,10 +1,11 @@
 import React from 'react'
+import Layout from '../../Layout/Layout.tsx'
 
 const BlogPage = () => {
   return (
-    <div>
-      
-    </div>
+    <Layout>
+      salam
+    </Layout>
   )
 }
 

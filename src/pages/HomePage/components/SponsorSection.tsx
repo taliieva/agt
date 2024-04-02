@@ -27,11 +27,11 @@ const SponsorSection = () => {
           alignItems: "center",
           justifyContent: "center",
         }}
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={50}
         slidesPerView={2}
         loop={true}
-        autoplay={{ delay: 1000 }}
+        autoplay={{ delay: 2000 }}
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
