@@ -1,19 +1,22 @@
-import React from 'react'
-import Header from '../components/Header.tsx'
-import Footer from '../components/Footer.tsx'
+import React from "react";
+import Header from "../components/Header.tsx";
+import Footer from "../components/Footer.tsx";
+import Providers from "./Providers.tsx";
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
     <div>
-      <header>
-        <Header />
-      </header>
-      <main>{children}</main>
-      <footer>
-        <Footer />
-      </footer>
+      <Providers>
+        <header>
+          <Header />
+        </header>
+        <main>{children}</main>
+        <footer>
+          <Footer />
+        </footer>
+      </Providers>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

@@ -9,15 +9,15 @@ import "swiper/css/scrollbar";
 const Carousel = () => {
   return (
     <Swiper
-      style={{ marginTop: "80px" }}
+      // style={{ marginTop: "80px" }}
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       spaceBetween={50}
       slidesPerView={1}
       loop={true}
       autoplay={{ delay: 3000 }}
       navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
+      // pagination={{ clickable: true }}
+      // scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
     >

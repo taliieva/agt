@@ -34,12 +34,17 @@ const BlogSection = () => {
       <HStack w="90%" justifyContent="center" alignItems="center" gap={30}>
         {blogPosts.map((blogs, index) => (
           <VStack
+          key={index}
             alignItems="flex-start"
             w="25%"
             p={10}
             borderRadius="10px"
             boxShadow="0px 4px 6px rgba(0, 0, 0, 0.5)"
-            gap={20}
+            // gap={20}
+            _hover={{
+              transform: 'scale(1.1)',
+              boxShadow:"0px 10px 10px rgba(127, 123, 226, .95)"
+            }}
           >
             <Image src={blogs.imageSrc} w="100%" />
             <Text color="#6B6B6B">
@@ -55,6 +60,7 @@ const BlogSection = () => {
               color="#7F7BE2"
               cursor={"pointer"}
               boxShadow="0px 4px 6px rgba(0, 0, 0, 0.3)"
+            
             >
               Read more
             </Button>

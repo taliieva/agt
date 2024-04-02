@@ -1,21 +1,45 @@
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import { Box, Button, HStack, Image, Text } from "@chakra-ui/react";
-import React from "react";
+import { Box, Button, Flex, HStack, Image, Text } from "@chakra-ui/react";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 const Header = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+  const showToggle = () => {
+    setOpenMenu(!openMenu);
+  };
+
   return (
     <Box
-      height="80px"
+      height={{ md: "90px", sm: "50px" }}
       position="fixed"
       top="0"
       left="0"
       right="0"
       bg="rgba(27, 39, 61, .95)"
       zIndex="1000"
+      mb={{md:"80px",base:"50px"}}
     >
       <HStack p="10px 60px" justifyContent="space-between">
         <Image src="/assets/agi.png" width="13%" />
-        <HStack gap={30} fontSize={18}>
+        <Box display={{ md: "none", base: "block" }} onClick={showToggle}>
+          <FontAwesomeIcon icon={faBars} color="white" />
+        </Box>
+        <Flex
+          gap={{ lg: "30px", md: "20px", sm: "10px" }}
+          fontSize={18}
+          flexDirection={{ md: "row", base: "column" }}
+          alignItems="center"
+          justifyContent="center"
+          display={{ md: "flex", base: openMenu ? "flex" : "none" }}
+          position={{ base: "absolute", md: "initial" }}
+          bg="rgba(27, 39, 61, .95)"
+          width="100%"
+          left="0"
+          top={{ md: "90px", base: "50px" }}
+          padding={{ md: "20px 60px", base: "20px 0" }}
+        >
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
             <Text _hover={{ color: "#9DC3DA", cursor: "pointer" }}>
               Əsas səhifə
@@ -34,12 +58,6 @@ const Header = () => {
           <Link to="/blog" style={{ textDecoration: "none", color: "white" }}>
             <Text _hover={{ color: "#9DC3DA", cursor: "pointer" }}>Blog</Text>
           </Link>
-          {/* <Link
-            to="/contact"
-            style={{ textDecoration: "none", color: "white" }}
-          >
-            <Text _hover={{ color: "#9DC3DA", cursor: "pointer" }}>Əlaqə</Text>
-          </Link> */}
           <Link to="/contact">
             <Button
               p="10px 20px"
@@ -49,7 +67,7 @@ const Header = () => {
               bg="#9DC3DA"
               color="white"
               border="none"
-              _hover={{color:"#9DC3DA", bg:"white"}}
+              _hover={{ color: "#9DC3DA", bg: "white" }}
             >
               <HStack>
                 <Text>Əlaqə</Text>
@@ -57,7 +75,7 @@ const Header = () => {
               </HStack>
             </Button>
           </Link>
-        </HStack>
+        </Flex>
       </HStack>
     </Box>
   );

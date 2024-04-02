@@ -32,9 +32,9 @@ const SponsorSection = () => {
         slidesPerView={2}
         loop={true}
         autoplay={{ delay: 2000 }}
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
+        // navigation
+        // pagination={{ clickable: true }}
+        // scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
       >

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Box,
   Button,
@@ -21,11 +21,11 @@ const TeamSection = () => {
   ];
 
   return (
-    <VStack p="100px 0" bg="#7F7BE2" gap="50px">
+    <VStack p={{md:"100px 0", base:"50px 0"}} bg="#7F7BE2" gap="50px" w="100%">
       <Heading color="white" fontSize="30px">
         OUR TEAMS
       </Heading>
-      <Grid gridTemplateColumns="repeat(3,1fr)" gap={50}>
+      <Grid gridTemplateColumns={{md:"repeat(3,1fr)", sm:"repeat(2,1fr)"}} gap={50}>
         {photos.map((photo, index) => (
           <Box
             position={"relative"}
@@ -33,24 +33,26 @@ const TeamSection = () => {
             display={"flex"}
             justifyContent="center"
             alignItems="center"
+            _hover={{
+              transform: 'scale(1.1)',
+            }}
           >
             <Image
               key={index}
               src={photo}
-              w="300px"
+              width={{base:"200px", sm:"200px", lg: "200px",xl:"300px" }}
               display={"block"}
               borderRadius="10px"
             />
-            <Box
+            <VStack
               borderRadius="10px"
               height="100%"
               width="100%"
               position="absolute"
               top={0}
               right={0}
-              background="rgba(0,0,0,0.7)"
-              display={"flex"}
-              justifyContent="center"
+              background="rgba(0,0,0,0.3)"
+              justifyContent="flex-end"
               alignItems="flex-start"
               p={10}
               opacity="0"
@@ -59,12 +61,13 @@ const TeamSection = () => {
                 opacity: "1",
                 transitionDuration: "1s",
               }}
-              backdropFilter="blur(3px)"
+              // backdropFilter="blur(3px)"
             >
               <Text fontSize="18px" color={"white"} fontWeight={600}>
                 Team {index + 1}
               </Text>
-            </Box>
+              <Text color="white">About the team</Text>
+            </VStack>
           </Box>
         ))}
       </Grid>
