@@ -16,7 +16,7 @@ const SponsorSection = () => {
     ]
   return (
     <VStack p="50px 0">
-      <Heading fontSize={40} color="#1b273d">
+      <Heading fontSize={{base:"24px", sm: "30px", lg: "40px" }} color="#1b273d">
         Sponsors
       </Heading>
       <Swiper

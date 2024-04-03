@@ -11,7 +11,7 @@ const ContactPage = () => {
         <Image src="/assets/slider6.jpg" w="100%" position="relative"/>
         <Text position="absolute" top="50%" left="20%" fontSize="40px">Əlaqə</Text>
       </Box> */}
-      <Box bg="rgba(27, 39, 61, .95)" mt="80px" display="flex" alignItems="center" p={60}>
+      <Box bg="rgba(27, 39, 61, .95)" mt={{md:"90px", base:"50px"}} display="flex" alignItems="center" p="60px" flexDirection="column">
         <Text fontSize="40px" color="white">Əlaqə</Text>
       </Box>
       <SocialSection/>

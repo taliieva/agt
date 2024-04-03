@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Flex,
   HStack,
   Heading,
   Image,
@@ -11,18 +12,47 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <VStack mt="80px" alignItems="center">
-      <Box bg="rgba(27, 39, 61, .95)" display="flex" alignItems="center" p={60} w="100%">
-        <Text fontSize="40px" color="white">Haqqımızda</Text>
+    <VStack alignItems="center">
+      <Box
+        bg="rgba(27, 39, 61, .95)"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        p="60px"
+        w="100%"
+      >
+        <Text fontSize="40px" color="white">
+          Haqqımızda
+        </Text>
       </Box>
-      <HStack justifyContent="center" gap="40px" p="100px 0">
-        <Image src="/assets/logo.png" w="20%" borderRadius="10px" />
-        <VStack w="40%" alignItems="flex-start" gap={10}>
-          <Heading fontSize="30px" color="#1b273d">
-            Azərbaycan Gənclər İttifaqı
-          </Heading>
-          <Text>WHY AGT?</Text>
-          <Text fontSize="18px" mt={20}>
+      <VStack
+        justifyContent="center"
+        gap="10px"
+        p={{ md: "100px 20px", base: "50px 20px" }}
+      >
+        <Heading
+          fontSize={{ base: "20px", sm: "25px", lg: "30px" }}
+          color="#1b273d"
+        >
+          Azərbaycan Gənclər İttifaqı
+        </Heading>
+        <Text
+          // alignSelf={{ base: "flex-start", sm: "initial" }}
+          fontSize={{ sm: "16px", base: "14px" }}
+        >
+          WHY AGT?
+        </Text>
+        <Flex
+          flexDirection={{ md: "row", base: "column" }}
+          w={{ base: "90%", sm: "70%", md: "60%" }}
+          alignItems="flex-start"
+          gap="30px"
+          mt="30px"
+          justifyContent="flex-start"
+        >
+          <Image src="/assets/logo.png" w={{ base: "30%", md: "20%" }} />
+
+          <Text fontSize={{ base: "12px", md: "16px", xl: "18px" }}>
             "Azərbaycan Gənclər İttifaqı" İctimai Birliyi 1994-cü ildən
             fəaliyyət göstərən yerli qeyri-hökümət təşkilatıdır. Təşkilatın əsas
             məqsədi Azərbaycanda gənclər siyasətini həyata keçirilməsi üçün
@@ -34,8 +64,8 @@ const AboutUs = () => {
             həmçinin gənclərin sosial, səhiyyə, təhsil, ekologiya, mədəniyyət və
             digər sahələrdə maarifləndirilməsindən ibarətdir.
           </Text>
-        </VStack>
-      </HStack>
+        </Flex>
+      </VStack>
     </VStack>
   );
 };

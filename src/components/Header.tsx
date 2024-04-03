@@ -28,7 +28,7 @@ const Header = () => {
           <FontAwesomeIcon icon={faBars} color="white" />
         </Box>
         <Flex
-          gap={{ lg: "30px", md: "20px", sm: "10px" }}
+          gap={{ lg: "30px", md: "20px", base: "10px" }}
           fontSize={18}
           flexDirection={{ md: "row", base: "column" }}
           alignItems="center"

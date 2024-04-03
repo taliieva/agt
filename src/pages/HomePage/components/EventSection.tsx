@@ -48,8 +48,8 @@ const EventSection = () => {
     },
   ];
   return (
-    <VStack bg="#7F7BE2" p="100px 0">
-      <Heading fontSize="40px" fontWeight="700" color="white" mb="50px">
+    <VStack bg="#7F7BE2" p={{md:"100px 20px", base:"50px 20px"}}>
+      <Heading fontSize={{base:"24px", sm: "30px", lg: "40px" }} fontWeight="700" color="white" mb="50px">
         Events
       </Heading>
       <Flex

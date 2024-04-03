@@ -38,8 +38,8 @@ const BlogSection = () => {
     },
   ];
   return (
-    <VStack p="100px 0" gap={50} w="100%">
-      <Heading color="#1b273d">OUR BLOGS</Heading>
+    <VStack p={{md:"100px 20px", base:"50px 20px"}} gap="50px" w="100%">
+      <Heading color="#1b273d" fontSize={{base:"24px", sm: "30px", lg: "40px" }}>OUR BLOGS</Heading>
       <Flex
         w="90%"
         flexDirection={{ sm: "row", base: "column" }}

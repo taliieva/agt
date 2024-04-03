@@ -21,27 +21,38 @@ const TeamSection = () => {
   ];
 
   return (
-    <VStack p={{md:"100px 0", base:"50px 0"}} bg="#7F7BE2" gap="50px" w="100%">
-      <Heading color="white" fontSize="30px">
+    <VStack
+      p={{ md: "100px 20px", base: "50px 20px" }}
+      bg="#7F7BE2"
+      gap="50px"
+      w="100%"
+    >
+      <Heading
+        color="white"
+        fontSize={{ base: "24px", sm: "30px", lg: "40px" }}
+      >
         OUR TEAMS
       </Heading>
-      <Grid gridTemplateColumns={{md:"repeat(3,1fr)", sm:"repeat(2,1fr)"}} gap={50}>
+      <Grid
+        gridTemplateColumns={{ md: "repeat(3,1fr)", sm: "repeat(2,1fr)" }}
+        gap={50}
+      >
         {photos.map((photo, index) => (
           <Box
-          key={index}
+            key={index}
             position={"relative"}
             width="100%"
             display={"flex"}
             justifyContent="center"
             alignItems="center"
             _hover={{
-              transform: 'scale(1.1)',
+              transform: "scale(1.1)",
             }}
           >
             <Image
               key={index}
               src={photo}
-              width={{base:"200px", sm:"200px", lg: "200px",xl:"300px" }}
+              width={{ base: "200px", xl: "300px" }}
               display={"block"}
               borderRadius="10px"
             />

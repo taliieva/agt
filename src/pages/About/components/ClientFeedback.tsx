@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -33,25 +33,27 @@ const ClientFeedback = () => {
     },
   ];
   return (
-    <VStack p="50px 0">
-    <Heading fontSize={40} color="#1b273d">WHAT CLIENTS SAY</Heading>
-    <Text fontSize={18}>Welcome to the dedicated to building remarkable Testimonials!</Text>
+    <VStack  p={{ md: "100px 0", base: "50px 0" }}>
+    <Heading fontSize={{base:"24px", sm: "30px", lg: "40px" }} color="#1b273d">WHAT CLIENTS SAY</Heading>
+    <Text fontSize={{base:"12px",md:"16px",xl:"18px"}}>Welcome to the dedicated to building remarkable Testimonials!</Text>
     <Swiper
       style={{
-        padding: "100px 0",
+        padding: "50px 0",
         width: "100%",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
       }}
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       spaceBetween={50}
       slidesPerView={1}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
+      autoplay={{delay:2000}}
+      loop={true}
+      // navigation
+      // pagination={{ clickable: true }}
+      // scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
+      // onSlideChange={() => console.log("slide change")}
     >
       {sliders.map((slide, index) => (
         <SwiperSlide
@@ -63,10 +65,10 @@ const ClientFeedback = () => {
             justifyContent: "center",
           }}
         >
-          <VStack w={"80%"} gap={20}>
-            <Text fontSize={18}>{slide.comment}</Text>
-            <Text fontSize={20} width="60%" textAlign={"center"}>{slide.quote}</Text>
-            <Image src={slide.image} w="200px" borderRadius="50%" />
+          <VStack w={"80%"} gap="20px">
+            <Text fontSize={{base:"12px",md:"16px",xl:"18px"}}>{slide.comment}</Text>
+            <Text fontSize={{base:"16px",md:"18px",xl:"20px"}} width={{md:"60%", sm:"80%", base:"100%"}} textAlign={"center"}>{slide.quote}</Text>
+            <Image src={slide.image} w={{md:"200px", sm:"150px", base:"100px"}} borderRadius="50%" />
           </VStack>
         </SwiperSlide>
       ))}
