@@ -39,7 +39,7 @@ const BlogSection = () => {
   ];
   return (
     <VStack p={{md:"100px 20px", base:"50px 20px"}} gap="50px" w="100%">
-      <Heading color="#1b273d" fontSize={{base:"24px", sm: "30px", lg: "40px" }}>OUR BLOGS</Heading>
+      <Heading color="#1b273d" fontSize={{base:"24px", sm: "30px", lg: "40px" }}>Xəbərlər</Heading>
       <Flex
         w="90%"
         flexDirection={{ sm: "row", base: "column" }}
@@ -104,7 +104,7 @@ const BlogSection = () => {
           transitionDuration: "2000s",
         }}
       >
-        Load more
+        Daha çox
       </Button>
     </VStack>
   );

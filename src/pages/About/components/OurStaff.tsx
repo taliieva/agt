@@ -17,9 +17,9 @@ const OurStaff = () => {
       p={{ md: "100px 20px", base: "50px 20px" }}
     >
       <Heading color="#1b273d" fontSize={{base:"24px", sm: "30px", lg: "40px" }} fontWeight={600}>
-        MEET OUR STAFF
+        Komandamızla tanış olun
       </Heading>
-      <Text>Welcome to our team</Text>
+      <Text>Komanda üzvlərimiz</Text>
       <Grid
         gridTemplateColumns={{ md: "repeat(3,1fr)", sm: "repeat(2,1fr)" }}
         gap="50px"

@@ -31,7 +31,7 @@ const TeamSection = () => {
         color="white"
         fontSize={{ base: "24px", sm: "30px", lg: "40px" }}
       >
-        OUR TEAMS
+        Komandamız
       </Heading>
       <Grid
         gridTemplateColumns={{ md: "repeat(3,1fr)", sm: "repeat(2,1fr)" }}

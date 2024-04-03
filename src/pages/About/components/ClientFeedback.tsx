@@ -34,8 +34,8 @@ const ClientFeedback = () => {
   ];
   return (
     <VStack  p={{ md: "100px 0", base: "50px 0" }}>
-    <Heading fontSize={{base:"24px", sm: "30px", lg: "40px" }} color="#1b273d">WHAT CLIENTS SAY</Heading>
-    <Text fontSize={{base:"12px",md:"16px",xl:"18px"}}>Welcome to the dedicated to building remarkable Testimonials!</Text>
+    <Heading fontSize={{base:"24px", sm: "30px", lg: "40px" }} color="#1b273d">Müştərilərin fikirləri</Heading>
+    <Text fontSize={{base:"12px",md:"16px",xl:"18px"}}>Müştərilərimizin dəyərli fikirlərindən bir neçəsini sizə təqdim edirik!</Text>
     <Swiper
       style={{
         padding: "50px 0",

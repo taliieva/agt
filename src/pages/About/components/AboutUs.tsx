@@ -12,13 +12,13 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <VStack alignItems="center">
+    <VStack alignItems="center" mt={{ md: "90px", base: "50px" }}>
       <Box
         bg="rgba(27, 39, 61, .95)"
         display="flex"
         alignItems="center"
         justifyContent="center"
-        p="60px"
+        p={{ md: "100px 60px", base: "60px" }}
         w="100%"
       >
         <Text fontSize="40px" color="white">
@@ -40,7 +40,7 @@ const AboutUs = () => {
           // alignSelf={{ base: "flex-start", sm: "initial" }}
           fontSize={{ sm: "16px", base: "14px" }}
         >
-          WHY AGT?
+          Niyə AGT?
         </Text>
         <Flex
           flexDirection={{ md: "row", base: "column" }}
