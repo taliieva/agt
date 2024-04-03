@@ -1,9 +1,9 @@
-import "./App.css"
+import "./App.css";
 import Routers from "./Routers/Routers.tsx";
 function App() {
   return (
     <div className="App">
-      <Routers/>
+      <Routers />
     </div>
   );
 }

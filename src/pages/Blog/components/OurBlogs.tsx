@@ -1,16 +1,7 @@
-import {
-  Button,
-  Flex,
-  Grid,
-  HStack,
-  Heading,
-  Image,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, Image, Text } from "@chakra-ui/react";
 import React from "react";
 
-const BlogSection = () => {
+const OurBlogs = () => {
   const blogPosts = [
     {
       id: 1,
@@ -36,21 +27,74 @@ const BlogSection = () => {
       category: "Design",
       content: "Brooklyn Beta was the most important conferen best tristique",
     },
+    {
+      id: 4,
+      imageSrc: "/assets/blog3.jpg",
+      date: "April 25, 2021",
+      author: "Rizasgor",
+      category: "Design",
+      content: "Brooklyn Beta was the most important conferen best tristique",
+    },
+    {
+      id: 5,
+      imageSrc: "/assets/blog1.jpg",
+      date: "April 25, 2021",
+      author: "Rizasgor",
+      category: "Design",
+      content: "Brooklyn Beta was the most important conferen best tristique",
+    },
+    {
+      id: 6,
+      imageSrc: "/assets/blog2.jpg",
+      date: "April 25, 2021",
+      author: "Rizasgor",
+      category: "Design",
+      content: "Brooklyn Beta was the most important conferen best tristique",
+    },
+    {
+      id: 7,
+      imageSrc: "/assets/blog2.jpg",
+      date: "April 25, 2021",
+      author: "Rizasgor",
+      category: "Design",
+      content: "Brooklyn Beta was the most important conferen best tristique",
+    },
+    {
+      id: 8,
+      imageSrc: "/assets/blog3.jpg",
+      date: "April 25, 2021",
+      author: "Rizasgor",
+      category: "Design",
+      content: "Brooklyn Beta was the most important conferen best tristique",
+    },
+    {
+      id: 9,
+      imageSrc: "/assets/blog1.jpg",
+      date: "April 25, 2021",
+      author: "Rizasgor",
+      category: "Design",
+      content: "Brooklyn Beta was the most important conferen best tristique",
+    },
   ];
   return (
-    <VStack p={{ md: "100px 20px", base: "50px 20px" }} gap="50px" w="100%">
-      <Heading
-        color="#1b273d"
-        fontSize={{ base: "24px", sm: "30px", lg: "40px" }}
-      >
-        Xəbərlər
-      </Heading>
-      <Flex
-        w="90%"
-        flexDirection={{ sm: "row", base: "column" }}
-        justifyContent="center"
+    <Box>
+      <Box
+        bg="rgba(27, 39, 61, .95)"
+        // mt={{ md: "90px", base: "50px" }}
+        display="flex"
         alignItems="center"
-        gap={30}
+        p={{ md: "100px 60px", base: "60px" }}
+        flexDirection="column"
+      >
+        <Text fontSize="40px" color="white">
+          Xəbərlərimiz
+        </Text>
+      </Box>
+      <Grid
+        gridTemplateColumns={{ md: "repeat(3,1fr)", sm: "repeat(2,1fr)" }}
+        w="100%"
+        gap="50px"
+        p={{ md: "100px 50px", base: "50px 30px", lg: "100px" }}
       >
         {blogPosts.map((blogs, index) => (
           <Flex
@@ -58,7 +102,8 @@ const BlogSection = () => {
             cursor="pointer"
             key={index}
             alignItems="flex-start"
-            w={{ xl: "25%", md: "30%", sm: "40%", base: "70%" }}
+            // w={{ xl: "25%", md: "30%", sm: "40%", base: "70%" }}
+            w="100%"
             p="10px"
             borderRadius="10px"
             boxShadow="0px 4px 6px rgba(0, 0, 0, 0.5)"
@@ -95,24 +140,9 @@ const BlogSection = () => {
             </Button>
           </Flex>
         ))}
-      </Flex>
-      <Button
-        w={{ xl: "10%", sm: "20%", base: "60%" }}
-        padding="15px 30px"
-        bg="#7F7BE2"
-        color="white"
-        border="none"
-        fontSize="16px"
-        cursor="pointer"
-        _hover={{
-          borderRadius: "20px",
-          transitionDuration: "2000s",
-        }}
-      >
-        Daha çox
-      </Button>
-    </VStack>
+      </Grid>
+    </Box>
   );
 };
 
-export default BlogSection;
+export default OurBlogs;

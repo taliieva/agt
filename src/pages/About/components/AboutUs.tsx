@@ -12,7 +12,9 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <VStack alignItems="center" mt={{ md: "90px", base: "50px" }}>
+    <VStack alignItems="center"
+    //  mt={{ md: "90px", base: "50px" }}
+     >
       <Box
         bg="rgba(27, 39, 61, .95)"
         display="flex"

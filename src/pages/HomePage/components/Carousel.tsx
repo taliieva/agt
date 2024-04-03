@@ -14,7 +14,9 @@ import "swiper/css/scrollbar";
 import { Box } from "@chakra-ui/layout";
 const Carousel = () => {
   return (
-    <Box mt={{md:"90px", base:"50px"}}>
+    <Box
+    // mt={{ md: "90px", base: "50px" }}
+    >
       <Swiper
         // style={{ marginTop: "80px" }}
         // style={{ marginTop: { md: "80px", base: "0px" } }}

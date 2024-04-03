@@ -2,13 +2,32 @@ import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { Box, Button, Flex, HStack, Image, Text } from "@chakra-ui/react";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const showToggle = () => {
     setOpenMenu(!openMenu);
   };
+  const [scrollBG, setScrollBG] = useState(false);
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const threshold = 100; // Eşik değeri - Header'ın yüksekliğine göre ayarlayabilirsiniz
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > threshold) {
+        setScrollBG(true);
+      } else {
+        setScrollBG(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <Box
@@ -18,12 +37,14 @@ const Header = () => {
       top="0"
       left="0"
       right="0"
-      bg="rgba(27, 39, 61, .95)"
+      bg={scrollBG ? "rgba(27, 39, 61, .95)" : "transparent"}
       zIndex="1000"
-      // mb={{ md: "80px", base: "0px" }}
     >
-      <HStack p={{md:"10px 60px", sm:"10px 40px", base:"10px 20px"}} justifyContent="space-between">
-        <Image src="/assets/agi.png" width={{md:"150px", base:"100px"}} />
+      <HStack
+        p={{ md: "10px 60px", sm: "10px 40px", base: "10px 20px" }}
+        justifyContent="space-between"
+      >
+        <Image src="/assets/agi.png" width={{ md: "150px", base: "100px" }} />
         <Box display={{ md: "none", base: "block" }} onClick={showToggle}>
           <FontAwesomeIcon icon={faBars} color="white" />
         </Box>

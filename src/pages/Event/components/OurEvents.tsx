@@ -1,15 +1,7 @@
-import {
-  HStack,
-  Heading,
-  VStack,
-  Image,
-  Text,
-  Box,
-  Flex,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 
-const EventSection = () => {
+const OurEvents = () => {
   const teams = [
     {
       id: 2,
@@ -48,11 +40,11 @@ const EventSection = () => {
     },
   ];
   return (
-    <VStack bg="#7F7BE2" p={{ md: "100px 20px", base: "50px 20px" }}>
+    <VStack bg="white" p={{ md: "100px 20px", base: "50px 20px" }}>
       <Heading
         fontSize={{ base: "24px", sm: "30px", lg: "40px" }}
         fontWeight="700"
-        color="white"
+        color="#1b273d"
         mb="50px"
       >
         Tədbirlər
@@ -76,7 +68,7 @@ const EventSection = () => {
             bg="white"
             w="100%"
             p={{ lg: "40px", base: "20px" }}
-            borderRadius="20px"
+            borderRadius="10px"
             alignItems="flex-start"
           >
             <Text
@@ -162,4 +154,4 @@ const EventSection = () => {
   );
 };
 
-export default EventSection;
+export default OurEvents;

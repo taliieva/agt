@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../Layout/Layout.tsx";
 import AboutEvents from "./components/AboutEvents.tsx";
 import TeamSection from "./components/TeamSection.tsx";
@@ -8,14 +8,17 @@ import EventSection from "./components/EventSection.tsx";
 import SponsorSection from "./components/SponsorSection.tsx";
 
 const HomePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Layout>
-      <Carousel/>
-      <AboutEvents/>
-      <TeamSection/>
-      <BlogSection/>
-      <EventSection/>
-      <SponsorSection/>
+      <Carousel />
+      <AboutEvents />
+      <TeamSection />
+      <BlogSection />
+      <EventSection />
+      <SponsorSection />
     </Layout>
   );
 };

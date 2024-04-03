@@ -5,6 +5,7 @@ import EventPage from "../pages/Event/page.tsx";
 import ContactPage from "../pages/Contact/page.tsx";
 import BlogPage from "../pages/Blog/page.tsx";
 import AboutPage from "../pages/About/page.tsx";
+
 const Routers = () => {
   return (
     <BrowserRouter>

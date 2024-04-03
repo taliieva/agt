@@ -16,7 +16,11 @@ const OurStaff = () => {
       bg="rgba(50, 51, 51, 0.1)"
       p={{ md: "100px 20px", base: "50px 20px" }}
     >
-      <Heading color="#1b273d" fontSize={{base:"24px", sm: "30px", lg: "40px" }} fontWeight={600}>
+      <Heading
+        color="#1b273d"
+        fontSize={{ base: "24px", sm: "30px", lg: "40px" }}
+        fontWeight={600}
+      >
         Komandamızla tanış olun
       </Heading>
       <Text>Komanda üzvlərimiz</Text>

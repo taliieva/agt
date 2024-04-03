@@ -1,12 +1,16 @@
-import React from 'react'
-import Layout from '../../Layout/Layout.tsx'
+import React, { useEffect } from "react";
+import Layout from "../../Layout/Layout.tsx";
+import OurBlogs from "./components/OurBlogs.tsx";
 
 const BlogPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Layout>
-      salam
+      <OurBlogs />
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPage
+export default BlogPage;

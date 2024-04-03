@@ -13,7 +13,7 @@ import React from "react";
 const MessageSection = () => {
   return (
     <Box
-      p="30px 0"
+      p="50px 0"
       w="100%"
       display="flex"
       alignItems="center"
