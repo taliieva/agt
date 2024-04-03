@@ -22,7 +22,7 @@ const Header = () => {
       zIndex="1000"
       // mb={{ md: "80px", base: "0px" }}
     >
-      <HStack p="10px 60px" justifyContent="space-between">
+      <HStack p={{md:"10px 60px", sm:"10px 40px", base:"10px 20px"}} justifyContent="space-between">
         <Image src="/assets/agi.png" width={{md:"150px", base:"100px"}} />
         <Box display={{ md: "none", base: "block" }} onClick={showToggle}>
           <FontAwesomeIcon icon={faBars} color="white" />
