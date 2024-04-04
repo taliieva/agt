@@ -90,7 +90,7 @@ const EventSection = () => {
 
       {teams.map((team, index) => (
         <Accordion
-        defaultIndex={index === 0 ? [0] : []}
+          defaultIndex={index === 0 ? [0] : []}
           allowMultiple
           bg="#ddd"
           w={{ lg: "80%", sm: "90%" }}
@@ -103,10 +103,14 @@ const EventSection = () => {
           }}
         >
           <AccordionItem w="100%" border="none">
-            <AccordionButton bg="white" borderRadius="10px"  _hover={{ bg: "white" }} >
+            <AccordionButton
+              bg="white"
+              borderRadius="10px"
+              _hover={{ bg: "white" }}
+              p={{ lg: "40px 20px", base: "20px" }}
+            >
               <Flex
                 flexDirection={{ sm: "row", base: "column" }}
-                p={{ lg: "40px 20px", base: "20px" }}
                 borderRadius="10px"
                 gap="20px"
               >
@@ -125,10 +129,13 @@ const EventSection = () => {
                     fontSize={{ lg: "24px", md: "20px", base: "16px" }}
                     fontWeight={700}
                     color="#1b273d"
+                    textAlign="start"
                   >
                     {team.name}
                   </Text>
-                  <Text fontSize="16px">{team.author}</Text>
+                  <Text fontSize="16px" textAlign="start">
+                    {team.author}
+                  </Text>
                 </VStack>
               </Flex>
             </AccordionButton>
