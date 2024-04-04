@@ -114,7 +114,7 @@ const EventSection = () => {
                 borderRadius="10px"
                 gap="20px"
               >
-                <Image src={team.image} w="100px" borderRadius="50%" />
+                {/* <Image src={team.image} w="100px" borderRadius="50%" /> */}
                 <VStack w="100%" borderRadius="20px" alignItems="flex-start">
                   <Text
                     bg="#FCBBBB"
