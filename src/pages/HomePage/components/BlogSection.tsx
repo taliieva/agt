@@ -10,8 +10,9 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
-
+import data from '../../../data.json';
 const BlogSection = () => {
+  const blogData = data.blogs.slice(0,3);
   const blogPosts = [
     {
       id: 1,
@@ -53,7 +54,7 @@ const BlogSection = () => {
         alignItems="center"
         gap={30}
       >
-        {blogPosts.map((blogs, index) => (
+        {blogData.map((blogs, index) => (
           <Flex
             flexDirection="column"
             cursor="pointer"
@@ -92,7 +93,9 @@ const BlogSection = () => {
               boxShadow="0px 4px 6px rgba(0, 0, 0, 0.3)"
               fontSize={{ lg: "16px", base: "14px" }}
             >
+              <Link to={`/blog/${blogs.id}`}>
               Read more
+              </Link>
             </Button>
           </Flex>
         ))}
