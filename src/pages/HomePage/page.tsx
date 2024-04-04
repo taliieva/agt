@@ -15,7 +15,7 @@ const HomePage = () => {
     <Layout>
       <Carousel />
       <AboutEvents />
-      <TeamSection />
+      {/* <TeamSection /> */}
       <BlogSection />
       <EventSection />
       <SponsorSection />

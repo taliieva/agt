@@ -6,6 +6,7 @@ import ContactPage from "../pages/Contact/page.tsx";
 import BlogPage from "../pages/Blog/page.tsx";
 import AboutPage from "../pages/About/page.tsx";
 import BlogId from "../pages/Blog/blogId/BlogId.tsx";
+import EventId from "../pages/Event/eventId/EventId.tsx";
 
 const Routers = () => {
   return (
@@ -13,6 +14,7 @@ const Routers = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/event" element={<EventPage />} />
+        <Route path="/event/:eventId" element={<EventId/>}/>
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:blogId" element={<BlogId/>}/>
