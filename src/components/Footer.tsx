@@ -14,7 +14,7 @@ import React from "react";
 const Footer = () => {
   return (
     <VStack
-      bg="#7F7BE2"
+      bg="rgba(27, 39, 61, .95)"
       color={"white"}
       alignItems="center"
       gap="40px"
