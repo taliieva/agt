@@ -64,7 +64,7 @@ const MessageSection = () => {
             p="15px"
             borderRadius="5px"
             border="1px solid black"
-            placeholder="Unvan"
+            placeholder="Ünvan"
             fontSize="14px"
             outline="none"
           />
@@ -81,7 +81,7 @@ const MessageSection = () => {
             p="15px"
             borderRadius="5px"
             border="1px solid black"
-            placeholder="Mesajiniz"
+            placeholder="Mesajınız"
             fontSize="14px"
             outline="none"
           />
@@ -93,12 +93,14 @@ const MessageSection = () => {
           borderRadius="20px"
           border={"none"}
           mt={30}
-          bg="#7F7BE2"
+          // bg="#7F7BE2"
+          colorScheme="purple"
           color="white"
           fontSize="16px"
           cursor="pointer"
+          // variant='solid'
         >
-          Gonder
+          Göndər
         </Button>
       </VStack>
     </Box>

@@ -1,81 +1,83 @@
 import { Box, Button, Flex, Grid, Image, Text } from "@chakra-ui/react";
 import React from "react";
-
+import data from "../../../data.json";
+import { Link } from "react-router-dom";
 const OurBlogs = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      imageSrc: "/assets/blog1.jpg",
-      date: "April 25, 2021",
-      author: "Rizasgor",
-      category: "Design",
-      content: "Brooklyn Beta was the most important conferen best tristique",
-    },
-    {
-      id: 2,
-      imageSrc: "/assets/blog2.jpg",
-      date: "April 25, 2021",
-      author: "Rizasgor",
-      category: "Design",
-      content: "Brooklyn Beta was the most important conferen best tristique",
-    },
-    {
-      id: 3,
-      imageSrc: "/assets/blog3.jpg",
-      date: "April 25, 2021",
-      author: "Rizasgor",
-      category: "Design",
-      content: "Brooklyn Beta was the most important conferen best tristique",
-    },
-    {
-      id: 4,
-      imageSrc: "/assets/blog3.jpg",
-      date: "April 25, 2021",
-      author: "Rizasgor",
-      category: "Design",
-      content: "Brooklyn Beta was the most important conferen best tristique",
-    },
-    {
-      id: 5,
-      imageSrc: "/assets/blog1.jpg",
-      date: "April 25, 2021",
-      author: "Rizasgor",
-      category: "Design",
-      content: "Brooklyn Beta was the most important conferen best tristique",
-    },
-    {
-      id: 6,
-      imageSrc: "/assets/blog2.jpg",
-      date: "April 25, 2021",
-      author: "Rizasgor",
-      category: "Design",
-      content: "Brooklyn Beta was the most important conferen best tristique",
-    },
-    {
-      id: 7,
-      imageSrc: "/assets/blog2.jpg",
-      date: "April 25, 2021",
-      author: "Rizasgor",
-      category: "Design",
-      content: "Brooklyn Beta was the most important conferen best tristique",
-    },
-    {
-      id: 8,
-      imageSrc: "/assets/blog3.jpg",
-      date: "April 25, 2021",
-      author: "Rizasgor",
-      category: "Design",
-      content: "Brooklyn Beta was the most important conferen best tristique",
-    },
-    {
-      id: 9,
-      imageSrc: "/assets/blog1.jpg",
-      date: "April 25, 2021",
-      author: "Rizasgor",
-      category: "Design",
-      content: "Brooklyn Beta was the most important conferen best tristique",
-    },
-  ];
+  const blogs = data.blogs;
+  // const blogPosts = [
+  //   {
+  //     id: 1,
+  //     imageSrc: "/assets/blog1.jpg",
+  //     date: "April 25, 2021",
+  //     author: "Rizasgor",
+  //     category: "Design",
+  //     content: "Brooklyn Beta was the most important conferen best tristique",
+  //   },
+  //   {
+  //     id: 2,
+  //     imageSrc: "/assets/blog2.jpg",
+  //     date: "April 25, 2021",
+  //     author: "Rizasgor",
+  //     category: "Design",
+  //     content: "Brooklyn Beta was the most important conferen best tristique",
+  //   },
+  //   {
+  //     id: 3,
+  //     imageSrc: "/assets/blog3.jpg",
+  //     date: "April 25, 2021",
+  //     author: "Rizasgor",
+  //     category: "Design",
+  //     content: "Brooklyn Beta was the most important conferen best tristique",
+  //   },
+  //   {
+  //     id: 4,
+  //     imageSrc: "/assets/blog3.jpg",
+  //     date: "April 25, 2021",
+  //     author: "Rizasgor",
+  //     category: "Design",
+  //     content: "Brooklyn Beta was the most important conferen best tristique",
+  //   },
+  //   {
+  //     id: 5,
+  //     imageSrc: "/assets/blog1.jpg",
+  //     date: "April 25, 2021",
+  //     author: "Rizasgor",
+  //     category: "Design",
+  //     content: "Brooklyn Beta was the most important conferen best tristique",
+  //   },
+  //   {
+  //     id: 6,
+  //     imageSrc: "/assets/blog2.jpg",
+  //     date: "April 25, 2021",
+  //     author: "Rizasgor",
+  //     category: "Design",
+  //     content: "Brooklyn Beta was the most important conferen best tristique",
+  //   },
+  //   {
+  //     id: 7,
+  //     imageSrc: "/assets/blog2.jpg",
+  //     date: "April 25, 2021",
+  //     author: "Rizasgor",
+  //     category: "Design",
+  //     content: "Brooklyn Beta was the most important conferen best tristique",
+  //   },
+  //   {
+  //     id: 8,
+  //     imageSrc: "/assets/blog3.jpg",
+  //     date: "April 25, 2021",
+  //     author: "Rizasgor",
+  //     category: "Design",
+  //     content: "Brooklyn Beta was the most important conferen best tristique",
+  //   },
+  //   {
+  //     id: 9,
+  //     imageSrc: "/assets/blog1.jpg",
+  //     date: "April 25, 2021",
+  //     author: "Rizasgor",
+  //     category: "Design",
+  //     content: "Brooklyn Beta was the most important conferen best tristique",
+  //   },
+  // ];
   return (
     <Box>
       <Box
@@ -96,7 +98,7 @@ const OurBlogs = () => {
         gap="50px"
         p={{ md: "100px 50px", base: "50px 30px", lg: "100px" }}
       >
-        {blogPosts.map((blogs, index) => (
+        {blogs.map((blog, index) => (
           <Flex
             flexDirection="column"
             cursor="pointer"
@@ -113,19 +115,19 @@ const OurBlogs = () => {
               boxShadow: "0px 10px 10px rgba(127, 123, 226, .95)",
             }}
           >
-            <Image src={blogs.imageSrc} w="100%" />
+            <Image src={blog?.imageSrc} w="100%" />
             <Text
               color="#6B6B6B"
               fontSize={{ lg: "14px", md: "12px", base: "10px" }}
             >
-              {blogs.date} | {blogs.author} | {blogs.category}
+              {blog.date} | {blog.author} | {blog.category}
             </Text>
             <Text
               fontSize={{ lg: "18px", md: "16px", base: "12px" }}
               fontWeight={600}
               color="#7F7BE2"
             >
-              {blogs.content}
+              {blog.content}
             </Text>
             <Button
               padding="10px"
@@ -136,7 +138,7 @@ const OurBlogs = () => {
               boxShadow="0px 4px 6px rgba(0, 0, 0, 0.3)"
               fontSize={{ lg: "16px", base: "14px" }}
             >
-              Read more
+              <Link to={`/blog/${blog.id}`}>Read more</Link>
             </Button>
           </Flex>
         ))}

@@ -44,7 +44,9 @@ const Header = () => {
         p={{ md: "10px 60px", sm: "10px 40px", base: "10px 20px" }}
         justifyContent="space-between"
       >
+        <Link to="/">
         <Image src="/assets/agi.png" width={{ md: "150px", base: "100px" }} />
+        </Link>
         <Box display={{ md: "none", base: "block" }} onClick={showToggle}>
           <FontAwesomeIcon icon={faBars} color="white" />
         </Box>

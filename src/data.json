@@ -1,0 +1,77 @@
+{
+    "blogs": [
+      {
+        "id": 1,
+        "imageSrc": "/assets/blog1.jpg",
+        "date": "April 25, 2021",
+        "author": "Rizasgor",
+        "category": "Design",
+        "content": "Brooklyn Beta was the most important conferen best tristique"
+      },
+      {
+        "id": 2,
+        "imageSrc": "/assets/blog2.jpg",
+        "date": "April 25, 2021",
+        "author": "Rizasgor",
+        "category": "Design",
+        "content": "Brooklyn Beta was the most important conferen best tristique"
+      },
+      {
+        "id": 3,
+        "imageSrc": "/assets/blog3.jpg",
+        "date": "April 25, 2021",
+        "author": "Rizasgor",
+        "category": "Design",
+        "content": "Brooklyn Beta was the most important conferen best tristique"
+      },
+      {
+        "id": 4,
+        "imageSrc": "/assets/blog3.jpg",
+        "date": "April 25, 2021",
+        "author": "Rizasgor",
+        "category": "Design",
+        "content": "Brooklyn Beta was the most important conferen best tristique"
+      },
+      {
+        "id": 5,
+        "imageSrc": "/assets/blog1.jpg",
+        "date": "April 25, 2021",
+        "author": "Rizasgor",
+        "category": "Design",
+        "content": "Brooklyn Beta was the most important conferen best tristique"
+      },
+      {
+        "id": 6,
+        "imageSrc": "/assets/blog2.jpg",
+        "date": "April 25, 2021",
+        "author": "Rizasgor",
+        "category": "Design",
+        "content": "Brooklyn Beta was the most important conferen best tristique"
+      },
+      {
+        "id": 7,
+        "imageSrc": "/assets/blog2.jpg",
+        "date": "April 25, 2021",
+        "author": "Rizasgor",
+        "category": "Design",
+        "content": "Brooklyn Beta was the most important conferen best tristique"
+      },
+      {
+        "id": 8,
+        "imageSrc": "/assets/blog3.jpg",
+        "date": "April 25, 2021",
+        "author": "Rizasgor",
+        "category": "Design",
+        "content": "Brooklyn Beta was the most important conferen best tristique"
+      },
+      {
+        "id": 9,
+        "imageSrc": "/assets/blog1.jpg",
+        "date": "April 25, 2021",
+        "author": "Rizasgor",
+        "category": "Design",
+        "content": "Brooklyn Beta was the most important conferen best tristique"
+      }
+    ]
+  }
+  

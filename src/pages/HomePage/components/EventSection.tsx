@@ -6,17 +6,35 @@ import {
   Text,
   Box,
   Flex,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionIcon,
+  AccordionPanel,
 } from "@chakra-ui/react";
 import React from "react";
 
 const EventSection = () => {
   const teams = [
     {
+      id: 1,
+      image: "/assets/team1.jpg",
+      time: "09.00 AM - 10.30 AM",
+      name: "Wait is Over! Stony Brook Captures Conference",
+      author: "By Riaz Sagar , Logichunt Inc.",
+      overview:
+        "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.",
+      location: " Hall 1, Building A , Golden Street , Southafrica",
+    },
+    {
       id: 2,
       image: "/assets/team2.jpg",
       time: "09.00 AM - 10.30 AM",
       name: "Wait is Over! Stony Brook Captures Conference",
       author: "By Riaz Sagar , Logichunt Inc.",
+      overview:
+        "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.",
+      location: " Hall 1, Building A , Golden Street , Southafrica",
     },
     {
       id: 3,
@@ -24,6 +42,9 @@ const EventSection = () => {
       time: "09.00 AM - 10.30 AM",
       name: "Wait is Over! Stony Brook Captures Conference",
       author: "By Riaz Sagar , Logichunt Inc.",
+      overview:
+        "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.",
+      location: " Hall 1, Building A , Golden Street , Southafrica",
     },
     {
       id: 4,
@@ -31,6 +52,9 @@ const EventSection = () => {
       time: "09.00 AM - 10.30 AM",
       name: "Wait is Over! Stony Brook Captures Conference",
       author: "By Riaz Sagar , Logichunt Inc.",
+      overview:
+        "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.",
+      location: " Hall 1, Building A , Golden Street , Southafrica",
     },
     {
       id: 5,
@@ -38,6 +62,9 @@ const EventSection = () => {
       time: "09.00 AM - 10.30 AM",
       name: "Wait is Over! Stony Brook Captures Conference",
       author: "By Riaz Sagar , Logichunt Inc.",
+      overview:
+        "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.",
+      location: " Hall 1, Building A , Golden Street , Southafrica",
     },
     {
       id: 6,
@@ -45,6 +72,9 @@ const EventSection = () => {
       time: "09.00 AM - 10.30 AM",
       name: "Wait is Over! Stony Brook Captures Conference",
       author: "By Riaz Sagar , Logichunt Inc.",
+      overview:
+        "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.",
+      location: " Hall 1, Building A , Golden Street , Southafrica",
     },
   ];
   return (
@@ -57,67 +87,11 @@ const EventSection = () => {
       >
         Tədbirlər
       </Heading>
-      <Flex
-        flexDirection={{ sm: "row", base: "column" }}
-        _hover={{
-          // transform: "scale(1.1)",
-          boxShadow: "5px 5px 5px rgba(252, 187, 187, .8)",
-        }}
-        bg="#ddd"
-        w={{ lg: "80%", sm: "90%" }}
-        p="30px"
-        borderRadius="20px"
-        alignItems="flex-start"
-        gap="10px"
-      >
-        <Image src="/assets/team1.jpg" w="100px" borderRadius="50%" mt="20px" />
-        <VStack>
-          <VStack
-            bg="white"
-            w="100%"
-            p={{ lg: "40px", base: "20px" }}
-            borderRadius="20px"
-            alignItems="flex-start"
-          >
-            <Text
-              bg="#FCBBBB"
-              fontSize={{ lg: "16px", md: "14px", base: "12px" }}
-              fontWeight={600}
-              p="5px 10px"
-              borderRadius="20px"
-            >
-              09.00 AM - 10.30 AM
-            </Text>
-            <Text
-              fontSize={{ lg: "24px", md: "20px", base: "16px" }}
-              fontWeight={700}
-              color="#1b273d"
-            >
-              Wait is Over! Stony Brook Captures Conference
-            </Text>
-            <Text fontSize="16px">By Riaz Sagar , Logichunt Inc.</Text>
-          </VStack>
-          <VStack
-            alignItems="flex-start"
-            fontSize={{ lg: "18px", md: "16px", sm: "14px", base: "12px" }}
-          >
-            <Text color="#585555">
-              Meh synth Schlitz, tempor duis single-origin coffee ea next level
-              ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit
-              hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian
-              Truffaut synth art party deep v chillwave.
-            </Text>
-            <Text>
-              <span style={{ color: "#7F7BE2", fontWeight: 700 }}>
-                Location:{" "}
-              </span>
-              Hall 1, Building A , Golden Street , Southafrica
-            </Text>
-          </VStack>
-        </VStack>
-      </Flex>
+
       {teams.map((team, index) => (
-        <Box
+        <Accordion
+        defaultIndex={index === 0 ? [0] : []}
+          allowMultiple
           bg="#ddd"
           w={{ lg: "80%", sm: "90%" }}
           p="10px"
@@ -128,35 +102,52 @@ const EventSection = () => {
             boxShadow: "5px 5px 5px rgba(252, 187, 187, .8)",
           }}
         >
-          <Flex
-            flexDirection={{ sm: "row", base: "column" }}
-            bg="white"
-            p={{ lg: "40px 20px", base: "20px" }}
-            borderRadius="10px"
-            gap="20px"
-          >
-            <Image src={team.image} w="100px" borderRadius="50%" />
-            <VStack w="100%" borderRadius="20px" alignItems="flex-start">
-              <Text
-                bg="#FCBBBB"
-                fontSize={{ lg: "16px", md: "14px", base: "12px" }}
-                fontWeight={600}
-                p="5px 10px"
-                borderRadius="20px"
+          <AccordionItem w="100%" border="none">
+            <AccordionButton bg="white" borderRadius="10px"  _hover={{ bg: "white" }} >
+              <Flex
+                flexDirection={{ sm: "row", base: "column" }}
+                p={{ lg: "40px 20px", base: "20px" }}
+                borderRadius="10px"
+                gap="20px"
               >
-                {team.time}
-              </Text>
-              <Text
-                fontSize={{ lg: "24px", md: "20px", base: "16px" }}
-                fontWeight={700}
-                color="#1b273d"
+                <Image src={team.image} w="100px" borderRadius="50%" />
+                <VStack w="100%" borderRadius="20px" alignItems="flex-start">
+                  <Text
+                    bg="#FCBBBB"
+                    fontSize={{ lg: "16px", md: "14px", base: "12px" }}
+                    fontWeight={600}
+                    p="5px 10px"
+                    borderRadius="20px"
+                  >
+                    {team.time}
+                  </Text>
+                  <Text
+                    fontSize={{ lg: "24px", md: "20px", base: "16px" }}
+                    fontWeight={700}
+                    color="#1b273d"
+                  >
+                    {team.name}
+                  </Text>
+                  <Text fontSize="16px">{team.author}</Text>
+                </VStack>
+              </Flex>
+            </AccordionButton>
+            <AccordionPanel pb={4}>
+              <VStack
+                alignItems="flex-start"
+                fontSize={{ lg: "18px", md: "16px", sm: "14px", base: "12px" }}
               >
-                {team.name}
-              </Text>
-              <Text fontSize="16px">{team.author}</Text>
-            </VStack>
-          </Flex>
-        </Box>
+                <Text color="#585555">{team.overview}</Text>
+                <Text>
+                  <span style={{ color: "#7F7BE2", fontWeight: 700 }}>
+                    Location:{" "}
+                  </span>
+                  {team.location}
+                </Text>
+              </VStack>
+            </AccordionPanel>
+          </AccordionItem>
+        </Accordion>
       ))}
     </VStack>
   );

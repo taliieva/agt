@@ -9,6 +9,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const BlogSection = () => {
   const blogPosts = [
@@ -96,6 +97,7 @@ const BlogSection = () => {
           </Flex>
         ))}
       </Flex>
+      
       <Button
         w={{ xl: "10%", sm: "20%", base: "60%" }}
         padding="15px 30px"
@@ -109,8 +111,11 @@ const BlogSection = () => {
           transitionDuration: "2000s",
         }}
       >
+        <Link to="/blog">
         Daha çox
+        </Link>
       </Button>
+      
     </VStack>
   );
 };

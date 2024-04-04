@@ -9,6 +9,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const TeamSection = () => {
   const photos = [
@@ -83,6 +84,7 @@ const TeamSection = () => {
           </Box>
         ))}
       </Grid>
+
       <Button
         p="10px 30px"
         bg={"white"}
@@ -97,7 +99,7 @@ const TeamSection = () => {
           transitionDuration: "1s",
         }}
       >
-        Daha çox
+        <Link to="/about">Daha çox</Link>
       </Button>
     </VStack>
   );
