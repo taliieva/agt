@@ -13,70 +13,10 @@ import {
   AccordionPanel,
 } from "@chakra-ui/react";
 import React from "react";
-
+import data from "../../../data.json"
 const EventSection = () => {
-  const teams = [
-    {
-      id: 1,
-      image: "/assets/team1.jpg",
-      time: "09.00 AM - 10.30 AM",
-      name: "Wait is Over! Stony Brook Captures Conference",
-      author: "By Riaz Sagar , Logichunt Inc.",
-      overview:
-        "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.",
-      location: " Hall 1, Building A , Golden Street , Southafrica",
-    },
-    {
-      id: 2,
-      image: "/assets/team2.jpg",
-      time: "09.00 AM - 10.30 AM",
-      name: "Wait is Over! Stony Brook Captures Conference",
-      author: "By Riaz Sagar , Logichunt Inc.",
-      overview:
-        "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.",
-      location: " Hall 1, Building A , Golden Street , Southafrica",
-    },
-    {
-      id: 3,
-      image: "/assets/team3.jpg",
-      time: "09.00 AM - 10.30 AM",
-      name: "Wait is Over! Stony Brook Captures Conference",
-      author: "By Riaz Sagar , Logichunt Inc.",
-      overview:
-        "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.",
-      location: " Hall 1, Building A , Golden Street , Southafrica",
-    },
-    {
-      id: 4,
-      image: "/assets/team4.jpg",
-      time: "09.00 AM - 10.30 AM",
-      name: "Wait is Over! Stony Brook Captures Conference",
-      author: "By Riaz Sagar , Logichunt Inc.",
-      overview:
-        "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.",
-      location: " Hall 1, Building A , Golden Street , Southafrica",
-    },
-    {
-      id: 5,
-      image: "/assets/team5.jpg",
-      time: "09.00 AM - 10.30 AM",
-      name: "Wait is Over! Stony Brook Captures Conference",
-      author: "By Riaz Sagar , Logichunt Inc.",
-      overview:
-        "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.",
-      location: " Hall 1, Building A , Golden Street , Southafrica",
-    },
-    {
-      id: 6,
-      image: "/assets/team6.jpg",
-      time: "09.00 AM - 10.30 AM",
-      name: "Wait is Over! Stony Brook Captures Conference",
-      author: "By Riaz Sagar , Logichunt Inc.",
-      overview:
-        "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.",
-      location: " Hall 1, Building A , Golden Street , Southafrica",
-    },
-  ];
+  const events = data.teams
+  
   return (
     <VStack bg="#7F7BE2" p={{ md: "100px 20px", base: "50px 20px" }}>
       <Heading
@@ -88,7 +28,7 @@ const EventSection = () => {
         Tədbirlər
       </Heading>
 
-      {teams.map((team, index) => (
+      {events.map((team, index) => (
         <Accordion
           defaultIndex={index === 0 ? [0] : []}
           allowMultiple
