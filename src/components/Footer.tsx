@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Flex,
   HStack,
@@ -9,6 +8,8 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import React from "react";
 
 const Footer = () => {
@@ -28,11 +29,12 @@ const Footer = () => {
         w={{ xl: "40%", lg: "50%", sm: "80%", base: "90%" }}
       >
         <Input
+          color="black"
           bg="white"
           placeholder="Enter your email address"
           w="70%"
           padding="10px 20px"
-          outline="none"
+          // outline="none"
           fontSize="14px"
           border="1px solid white"
         />
@@ -43,6 +45,7 @@ const Footer = () => {
           bg="#68CE65"
           border="none"
           color={"white"}
+          _hover={{bg:"#68CE65"}}
         >
           Subscribe
         </Button>
@@ -65,12 +68,18 @@ const Footer = () => {
           </Text>
           <Text>18-21 December,2021</Text>
           <Text>85 Golden Street, Darlinghurst ERP 2021, United States</Text>
+          <Text>© 2020 ZEstudio IS POWERED BY THEMEARTH. THE PROPERTY OF THEIR OWNERS.</Text>
         </VStack>
         <VStack alignItems="flex-start">
           <Text mt={0} fontWeight={600}>
             Social Connection
           </Text>
           <Text>You should connect social area for Any update</Text>
+          <HStack>
+          {/* <FontAwesomeIcon icon={faFacebook} /> */}
+          <Image src="/assets/Facebook-logo.png" w="30px"/>
+          <Image src="/assets/instagram-logo.png" w="35px"/>
+          </HStack>
         </VStack>
       </Flex>
     </VStack>

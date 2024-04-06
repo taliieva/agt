@@ -48,6 +48,7 @@ const TeamSection = () => {
             alignItems="center"
             _hover={{
               transform: "scale(1.1)",
+              transition: "transform 0.3s ease",
             }}
           >
             <Image

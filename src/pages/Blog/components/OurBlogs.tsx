@@ -113,6 +113,7 @@ const OurBlogs = () => {
             _hover={{
               transform: "scale(1.1)",
               boxShadow: "0px 10px 10px rgba(127, 123, 226, .95)",
+              transition: "transform 1s ease",
             }}
           >
             <Image src={blog?.imageSrc} w="100%" />

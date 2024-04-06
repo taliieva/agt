@@ -1,15 +1,11 @@
 import {
-  HStack,
   Heading,
   VStack,
-  Image,
   Text,
-  Box,
   Flex,
   Accordion,
   AccordionItem,
   AccordionButton,
-  AccordionIcon,
   AccordionPanel,
 } from "@chakra-ui/react";
 import React from "react";

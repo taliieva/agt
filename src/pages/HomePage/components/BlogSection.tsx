@@ -1,8 +1,6 @@
 import {
   Button,
   Flex,
-  Grid,
-  HStack,
   Heading,
   Image,
   Text,
@@ -13,32 +11,7 @@ import { Link } from "react-router-dom";
 import data from '../../../data.json';
 const BlogSection = () => {
   const blogData = data.blogs.slice(0,3);
-  const blogPosts = [
-    {
-      id: 1,
-      imageSrc: "/assets/blog1.jpg",
-      date: "April 25, 2021",
-      author: "Rizasgor",
-      category: "Design",
-      content: "Brooklyn Beta was the most important conferen best tristique",
-    },
-    {
-      id: 2,
-      imageSrc: "/assets/blog2.jpg",
-      date: "April 25, 2021",
-      author: "Rizasgor",
-      category: "Design",
-      content: "Brooklyn Beta was the most important conferen best tristique",
-    },
-    {
-      id: 3,
-      imageSrc: "/assets/blog3.jpg",
-      date: "April 25, 2021",
-      author: "Rizasgor",
-      category: "Design",
-      content: "Brooklyn Beta was the most important conferen best tristique",
-    },
-  ];
+ 
   return (
     <VStack p={{ md: "100px 20px", base: "50px 20px" }} gap="50px" w="100%">
       <Heading
@@ -68,6 +41,7 @@ const BlogSection = () => {
             _hover={{
               transform: "scale(1.1)",
               boxShadow: "0px 10px 10px rgba(127, 123, 226, .95)",
+              transition: "transform 1s ease",
             }}
           >
             <Image src={blogs.imageSrc} w="100%" />

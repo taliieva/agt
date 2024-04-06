@@ -38,6 +38,7 @@ const OurStaff = () => {
             alignItems="center"
             _hover={{
               transform: "scale(1.1)",
+              transition: "transform 1s ease",
             }}
           >
             <Image

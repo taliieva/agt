@@ -14,7 +14,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const threshold = 100; // Eşik değeri - Header'ın yüksekliğine göre ayarlayabilirsiniz
+      const threshold = 100;
       const currentScrollY = window.scrollY;
       if (currentScrollY > threshold) {
         setScrollBG(true);
@@ -25,7 +25,6 @@ const Header = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -39,6 +38,7 @@ const Header = () => {
       right="0"
       bg={scrollBG ? "rgba(27, 39, 61, .95)" : "transparent"}
       zIndex="1000"
+      transition="background-color 0.3s ease"
     >
       <HStack
         p={{ md: "10px 60px", sm: "10px 40px", base: "10px 20px" }}

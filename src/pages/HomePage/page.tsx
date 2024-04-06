@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Layout from "../../Layout/Layout.tsx";
 import AboutEvents from "./components/AboutEvents.tsx";
-import TeamSection from "./components/TeamSection.tsx";
+// import TeamSection from "./components/TeamSection.tsx";
 import BlogSection from "./components/BlogSection.tsx";
 import Carousel from "./components/Carousel.tsx";
 import EventSection from "./components/EventSection.tsx";

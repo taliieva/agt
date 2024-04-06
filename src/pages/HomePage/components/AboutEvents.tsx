@@ -1,7 +1,6 @@
 import {
   Button,
   Flex,
-  HStack,
   Heading,
   Image,
   Text,

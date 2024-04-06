@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Layout from "../../Layout/Layout.tsx";
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import SocialSection from "./components/SocialSection.tsx";
 import MessageSection from "./components/MessageSection.tsx";
 

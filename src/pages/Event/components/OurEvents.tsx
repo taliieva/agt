@@ -1,4 +1,4 @@
-import { Accordion, AccordionButton, AccordionItem, AccordionPanel, Box, Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
+import { Accordion, AccordionButton, AccordionItem, AccordionPanel, Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import data from '../../../data.json'
 const OurEvents = () => {
