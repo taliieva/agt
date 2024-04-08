@@ -19,6 +19,7 @@ const SponsorSection = () => {
     "/assets/sponsor1.webp",
     "/assets/sponsor2.webp",
     "/assets/sponsor3.webp",
+    "/assets/sponsor2.webp",
   ];
   return (
     <VStack p="50px 0">
@@ -38,7 +39,7 @@ const SponsorSection = () => {
         }}
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={50}
-        slidesPerView={2}
+        slidesPerView={3}
         loop={true}
         autoplay={{ delay: 2000 }}
         // navigation
