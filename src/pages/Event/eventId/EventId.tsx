@@ -1,8 +1,18 @@
 import React, { useEffect } from "react";
 import Layout from "../../../Layout/Layout.tsx";
-import { Box, Flex, HStack, Heading, Image, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  HStack,
+  Heading,
+  Image,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import data from "../../../data.json";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
 const EventId = () => {
   const event = data.teams;
   const { eventId } = useParams();
@@ -12,44 +22,69 @@ const EventId = () => {
   }, []);
   return (
     <Layout>
-       <Box
-        bg="rgba(27, 39, 61, .95)"
-        // mt={{ md: "90px", base: "50px" }}
+      <Box
+        fontFamily="Poppins"
+        mt={{ md: "90px", base: "50px" }}
+        // bg="rgba(27, 39, 61, .95)"
+        bgImage="/assets/banner-inner2.jpg"
         display="flex"
-        alignItems="center"
-        p={{ md: "100px 60px", base: "60px" }}
         flexDirection="column"
-        mb="30px"
+        // alignItems="flex-start"
+        justifyContent="flex-start"
+        p={{ md: "100px 60px", base: "60px" }}
+        w="100%"
       >
-        <Text fontSize="40px" color="white">
-          {selectedEvent?.name}
+        <Text fontSize="40px" color="white" fontWeight={900}>
+          Tədbirlər
         </Text>
+        <HStack
+          color="white"
+          fontWeight={700}
+          fontSize={{ lg: "20px", md: "14px", base: "12px" }}
+          alignItems="flex-start"
+        >
+          <FontAwesomeIcon icon={faHouse} color="#ec398b" />
+          <Link to="/">Əsas səhifə</Link>
+          <Link to="/event">/ Tədbirlər</Link>
+          <Text color="#efa506">/ {selectedEvent?.name}</Text>
+        </HStack>
       </Box>
       <Flex alignItems="center" justifyContent="center">
         <VStack
           background="rgba(0,0,0,0.2)"
           w="90%"
-          mb="100px"
+          m={{ md: "100px 0", base: "50px 0" }}
           // border="1px solid black"
           alignItems="center"
           justifyContent="center"
           borderRadius="20px 20px 0 0"
           gap="30px"
         >
-          <Image src={selectedEvent?.image} w="100%" height="70vh" borderRadius="20px"/>
-          <HStack gap="50px" m="10px">
-            <VStack alignItems="flex-start" w="50%">
+          <Image
+            src={selectedEvent?.image}
+            w="100%"
+            height="70vh"
+            borderRadius="20px"
+          />
+          <Flex
+            gap={{ md: "50px", base: "20px" }}
+            m="10px"
+            alignItems="flex-start"
+            flexDirection={{ md: "row", base: "column" }}
+            fontFamily="Poppins"
+          >
+            <VStack alignItems="flex-start" w={{ md: "50%", base: "90%" }}>
               <Heading>Tədbir haqqında</Heading>
               <Text>{selectedEvent?.name}</Text>
               <Text>{selectedEvent?.overview}</Text>
             </VStack>
-            <VStack alignItems="flex-start" w="50%">
+            <VStack alignItems="flex-start" w={{ md: "50%", base: "90%" }}>
               <Heading>Məlumatlar</Heading>
               <Text>{selectedEvent?.author}</Text>
               <Text>{selectedEvent?.time}</Text>
               <Text>{selectedEvent?.location}</Text>
             </VStack>
-          </HStack>
+          </Flex>
         </VStack>
       </Flex>
     </Layout>

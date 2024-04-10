@@ -15,10 +15,10 @@ import React from "react";
 import data from "../../../data.json";
 import { Link } from "react-router-dom";
 const OurEvents = () => {
-  const events = data.teams;
+  const events = data.events;
 
   return (
-    <VStack bg="white" p={{ md: "100px 20px", base: "50px 20px" }}>
+    <VStack bg="white" p={{ md: "100px 20px", base: "50px 20px" }} fontFamily="Poppins">
       <Heading
         fontSize={{ base: "24px", sm: "30px", lg: "40px" }}
         fontWeight="700"
@@ -36,14 +36,15 @@ const OurEvents = () => {
         {events.map((team, index) => (
           <Link to={`/event/${team.id}`}>
             <Box
+              key={index}
               position={"relative"}
+              transition="transform 1s ease"
               _hover={{
                 transform: "scale(1.1)",
-                transition: "transform 0.3s ease",
               }}
             >
               <Image
-                src={team.image}
+                src={team.imageUrl}
                 width="100%"
                 h="150px"
                 borderRadius="10px"
@@ -57,14 +58,14 @@ const OurEvents = () => {
                 alignItems="center"
                 w="100%"
                 h="100%"
-                background="rgba(0,0,0,0.3)"
+                background="rgba(0,0,0,0.4)"
                 opacity={0}
                 color="white"
                 _hover={{
                   opacity: 1,
                 }}
               >
-                <Text>{team.name}</Text>
+                <Text fontSize="16px">{team.name}</Text>
               </Flex>
             </Box>
           </Link>

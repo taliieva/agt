@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Flex,
   Heading,
@@ -14,23 +15,35 @@ const AboutEvents = () => {
     <VStack
       p={{ md: "100px 20px", base: "50px 20px" }}
       gap={{ base: "20px", lg: "50px" }}
+      fontFamily="Poppins"
     >
-      <Heading fontSize={{ base: "20px", sm: "25px", lg: "30px" }}>
-        Azərbaycan Gənclər İttifaqı
-      </Heading>
       <Flex
-        flexDirection={{ base: "column-reverse", sm: "row" }}
+        flexDirection={{ base: "column", lg: "row" }}
         justifyContent="center"
         gap={{ sm: "40px", base: "20px" }}
-        alignItems="flex-start"
+        alignItems={{ lg: "flex-start", base: "center" }}
       >
         <VStack
-          w={{ base: "90%", sm: "70%", md: "60%", xl: "40%" }}
+          w={{ base: "90%", sm: "70%", md: "55%" }}
           alignItems="flex-start"
           textAlign="justify"
-          gap={{ base: "20px", md: "30px", xl: "50px" }}
+          gap={{ base: "20px", md: "30px" }}
         >
-          <Text fontSize={{ base: "12px", md: "16px", xl: "18px" }}>
+          <Heading
+            fontSize={{ base: "20px", sm: "25px", lg: "35px" }}
+            color="#1b273d"
+            fontWeight={900}
+            textTransform="uppercase"
+          >
+            Azərbaycan Gənclər İttifaqı
+          </Heading>
+          <Text fontSize={{ sm: "16px", base: "14px" }} color="#ec398b">
+            Niyə AGT?
+          </Text>
+          <Text
+            fontSize={{ base: "12px", md: "16px", xl: "18px" }}
+            color="rgba(50, 51, 51, .8)"
+          >
             "Azərbaycan Gənclər İttifaqı" İctimai Birliyi 1994-cü ildən
             fəaliyyət göstərən yerli qeyri-hökümət təşkilatıdır. Təşkilatın əsas
             məqsədi Azərbaycanda gənclər siyasətini həyata keçirilməsi üçün
@@ -42,28 +55,28 @@ const AboutEvents = () => {
             həmçinin gənclərin sosial, səhiyyə, təhsil, ekologiya, mədəniyyət və
             digər sahələrdə maarifləndirilməsindən ibarətdir.
           </Text>
-          <Link to="about">
-            <Button
-              p={{ sm: "10px 30px", base: "10px" }}
-              bg={"white"}
-              color="#68CE65"
-              border="1px solid #68CE65"
+          <Link to="/about">
+            <Box
+              fontFamily="Oswald"
+              p="10px 40px"
+              w="100%"
+              fontSize="20px"
               cursor="pointer"
-              fontSize={{ sm: "16px", base: "14px" }}
+              bg="#554bb9"
+              color="white"
+              border="none"
+              transition="border-radius 0.5s ease"
               _hover={{
-                color: "white",
-                bg: "#68CE65",
-                borderRadius: "20px",
-                transitionDuration: "1s",
+                borderRadius: "15px",
               }}
             >
               Daha çox
-            </Button>
+            </Box>
           </Link>
         </VStack>
         <Image
           src="/assets/about-sp.jpg"
-          w={{ base: "30%", md: "20%" }}
+          w={{ base: "40%", lg: "25%" }}
           borderRadius="10px"
           height="100%"
         />

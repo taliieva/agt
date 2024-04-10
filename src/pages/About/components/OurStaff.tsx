@@ -15,15 +15,17 @@ const OurStaff = () => {
       gap="20px"
       bg="rgba(50, 51, 51, 0.1)"
       p={{ md: "100px 20px", base: "50px 20px" }}
+      fontFamily="Poppins"
     >
       <Heading
         color="#1b273d"
         fontSize={{ base: "24px", sm: "30px", lg: "40px" }}
-        fontWeight={600}
+        fontWeight={900}
+        textTransform="uppercase"
       >
         Komandamızla tanış olun
       </Heading>
-      <Text>Komanda üzvlərimiz</Text>
+      <Text color="rgba(50, 51, 51, .8)">Komanda üzvlərimiz</Text>
       <Grid
         gridTemplateColumns={{ md: "repeat(3,1fr)", sm: "repeat(2,1fr)" }}
         gap="50px"
@@ -36,9 +38,10 @@ const OurStaff = () => {
             display={"flex"}
             justifyContent="center"
             alignItems="center"
+            transition= "transform 0.5s ease"
             _hover={{
               transform: "scale(1.1)",
-              transition: "transform 1s ease",
+              
             }}
           >
             <Image

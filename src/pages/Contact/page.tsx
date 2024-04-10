@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
 import Layout from "../../Layout/Layout.tsx";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, HStack, Text } from "@chakra-ui/react";
 import SocialSection from "./components/SocialSection.tsx";
 import MessageSection from "./components/MessageSection.tsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
 const ContactPage = () => {
   useEffect(() => {
@@ -15,16 +18,26 @@ const ContactPage = () => {
         <Text position="absolute" top="50%" left="20%" fontSize="40px">Əlaqə</Text>
       </Box> */}
       <Box
-        bg="rgba(27, 39, 61, .95)"
-        // mt={{ md: "90px", base: "50px" }}
+        fontFamily="Poppins"
+        mt={{ md: "90px", base: "50px" }}
+        // bg="rgba(27, 39, 61, .95)"
+        bgImage="/assets/banner-inner2.jpg"
         display="flex"
-        alignItems="center"
-        p={{ md: "100px 60px", base: "60px" }}
         flexDirection="column"
+        // alignItems="flex-start"
+        justifyContent="flex-start"
+        p={{ md: "100px 60px", base: "60px" }}
+        w="100%"
+        
       >
-        <Text fontSize="40px" color="white">
+        <Text fontSize="40px" color="white" fontWeight={900} fontFamily="Poppins">
           Əlaqə
         </Text>
+        <HStack color="white" fontWeight={700}>
+          <FontAwesomeIcon icon={faHouse} color="#ec398b" />
+          <Link to="/">Əsas səhifə</Link>
+          <Text color="#efa506">/ Əlaqə</Text>
+        </HStack>
       </Box>
       <SocialSection />
       <MessageSection />

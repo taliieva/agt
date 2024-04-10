@@ -46,6 +46,7 @@ const SocialSection = () => {
           // w={{ base: "25%", xl: "25%" }}
           w={{ md: "100%", base: "80%" }}
           boxShadow="0px 4px 6px rgba(0, 0, 0, 0.5)"
+          transition={"box-shadow 0.5s ease"}
           _hover={{ boxShadow: "0px 10px 10px rgba(127, 123, 226, .95)" }}
           p={{ lg: "50px", md: "30px", base: "20px" }}
           borderRadius="10px"

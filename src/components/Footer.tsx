@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Flex,
   HStack,
@@ -9,46 +10,62 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+// import { faFacebookF } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
+const yearDate = new Date().getFullYear();
+
 
 const Footer = () => {
   return (
     <VStack
       bg="rgba(27, 39, 61, .95)"
+      // bgImage="/assets/footer-bg.jpg"
       color={"white"}
       alignItems="center"
       gap="40px"
-      p="100px 0"
+      p={{ md: "100px 20px", base: "50px 20px" }}
+      fontFamily="Oswald"
     >
-      <Heading fontSize={{ md: "40px", sm: "30px", base: "24px" }}>
+      <Heading
+        fontSize={{ md: "36px", sm: "30px", base: "24px" }}
+        fontWeight={400}
+      >
         JOIN NEWSLETTER
       </Heading>
       <HStack
         alignSelf="center"
-        w={{ xl: "40%", lg: "50%", sm: "80%", base: "90%" }}
+        w={{ xl: "50%", lg: "50%", sm: "80%", base: "90%" }}
       >
         <Input
+          fontFamily="Poppins"
           color="black"
-          bg="white"
+          bg="rgba(255, 255, 255, .8)"
           placeholder="Enter your email address"
-          w="70%"
+          w="80%"
           padding="10px 20px"
+          height="55px"
           // outline="none"
           fontSize="14px"
-          border="1px solid white"
+          border="1px rgba(255, 255, 255, .8)"
+          _focus={{ bg: "white" }}
         />
-        <Button
+        <VStack
           width={{ md: "20%", base: "40%" }}
-          // padding="10px"
-          fontSize="16px"
-          bg="#68CE65"
+          alignItems="center"
+          justifyContent="center"
+          height="55px"
+          bg="#efa506"
           border="none"
           color={"white"}
-          _hover={{bg:"#68CE65"}}
+          transition={"border-radius 0.5s ease"}
+          _hover={{ bg: "#ec398b", borderRadius: "15px" }}
         >
-          Subscribe
-        </Button>
+          <Text fontSize="18px" letterSpacing="1px">
+            Subscribe
+          </Text>
+        </VStack>
       </HStack>
       <Flex
         flexDirection={{ md: "row", base: "column" }}
@@ -60,7 +77,8 @@ const Footer = () => {
       >
         <Image
           src="/assets/agi.png"
-          width={{ lg: "200px", md: "100px", base: "100px" }}
+          // width={{ lg: "200px", md: "100px", base: "100px" }}
+          w={"250px"}
         />
         <VStack alignItems="flex-start">
           <Text mt={0} fontWeight={600}>
@@ -68,7 +86,6 @@ const Footer = () => {
           </Text>
           <Text>18-21 December,2021</Text>
           <Text>85 Golden Street, Darlinghurst ERP 2021, United States</Text>
-          <Text>© 2020 ZEstudio IS POWERED BY THEMEARTH. THE PROPERTY OF THEIR OWNERS.</Text>
         </VStack>
         <VStack alignItems="flex-start">
           <Text mt={0} fontWeight={600}>
@@ -76,12 +93,23 @@ const Footer = () => {
           </Text>
           <Text>You should connect social area for Any update</Text>
           <HStack>
-          {/* <FontAwesomeIcon icon={faFacebook} /> */}
-          <Image src="/assets/Facebook-logo.png" w="30px"/>
-          <Image src="/assets/instagram-logo.png" w="35px"/>
+            {/* <FontAwesomeIcon icon={faFacebookF} /> */}
+            {/* <Image src="/assets/facebook-f.svg"/> */}
+            <Box padding="15px 20px" bg="#999" borderRadius="50%" transition={"background-color 0.5s ease"} _hover={{bg:"#efa506", color:"white"}}>
+              <FontAwesomeIcon icon={faFacebookF as IconProp} fontSize="18px"/>
+            </Box>
+            <Box padding="15px 20px" bg="#999" borderRadius="50%" transition={"background-color 0.5s ease"}  _hover={{bg:"#efa506", color:"white"}}>
+              <FontAwesomeIcon icon={faInstagram as IconProp} fontSize="18px"/>
+            </Box>
+            {/* <Image src="/assets/instagram-logo.png" w="35px"/> */}
           </HStack>
         </VStack>
       </Flex>
+      <Text>
+        <span style={{ color: "#efa506" }}>©</span> {yearDate} template IS
+        POWERED BY <span style={{ color: "#efa506" }}>ZeStudio</span>. THE
+        PROPERTY OF THEIR OWNERS.
+      </Text>
     </VStack>
   );
 };

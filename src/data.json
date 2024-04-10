@@ -85,7 +85,7 @@
     "teams" : [
       {
         "id": 1,
-        "image": "/assets/team1.jpg",
+        "image": "/assets/event6.jpg",
         "time": "09.00 AM - 10.30 AM",
         "name": "Wait is Over! Stony Brook Captures Conference",
         "author": "By Riaz Sagar , Logichunt Inc.",
@@ -95,7 +95,7 @@
       },
       {
         "id": 2,
-        "image": "/assets/team2.jpg",
+        "image": "/assets/event23.jpg",
         "time": "09.00 AM - 10.30 AM",
         "name": "Wait is Over! Stony Brook Captures Conference",
         "author": "By Riaz Sagar , Logichunt Inc.",
@@ -105,7 +105,7 @@
       },
       {
         "id": 3,
-        "image": "/assets/team3.jpg",
+        "image": "/assets/event24.jpg",
         "time": "09.00 AM - 10.30 AM",
         "name": "Wait is Over! Stony Brook Captures Conference",
         "author": "By Riaz Sagar , Logichunt Inc.",
@@ -115,7 +115,7 @@
       },
       {
         "id": 4,
-        "image": "/assets/team4.jpg",
+        "image": "/assets/event25.jpg",
         "time": "09.00 AM - 10.30 AM",
         "name": "Wait is Over! Stony Brook Captures Conference",
         "author": "By Riaz Sagar , Logichunt Inc.",
@@ -125,7 +125,7 @@
       },
       {
         "id": 5,
-        "image": "/assets/team5.jpg",
+        "image": "/assets/event26.jpg",
         "time": "09.00 AM - 10.30 AM",
         "name": "Wait is Over! Stony Brook Captures Conference",
         "author": "By Riaz Sagar , Logichunt Inc.",
@@ -135,13 +135,45 @@
       },
       {
         "id": 6,
-        "image": "/assets/team6.jpg",
+        "image": "/assets/event27.jpg",
         "time": "09.00 AM - 10.30 AM",
         "name": "Wait is Over! Stony Brook Captures Conference",
         "author": "By Riaz Sagar , Logichunt Inc.",
         "overview":
           "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.",
         "location": " Hall 1, Building A , Golden Street , Southafrica"
+      }
+    ],
+    "events" : [
+      {
+        "id": 1,
+        "imageUrl":"/assets/event6.jpg",
+        "name" : "Gozel ve bedheybet"
+      },
+      {
+        "id": 2,
+        "imageUrl":"/assets/event23.jpg",
+        "name" : "Bir zamanlar cikaqoda"
+      },
+      {
+        "id": 3,
+        "imageUrl":"/assets/event24.jpg",
+        "name" : "Mulen Ruj"
+      },
+      {
+        "id": 4,
+        "imageUrl":"/assets/event25.jpg",
+        "name" : "Sindirella"
+      },
+      {
+        "id": 5,
+        "imageUrl":"/assets/event26.jpg",
+        "name" : "Bremen musiqicileri"
+      },
+      {
+        "id": 6,
+        "imageUrl":"/assets/event27.jpg",
+        "name" : "Rapunzel"
       }
     ]
   }

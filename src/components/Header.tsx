@@ -11,7 +11,6 @@ const Header = () => {
   };
   const [scrollBG, setScrollBG] = useState(false);
 
-
   useEffect(() => {
     const handleScroll = () => {
       const threshold = 100;
@@ -30,29 +29,32 @@ const Header = () => {
 
   return (
     <Box
+      fontFamily="Oswald"
+      // mb="50px"
       w="100%"
       height={{ md: "90px", base: "50px" }}
       position="fixed"
       top="0"
       left="0"
       right="0"
-      bg={scrollBG ? "rgba(27, 39, 61, .95)" : "transparent"}
+      bg="rgba(27, 39, 61, .95)"
       zIndex="1000"
-      transition="background-color 0.3s ease"
+      // transition="background-color 0.3s ease"
     >
       <HStack
+        alignItems="center"
         p={{ md: "10px 60px", sm: "10px 40px", base: "10px 20px" }}
         justifyContent="space-between"
       >
         <Link to="/">
-        <Image src="/assets/agi.png" width={{ md: "150px", base: "100px" }} />
+          <Image src="/assets/agi.png" width={{ md: "150px", base: "100px" }} />
         </Link>
         <Box display={{ md: "none", base: "block" }} onClick={showToggle}>
           <FontAwesomeIcon icon={faBars} color="white" />
         </Box>
         <Flex
           gap={{ lg: "30px", md: "20px", base: "10px" }}
-          fontSize={18}
+          fontSize="20px"
           flexDirection={{ md: "row", base: "column" }}
           alignItems="center"
           justifyContent="flex-end"
@@ -64,40 +66,49 @@ const Header = () => {
           top={{ md: "90px", base: "50px" }}
           padding="20px 0"
         >
-          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-            <Text _hover={{ color: "#9DC3DA", cursor: "pointer" }}>
+          <Link
+            to="/"
+            style={{ textDecoration: "none", color: "rgba(255,255,255,0.7" }}
+          >
+            <Text _hover={{ color: "#fff", cursor: "pointer" }}>
               Əsas səhifə
             </Text>
           </Link>
-          <Link to="/about" style={{ textDecoration: "none", color: "white" }}>
-            <Text _hover={{ color: "#9DC3DA", cursor: "pointer" }}>
+          <Link
+            to="/about"
+            style={{ textDecoration: "none", color: "rgba(255,255,255,0.7" }}
+          >
+            <Text _hover={{ color: "#fff", cursor: "pointer" }}>
               Haqqımızda
             </Text>
           </Link>
-          <Link to="/event" style={{ textDecoration: "none", color: "white" }}>
-            <Text _hover={{ color: "#9DC3DA", cursor: "pointer" }}>
-              Tədbirlər
-            </Text>
+          <Link
+            to="/event"
+            style={{ textDecoration: "none", color: "rgba(255,255,255,0.7" }}
+          >
+            <Text _hover={{ color: "#fff", cursor: "pointer" }}>Tədbirlər</Text>
           </Link>
-          <Link to="/blog" style={{ textDecoration: "none", color: "white" }}>
-            <Text _hover={{ color: "#9DC3DA", cursor: "pointer" }}>Blog</Text>
+          <Link
+            to="/blog"
+            style={{ textDecoration: "none", color: "rgba(255,255,255,0.7)" }}
+          >
+            <Text _hover={{ color: "#fff", cursor: "pointer" }}>Xəbərlər</Text>
           </Link>
           <Link to="/contact">
-            <Button
-              p="10px 20px"
-              fontSize="16px"
-              borderRadius="20px"
+            <Box
+              p="10px 40px"
+              fontSize="20px"
               cursor="pointer"
-              bg="#9DC3DA"
+              bg="#ec398b"
               color="white"
               border="none"
-              _hover={{ color: "#9DC3DA", bg: "white" }}
+              transition="border-radius 0.5s ease"
+              _hover={{
+                borderRadius: "15px",
+              }}
             >
-              <HStack>
-                <Text>Əlaqə</Text>
-                <ArrowForwardIcon />
-              </HStack>
-            </Button>
+              <Text>Əlaqə</Text>
+            </Box>
           </Link>
         </Flex>
       </HStack>

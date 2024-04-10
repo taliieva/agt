@@ -22,10 +22,12 @@ const SponsorSection = () => {
     "/assets/sponsor2.webp",
   ];
   return (
-    <VStack p="50px 0">
+    <VStack p={{ md: "100px 20px", base: "50px 20px" }} fontFamily="Poppins">
       <Heading
         fontSize={{ base: "24px", sm: "30px", lg: "40px" }}
         color="#1b273d"
+        fontWeight={900}
+        textTransform="uppercase"
       >
         Tərəfdaşlar
       </Heading>

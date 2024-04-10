@@ -51,6 +51,9 @@ const MessageSection = () => {
             placeholder="Ad"
             fontSize="14px"
             outline="none"
+            _hover={{border:"1px solid black"}}
+            focusBorderColor="transparent"
+            _focus={{border:"1px solid black"}}
           />
           <Input
             p="15px"
@@ -59,6 +62,9 @@ const MessageSection = () => {
             placeholder="Soyad"
             fontSize="14px"
             outline="none"
+            _hover={{border:"1px solid black"}}
+            focusBorderColor="transparent"
+            _focus={{border:"1px solid black"}}
           />
           <Input
             p="15px"
@@ -67,6 +73,9 @@ const MessageSection = () => {
             placeholder="Ünvan"
             fontSize="14px"
             outline="none"
+            _hover={{border:"1px solid black"}}
+            focusBorderColor="transparent"
+            _focus={{border:"1px solid black"}}
           />
           <Input
             p="15px"
@@ -75,6 +84,9 @@ const MessageSection = () => {
             placeholder="Telefon"
             fontSize="14px"
             outline="none"
+            _hover={{border:"1px solid black"}}
+            focusBorderColor="transparent"
+            _focus={{border:"1px solid black"}}
           />
           <Textarea
             gridColumn="1/3"
@@ -84,6 +96,9 @@ const MessageSection = () => {
             placeholder="Mesajınız"
             fontSize="14px"
             outline="none"
+            _hover={{border:"1px solid black"}}
+            focusBorderColor="transparent"
+            _focus={{border:"1px solid black"}}
           />
         </Grid>
         <Button
