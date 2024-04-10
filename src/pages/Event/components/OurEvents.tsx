@@ -28,7 +28,7 @@ const OurEvents = () => {
         Tədbirlər
       </Heading>
       <Grid
-        gridTemplateColumns="repeat(3,1fr)"
+        gridTemplateColumns={{ lg: "repeat(3,1fr)", md: "repeat(2,1fr)" }}
         w="80%"
         justifyContent="center"
         gap={50}
