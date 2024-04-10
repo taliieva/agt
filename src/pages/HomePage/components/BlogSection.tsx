@@ -30,7 +30,7 @@ const BlogSection = () => {
         Xəbərlər
       </Heading>
       <Grid
-        w="80%"
+        w={{lg:"80%", base:"90%"}}
         flexDirection={{ sm: "row", base: "column" }}
         justifyContent="center"
         alignItems="center"
@@ -58,12 +58,12 @@ const BlogSection = () => {
             <Image src={blogs.imageSrc} w="100%" />
             <Text
               color="rgba(50, 51, 51, .8)"
-              fontSize={{ lg: "14px", md: "12px", base: "10px" }}
+              fontSize={{ lg: "14px", md: "12px", base: "14px" }}
             >
               {blogs.date} | {blogs.author} | {blogs.category}
             </Text>
             <Text
-              fontSize={{ lg: "18px", md: "16px", base: "12px" }}
+              fontSize={{ lg: "18px", md: "16px", base: "18px" }}
               fontWeight={700}
               color="#1b273d"
               _hover={{

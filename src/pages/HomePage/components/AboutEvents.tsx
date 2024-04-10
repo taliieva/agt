@@ -30,7 +30,7 @@ const AboutEvents = () => {
           gap={{ base: "20px", md: "30px" }}
         >
           <Heading
-            fontSize={{ base: "20px", sm: "25px", lg: "35px" }}
+            fontSize={{ base: "20px", sm: "25px", xl: "35px" }}
             color="#1b273d"
             fontWeight={900}
             textTransform="uppercase"
