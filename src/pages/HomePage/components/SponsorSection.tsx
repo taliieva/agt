@@ -61,6 +61,7 @@ const SponsorSection = () => {
             }}
           >
             <VStack
+            height="100px"
               w={"100px"}
               gap={20}
               alignItems="center"
