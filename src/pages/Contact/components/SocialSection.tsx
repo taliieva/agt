@@ -35,20 +35,22 @@ const SocialSection = () => {
       alignItems="center"
       justifyItems="center"
       width="100%"
-      p={{ md: "100px", base: "50px 20px" }}
+      p={{ md: "100px", base: "80px 20px" }}
       justifyContent="center"
-      gap={{ md: "50px", base: "20px" }}
+      gap={{ lg: "50px", base: "20px" }}
     >
       {contact.map((item, index) => (
         <VStack
           key={index}
           gap={{ md: "20px", base: "10px" }}
           // w={{ base: "25%", xl: "25%" }}
-          w={{ md: "100%", base: "80%" }}
+          w={{ lg: "90%",md:"230px", base: "100%" }}
+          // w="100%"
+          
           boxShadow="0px 4px 6px rgba(0, 0, 0, 0.5)"
           transition={"box-shadow 0.5s ease"}
           _hover={{ boxShadow: "0px 10px 10px rgba(127, 123, 226, .95)" }}
-          p={{ lg: "50px", md: "30px", base: "20px" }}
+          p={{ lg: "50px 0", md: "30px 0", base: "20px 0" }}
           borderRadius="10px"
         >
           <FontAwesomeIcon icon={item.icon} color="#7F7BE2" fontSize="30px" />

@@ -39,7 +39,7 @@ const ClientFeedback = () => {
     },
   ];
   return (
-    <VStack p={{ md: "100px 0", base: "50px 0" }}>
+    <VStack p={{ md: "100px 0", base: "80px 0" }}>
       <Heading
         fontSize={{ base: "24px", sm: "30px", lg: "40px" }}
         color="#1b273d"

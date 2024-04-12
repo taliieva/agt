@@ -20,7 +20,7 @@ const EventSection = () => {
       bgImage={"/assets/schedule-bg-pattern.png"}
       bgSize="cover"
       bgColor="#554bb9"
-      p={{ md: "100px 20px", base: "50px 20px" }}
+      p={{ md: "100px 30px", base: "80px 20px" }}
       fontFamily="Poppins"
     >
       <Heading
@@ -38,11 +38,10 @@ const EventSection = () => {
           defaultIndex={index === 0 ? [0] : []}
           allowMultiple
           bg="#ddd"
-          w={{ lg: "80%", sm: "90%" }}
+          w={{ xl: "80%", base: "100%" }}
           p="10px"
           borderRadius="20px"
           key={index}
-          
         >
           <AccordionItem w="100%" border="none">
             <AccordionButton
@@ -59,24 +58,28 @@ const EventSection = () => {
                 {/* <Image src={team.image} w="100px" borderRadius="50%" /> */}
                 <VStack w="100%" borderRadius="20px" alignItems="flex-start">
                   <Text
+
                     bg="rgba(239, 165, 6, .1)"
                     fontSize={{ lg: "16px", md: "14px", base: "12px" }}
-                    fontWeight={600}
+                    fontWeight={700}
                     p="5px 10px"
                     borderRadius="20px"
                   >
-                    {team.time}
+                    {team.startTime}{" "}
+                    <span style={{ color: "#efa506" }}>AM</span> -{team.endTime}{" "}
+                    <span style={{ color: "#efa506" }}>PM</span>
                   </Text>
                   <Text
-                    fontSize={{ lg: "30px", md: "20px", base: "16px" }}
-                    fontWeight={700}
+                    fontSize={{ lg: "25px", md: "20px", base: "16px" }}
+                    fontWeight={900}
                     color="#1b273d"
                     textAlign="start"
+                    fontFamily="Poppins"
                   >
                     {team.name}
                   </Text>
-                  <Text fontSize="16px" textAlign="start" color="#ec398b">
-                    {team.author}
+                  <Text fontSize={{base:"12px", lg:"14px"}} textAlign="start" color="#ec398b" fontFamily="Poppins">
+                    <span style={{ color: "black" }}>By</span> {team.author}
                   </Text>
                 </VStack>
               </Flex>
@@ -84,10 +87,10 @@ const EventSection = () => {
             <AccordionPanel pb={4}>
               <VStack
                 alignItems="flex-start"
-                fontSize={{ lg: "18px", md: "16px", sm: "14px", base: "12px" }}
+                fontSize={{md: "16px", sm: "14px", base: "12px" }}
               >
-                <Text color="#585555">{team.overview}</Text>
-                <Text>
+                <Text color="#585555" fontFamily="Poppins">{team.overview}</Text>
+                <Text fontSize="14px" fontFamily="Poppins">
                   <span style={{ color: "#7F7BE2", fontWeight: 700 }}>
                     Location:{" "}
                   </span>
@@ -99,23 +102,23 @@ const EventSection = () => {
         </Accordion>
       ))}
       <Link to="/event">
-            <Box
-              fontFamily="Oswald"
-              p="10px 40px"
-              w="100%"
-              fontSize="20px"
-              cursor="pointer"
-              bg="#554bb9"
-              color="white"
-              border="none"
-              transition="border-radius 0.5s ease"
-              _hover={{
-                borderRadius: "15px",
-              }}
-            >
-              Daha çox
-            </Box>
-          </Link>
+        <Box
+          fontFamily="Oswald"
+          p="10px 40px"
+          w="100%"
+          fontSize="20px"
+          cursor="pointer"
+          bg="#554bb9"
+          color="white"
+          border="none"
+          transition="border-radius 0.5s ease"
+          _hover={{
+            borderRadius: "15px",
+          }}
+        >
+          Daha çox
+        </Box>
+      </Link>
     </VStack>
   );
 };

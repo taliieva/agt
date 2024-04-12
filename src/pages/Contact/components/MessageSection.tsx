@@ -20,9 +20,9 @@ const MessageSection = () => {
       justifyContent="center"
     >
       <VStack
-        p={{ lg: "100px 100px", md: "100px 50px", base: "50px 20px" }}
+        p={{ lg: "100px 100px", md: "100px 50px", base: "80px 20px" }}
         boxShadow="3px 4px 6px 4px rgba(0, 0, 0, 0.5)"
-        w="80%"
+        w={{lg:"80%", base:"90%"}}
         alignItems="center"
         justifyContent="center"
         borderRadius="30px"
@@ -42,7 +42,7 @@ const MessageSection = () => {
         <Grid
           gridTemplateColumns="repeat(2,1fr)"
           gap={{ md: "30px", sm: "20px", base: "10px" }}
-          w="90%"
+          w="100%"
         >
           <Input
             p="15px"

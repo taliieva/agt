@@ -31,7 +31,7 @@ const EventId = () => {
         flexDirection="column"
         // alignItems="flex-start"
         justifyContent="flex-start"
-        p={{ md: "100px 60px", base: "60px" }}
+        p={{ lg: "100px 150px", base: "80px 30px" }}
         w="100%"
       >
         <Text fontSize="40px" color="white" fontWeight={900}>
@@ -42,11 +42,12 @@ const EventId = () => {
           fontWeight={700}
           fontSize={{ lg: "20px", md: "14px", base: "12px" }}
           alignItems="flex-start"
+          // justifyContent="flex-start"
         >
           <FontAwesomeIcon icon={faHouse} color="#ec398b" />
           <Link to="/">Əsas səhifə</Link>
-          <Link to="/event">/ Tədbirlər</Link>
-          <Text color="#efa506">/ {selectedEvent?.name}</Text>
+          <Link to="/event">/Tədbirlər</Link>
+          <Text color="#efa506">/{selectedEvent?.name}</Text>
         </HStack>
       </Box>
       <Flex alignItems="center" justifyContent="center">
@@ -81,7 +82,7 @@ const EventId = () => {
             <VStack alignItems="flex-start" w={{ md: "50%", base: "90%" }}>
               <Heading>Məlumatlar</Heading>
               <Text>{selectedEvent?.author}</Text>
-              <Text>{selectedEvent?.time}</Text>
+              <Text>{selectedEvent?.startTime} AM - {selectedEvent?.endTime} PM</Text>
               <Text>{selectedEvent?.location}</Text>
             </VStack>
           </Flex>

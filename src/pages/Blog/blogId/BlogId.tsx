@@ -23,7 +23,7 @@ const BlogId = () => {
         flexDirection="column"
         // alignItems="flex-start"
         justifyContent="flex-start"
-        p={{ md: "100px 60px", base: "60px" }}
+        p={{ lg: "100px 150px", base: "80px 30px" }}
         w="100%"
       >
         <Text fontSize="40px" color="white" fontWeight={900}>

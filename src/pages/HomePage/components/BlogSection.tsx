@@ -16,8 +16,9 @@ const BlogSection = () => {
 
   return (
     <VStack
-      p={{ md: "100px 20px", base: "50px 20px" }}
-      gap={{md:"50px", base:"30px"}}
+      p={{ md: "100px 20px", base: "80px 0" }}
+      // gap={{md:"50px", base:"30px"}}
+      gap="20px"
       w="100%"
       fontFamily="Oswald"
     >
@@ -26,16 +27,21 @@ const BlogSection = () => {
         fontSize={{ base: "24px", sm: "30px", lg: "40px" }}
         fontWeight={900}
         textTransform="uppercase"
+        // fontFamily="Poppins"
       >
         Xəbərlər
       </Heading>
+      <Text fontSize="20px" color="rgba(50, 51, 51, 0.8)">
+        Conferences dedicated to building remarkable events.
+      </Text>
       <Grid
-        w={{lg:"80%", base:"90%"}}
+        mt="50px"
+        w={{ lg: "80%", base: "90%" }}
         flexDirection={{ sm: "row", base: "column" }}
         justifyContent="center"
         alignItems="center"
         gap={30}
-        gridTemplateColumns={{lg:"repeat(3,1fr)", md:"repeat(2,1fr)"}}
+        gridTemplateColumns={{ lg: "repeat(3,1fr)", md: "repeat(2,1fr)" }}
       >
         {blogData.map((blogs, index) => (
           <Flex
@@ -50,12 +56,16 @@ const BlogSection = () => {
             boxShadow="1px 1px 1px 1px rgba(0, 0, 0, 0.1), -1px -1px 1px 1px rgba(0, 0, 0, 0.1)"
             gap="10px"
             transition="transform 1s ease"
-            _hover={{
-              transform: "scale(1.1)",
-              boxShadow: "0px 5px 5px rgba(127, 123, 226, .8)",
-            }}
+            // _hover={{
+            //   transform: "scale(1.1)",
+            //   boxShadow: "0px 5px 5px rgba(127, 123, 226, .8)",
+            // }}
           >
-            <Image src={blogs.imageSrc} w="100%" />
+            <Image
+              src={blogs.imageSrc}
+              w="100%"
+              
+            />
             <Text
               color="rgba(50, 51, 51, .8)"
               fontSize={{ lg: "14px", md: "12px", base: "14px" }}

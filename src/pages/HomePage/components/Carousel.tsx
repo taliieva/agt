@@ -26,7 +26,7 @@ const Carousel = () => {
         slidesPerView={1}
         loop={true}
         autoplay={{ delay: 3000 }}
-        navigation
+        // navigation
         // pagination={{ clickable: true }}
         // scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
@@ -39,10 +39,10 @@ const Carousel = () => {
             width="100%"
             style={{ position: "relative" }}
           />
-          <div style={{ position: "absolute", top: "40%", left: "10%" }}>
+          {/* <div style={{ position: "absolute", top: "40%", left: "10%" }}>
             <h1 style={{ fontSize: "50px", color: "white" }}>Event 1</h1>
             <p style={{ fontSize: "20px", color: "white" }}>Info about event</p>
-          </div>
+          </div> */}
         </SwiperSlide>
         <SwiperSlide>
           <img
@@ -51,10 +51,10 @@ const Carousel = () => {
             width="100%"
             style={{ position: "relative" }}
           />
-          <div style={{ position: "absolute", top: "40%", left: "10%" }}>
+          {/* <div style={{ position: "absolute", top: "40%", left: "10%" }}>
             <h1 style={{ fontSize: "40px", color: "white" }}>Event 2</h1>
             <p style={{ fontSize: "20px", color: "white" }}>Info about event</p>
-          </div>
+          </div> */}
         </SwiperSlide>
       </Swiper>
     </Box>

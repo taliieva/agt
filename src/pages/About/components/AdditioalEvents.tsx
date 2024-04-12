@@ -8,7 +8,7 @@ const AdditioalEvents = () => {
       bgSize="cover"
       bgColor="#554bb9"
       fontFamily="Poppins"
-      p={{ md: "100px 20px", base: "50px 20px" }}
+      p={{ md: "100px 20px", base: "80px 20px" }}
       gap={{ base: "20px", lg: "50px" }}
     >
       <Heading

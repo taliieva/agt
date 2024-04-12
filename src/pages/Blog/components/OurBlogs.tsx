@@ -81,7 +81,7 @@ const OurBlogs = () => {
   //   },
   // ];
   return (
-    <Box mt={{ md: "90px", base: "50px" }}>
+    <Box mt={{ md: "90px", base: "50px" }} w="100%">
       <Box
         // bg="rgba(27, 39, 61, .95)"
         bgImage="/assets/banner-inner2.jpg"
@@ -89,7 +89,7 @@ const OurBlogs = () => {
         flexDirection="column"
         // alignItems="flex-start"
         justifyContent="flex-start"
-        p={{ md: "100px 60px", base: "60px" }}
+        p={{ lg: "100px 150px", base: "80px 30px" }}
         w="100%"
       >
         <Text fontSize="40px" color="white" fontWeight={900}>

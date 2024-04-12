@@ -23,7 +23,7 @@ const TeamSection = () => {
 
   return (
     <VStack
-      p={{ md: "100px 20px", base: "50px 20px" }}
+      p={{ md: "100px 20px", base: "80px 20px" }}
       bg="#7F7BE2"
       gap="50px"
       w="100%"

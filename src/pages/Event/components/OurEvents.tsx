@@ -18,7 +18,7 @@ const OurEvents = () => {
   const events = data.events;
 
   return (
-    <VStack bg="white" p={{ md: "100px 20px", base: "50px 20px" }} fontFamily="Poppins">
+    <VStack bg="white" p={{ md: "100px 20px", base: "80px 20px" }} fontFamily="Poppins">
       <Heading
         fontSize={{ base: "24px", sm: "30px", lg: "40px" }}
         fontWeight="700"
@@ -29,9 +29,9 @@ const OurEvents = () => {
       </Heading>
       <Grid
         gridTemplateColumns={{ lg: "repeat(3,1fr)", md: "repeat(2,1fr)" }}
-        w="80%"
+        w={{ lg: "90%", base: "90%", xl:"80%" }}
         justifyContent="center"
-        gap={50}
+        gap={{xl:"50px", base:"20px"}}
       >
         {events.map((team, index) => (
           <Link to={`/event/${team.id}`}>

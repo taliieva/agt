@@ -14,8 +14,9 @@ const OurStaff = () => {
     <VStack
       gap="20px"
       bg="rgba(50, 51, 51, 0.1)"
-      p={{ md: "100px 20px", base: "50px 20px" }}
+      p={{ md: "100px 20px", base: "80px 20px" }}
       fontFamily="Poppins"
+      w="100%"
     >
       <Heading
         color="#1b273d"
@@ -27,7 +28,9 @@ const OurStaff = () => {
       </Heading>
       <Text color="rgba(50, 51, 51, .8)">Komanda üzvlərimiz</Text>
       <Grid
-        gridTemplateColumns={{ md: "repeat(3,1fr)", sm: "repeat(2,1fr)" }}
+        // w="100%"
+        w={{ lg: "90%", base: "90%", xl:"80%" }}
+        gridTemplateColumns={{ lg: "repeat(3,1fr)", md: "repeat(2,1fr)" }}
         gap="50px"
         mt={20}
       >
@@ -38,16 +41,16 @@ const OurStaff = () => {
             display={"flex"}
             justifyContent="center"
             alignItems="center"
-            transition= "transform 0.5s ease"
+            transition="transform 0.5s ease"
             _hover={{
               transform: "scale(1.1)",
-              
             }}
           >
             <Image
               key={index}
               src={photo}
-              width={{ base: "200px", sm: "200px", lg: "200px", xl: "300px" }}
+              // width={{ base: "200px", sm: "200px", lg: "200px", xl: "300px" }}
+              w="100%"
               display={"block"}
               borderRadius="10px"
             />

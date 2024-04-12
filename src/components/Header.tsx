@@ -34,6 +34,8 @@ const Header = () => {
       w="100%"
       height={{ md: "90px", base: "50px" }}
       position="fixed"
+      display="flex" 
+      justifyContent="center"
       top="0"
       left="0"
       right="0"
@@ -42,21 +44,22 @@ const Header = () => {
       // transition="background-color 0.3s ease"
     >
       <HStack
+      w={{lg:"85%", base:"100%"}}
         alignItems="center"
-        p={{ md: "10px 60px", sm: "10px 40px", base: "10px 20px" }}
+        p={{ lg: "10px 60px", base: "10px 5px" }}
         justifyContent="space-between"
       >
         <Link to="/">
           <Image src="/assets/agi.png" width={{ md: "150px", base: "100px" }} />
         </Link>
-        <Box display={{ md: "none", base: "block" }} onClick={showToggle}>
-          <FontAwesomeIcon icon={faBars} color="white" />
+        <Box display={{ md: "none", base: "block" }} onClick={showToggle} pr="10px">
+          <FontAwesomeIcon icon={faBars} color="#554BB9" fontSize="20px"/>
         </Box>
         <Flex
           gap={{ lg: "30px", md: "20px", base: "10px" }}
-          fontSize="20px"
+          fontSize={{md:"20px", base:"16px"}}
           flexDirection={{ md: "row", base: "column" }}
-          alignItems="center"
+          alignItems={{md:"center", base:"flex-start"}}
           justifyContent="flex-end"
           display={{ md: "flex", base: openMenu ? "flex" : "none" }}
           position={{ base: "absolute", md: "initial" }}
@@ -64,7 +67,7 @@ const Header = () => {
           width="100%"
           left="0"
           top={{ md: "90px", base: "50px" }}
-          padding="20px 0"
+          padding="20px 10px"
         >
           <Link
             to="/"
@@ -96,8 +99,8 @@ const Header = () => {
           </Link>
           <Link to="/contact">
             <Box
-              p="10px 40px"
-              fontSize="20px"
+              p={{md:"10px 40px", base:"10px 20px"}}
+              fontSize={{md:"20px", base:"16px"}}
               cursor="pointer"
               bg="#ec398b"
               color="white"

@@ -7,13 +7,18 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useAboutFirst } from "../../../hooks/useAbout.tsx";
 
 const AboutEvents = () => {
+  const { aboutFirst, fetchUseAbout } = useAboutFirst();
+  useEffect(() => {
+    fetchUseAbout();
+  }, []);
   return (
     <VStack
-      p={{ md: "100px 20px", base: "50px 20px" }}
+      p={{ md: "100px 30px", base:"80px 5px" }}
       gap={{ base: "20px", lg: "50px" }}
       fontFamily="Poppins"
     >
@@ -24,25 +29,36 @@ const AboutEvents = () => {
         alignItems={{ lg: "flex-start", base: "center" }}
       >
         <VStack
-          w={{ base: "90%", sm: "70%", md: "55%" }}
+          // w={{ base: "80%"}}
+          w={{xl:"50%", base:"100%"}}
           alignItems="flex-start"
-          textAlign="justify"
-          gap={{ base: "20px", md: "30px" }}
+          gap="20px"
         >
           <Heading
-            fontSize={{ base: "20px", sm: "25px", xl: "35px" }}
+            fontSize={{ base: "30px", sm: "35px", xl: "40px" }}
+            // fontSize="40px"
             color="#1b273d"
             fontWeight={900}
             textTransform="uppercase"
+            fontFamily="Poppins"
           >
-            Azərbaycan Gənclər İttifaqı
+            Azərbaycan gənclər təşkilatı
           </Heading>
-          <Text fontSize={{ sm: "16px", base: "14px" }} color="#ec398b">
+          <Text
+            fontSize={{ sm: "16px", base: "14px" }}
+            color="#ec398b"
+            fontFamily="Oswald"
+            letterSpacing="1px"
+            fontWeight={500}
+          >
             Niyə AGT?
           </Text>
           <Text
-            fontSize={{ base: "12px", md: "16px", xl: "18px" }}
+            w={{lg:"90%", base:"100%"}}
+            fontSize={{ base: "12px", xl: "14px" }}
+            letterSpacing="1px"
             color="rgba(50, 51, 51, .8)"
+            fontFamily="Poppins"
           >
             "Azərbaycan Gənclər İttifaqı" İctimai Birliyi 1994-cü ildən
             fəaliyyət göstərən yerli qeyri-hökümət təşkilatıdır. Təşkilatın əsas
@@ -75,8 +91,10 @@ const AboutEvents = () => {
           </Link>
         </VStack>
         <Image
+        ml="30px"
+        alignSelf="flex-start"
           src="/assets/about-sp.jpg"
-          w={{ base: "40%", lg: "25%" }}
+          w={{ base: "70%", lg: "30%" }}
           borderRadius="10px"
           height="100%"
         />
