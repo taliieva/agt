@@ -11,6 +11,7 @@ import {
 import React from "react";
 import { Link } from "react-router-dom";
 import data from "../../../data.json";
+import "../../../App.css";
 const BlogSection = () => {
   const blogData = data.blogs.slice(0, 3);
 
@@ -45,11 +46,11 @@ const BlogSection = () => {
       >
         {blogData.map((blogs, index) => (
           <Flex
+            className="parent"
             flexDirection="column"
             cursor="pointer"
             key={index}
             alignItems="flex-start"
-            // w={{ xl: "25%", md: "30%", sm: "40%", base: "70%" }}
             w="100%"
             p="15px"
             borderRadius="10px"
@@ -61,11 +62,28 @@ const BlogSection = () => {
             //   boxShadow: "0px 5px 5px rgba(127, 123, 226, .8)",
             // }}
           >
-            <Image
+            {/* <Image
               src={blogs.imageSrc}
               w="100%"
               
-            />
+            /> */}
+            <Box
+              w="100%"
+              height={{md:"200px", base:"250px"}}
+              overflow="hidden"
+              position="relative"
+              display="inline-block"
+            >
+              <Box
+                className="child"
+                w="100%"
+                h="100%"
+                bgImage={blogs.imageSrc}
+                bgSize="cover"
+                bgRepeat="no-repeat"
+                transition="all 1.1s"
+              ></Box>
+            </Box>
             <Text
               color="rgba(50, 51, 51, .8)"
               fontSize={{ lg: "14px", md: "12px", base: "14px" }}

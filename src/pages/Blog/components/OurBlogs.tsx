@@ -4,82 +4,9 @@ import data from "../../../data.json";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import "../../../App.css";
 const OurBlogs = () => {
   const blogs = data.blogs;
-  // const blogPosts = [
-  //   {
-  //     id: 1,
-  //     imageSrc: "/assets/blog1.jpg",
-  //     date: "April 25, 2021",
-  //     author: "Rizasgor",
-  //     category: "Design",
-  //     content: "Brooklyn Beta was the most important conferen best tristique",
-  //   },
-  //   {
-  //     id: 2,
-  //     imageSrc: "/assets/blog2.jpg",
-  //     date: "April 25, 2021",
-  //     author: "Rizasgor",
-  //     category: "Design",
-  //     content: "Brooklyn Beta was the most important conferen best tristique",
-  //   },
-  //   {
-  //     id: 3,
-  //     imageSrc: "/assets/blog3.jpg",
-  //     date: "April 25, 2021",
-  //     author: "Rizasgor",
-  //     category: "Design",
-  //     content: "Brooklyn Beta was the most important conferen best tristique",
-  //   },
-  //   {
-  //     id: 4,
-  //     imageSrc: "/assets/blog3.jpg",
-  //     date: "April 25, 2021",
-  //     author: "Rizasgor",
-  //     category: "Design",
-  //     content: "Brooklyn Beta was the most important conferen best tristique",
-  //   },
-  //   {
-  //     id: 5,
-  //     imageSrc: "/assets/blog1.jpg",
-  //     date: "April 25, 2021",
-  //     author: "Rizasgor",
-  //     category: "Design",
-  //     content: "Brooklyn Beta was the most important conferen best tristique",
-  //   },
-  //   {
-  //     id: 6,
-  //     imageSrc: "/assets/blog2.jpg",
-  //     date: "April 25, 2021",
-  //     author: "Rizasgor",
-  //     category: "Design",
-  //     content: "Brooklyn Beta was the most important conferen best tristique",
-  //   },
-  //   {
-  //     id: 7,
-  //     imageSrc: "/assets/blog2.jpg",
-  //     date: "April 25, 2021",
-  //     author: "Rizasgor",
-  //     category: "Design",
-  //     content: "Brooklyn Beta was the most important conferen best tristique",
-  //   },
-  //   {
-  //     id: 8,
-  //     imageSrc: "/assets/blog3.jpg",
-  //     date: "April 25, 2021",
-  //     author: "Rizasgor",
-  //     category: "Design",
-  //     content: "Brooklyn Beta was the most important conferen best tristique",
-  //   },
-  //   {
-  //     id: 9,
-  //     imageSrc: "/assets/blog1.jpg",
-  //     date: "April 25, 2021",
-  //     author: "Rizasgor",
-  //     category: "Design",
-  //     content: "Brooklyn Beta was the most important conferen best tristique",
-  //   },
-  // ];
   return (
     <Box mt={{ md: "90px", base: "50px" }} w="100%">
       <Box
@@ -104,54 +31,12 @@ const OurBlogs = () => {
       <Grid
         gridTemplateColumns={{ lg: "repeat(3,1fr)", md: "repeat(2,1fr)" }}
         w="100%"
-        gap={{lg:"50px", base:"30px"}}
+        gap={{ lg: "50px", base: "30px" }}
         p={{ md: "100px 50px", base: "50px 30px", lg: "100px" }}
       >
         {blogs.map((blog, index) => (
-          // <Flex
-          //   flexDirection="column"
-          //   cursor="pointer"
-          //   key={index}
-          //   alignItems="flex-start"
-          //   // w={{ xl: "25%", md: "30%", sm: "40%", base: "70%" }}
-          //   w="100%"
-          //   p="10px"
-          //   borderRadius="10px"
-          //   boxShadow="0px 4px 6px rgba(0, 0, 0, 0.5)"
-          //   gap="10px"
-          //   _hover={{
-          //     transform: "scale(1.1)",
-          //     boxShadow: "0px 10px 10px rgba(127, 123, 226, .95)",
-          //     transition: "transform 1s ease",
-          //   }}
-          // >
-          //   <Image src={blog?.imageSrc} w="100%" />
-          //   <Text
-          //     color="#6B6B6B"
-          //     fontSize={{ lg: "14px", md: "12px", base: "10px" }}
-          //   >
-          //     {blog.date} | {blog.author} | {blog.category}
-          //   </Text>
-          //   <Text
-          //     fontSize={{ lg: "18px", md: "16px", base: "12px" }}
-          //     fontWeight={600}
-          //     color="#7F7BE2"
-          //   >
-          //     {blog.content}
-          //   </Text>
-          //   <Button
-          //     padding="10px"
-          //     border="none"
-          //     bg={"white"}
-          //     color="#7F7BE2"
-          //     cursor={"pointer"}
-          //     boxShadow="0px 4px 6px rgba(0, 0, 0, 0.3)"
-          //     fontSize={{ lg: "16px", base: "14px" }}
-          //   >
-          //     <Link to={`/blog/${blog.id}`}>Read more</Link>
-          //   </Button>
-          // </Flex>
           <Flex
+            className="parent"
             flexDirection="column"
             cursor="pointer"
             key={index}
@@ -163,12 +48,25 @@ const OurBlogs = () => {
             boxShadow="1px 1px 1px 1px rgba(0, 0, 0, 0.1), -1px -1px 1px 1px rgba(0, 0, 0, 0.1)"
             gap="10px"
             transition="transform 1s ease"
-            _hover={{
-              transform: "scale(1.1)",
-              boxShadow: "0px 5px 5px rgba(127, 123, 226, .8)",
-            }}
           >
-            <Image src={blog.imageSrc} w="100%" />
+            {/* <Image src={blog.imageSrc} w="100%" /> */}
+            <Box
+              w="100%"
+              height={{ md: "200px", base: "250px" }}
+              overflow="hidden"
+              position="relative"
+              display="inline-block"
+            >
+              <Box
+                className="child"
+                w="100%"
+                h="100%"
+                bgImage={blog?.imageSrc}
+                bgSize="cover"
+                bgRepeat="no-repeat"
+                transition="all 1.1s"
+              ></Box>
+            </Box>
             <Text
               color="rgba(50, 51, 51, .8)"
               fontSize={{ lg: "14px", md: "12px", base: "14px" }}
