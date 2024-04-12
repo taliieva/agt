@@ -30,21 +30,19 @@ const Header = () => {
   return (
     <Box
       fontFamily="Oswald"
-      // mb="50px"
       w="100%"
       height={{ md: "90px", base: "50px" }}
       position="fixed"
-      display="flex" 
+      display="flex"
       justifyContent="center"
       top="0"
       left="0"
       right="0"
       bg="rgba(27, 39, 61, .95)"
       zIndex="1000"
-      // transition="background-color 0.3s ease"
     >
       <HStack
-      w={{lg:"85%", base:"100%"}}
+        w={{ lg: "85%", base: "100%" }}
         alignItems="center"
         p={{ lg: "10px 60px", base: "10px 5px" }}
         justifyContent="space-between"
@@ -52,14 +50,18 @@ const Header = () => {
         <Link to="/">
           <Image src="/assets/agi.png" width={{ md: "150px", base: "100px" }} />
         </Link>
-        <Box display={{ md: "none", base: "block" }} onClick={showToggle} pr="10px">
-          <FontAwesomeIcon icon={faBars} color="#554BB9" fontSize="20px"/>
+        <Box
+          display={{ md: "none", base: "block" }}
+          onClick={showToggle}
+          pr="10px"
+        >
+          <FontAwesomeIcon icon={faBars} color="#554BB9" fontSize="20px" />
         </Box>
         <Flex
           gap={{ lg: "30px", md: "20px", base: "10px" }}
-          fontSize={{md:"20px", base:"16px"}}
+          fontSize={{ md: "20px", base: "16px" }}
           flexDirection={{ md: "row", base: "column" }}
-          alignItems={{md:"center", base:"flex-start"}}
+          alignItems={{ md: "center", base: "flex-start" }}
           justifyContent="flex-end"
           display={{ md: "flex", base: openMenu ? "flex" : "none" }}
           position={{ base: "absolute", md: "initial" }}
@@ -99,8 +101,8 @@ const Header = () => {
           </Link>
           <Link to="/contact">
             <Box
-              p={{md:"10px 40px", base:"10px 20px"}}
-              fontSize={{md:"20px", base:"16px"}}
+              p={{ md: "10px 40px", base: "10px 20px" }}
+              fontSize={{ md: "20px", base: "16px" }}
               cursor="pointer"
               bg="#ec398b"
               color="white"

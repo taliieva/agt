@@ -76,14 +76,14 @@ const EventId = () => {
           >
             <VStack alignItems="flex-start" w={{ md: "50%", base: "90%" }}>
               <Heading>Tədbir haqqında</Heading>
-              <Text>{selectedEvent?.name}</Text>
-              <Text>{selectedEvent?.overview}</Text>
+              <Text fontSize={{ md: "16px", base: "14px" }}>{selectedEvent?.name}</Text>
+              <Text fontSize={{ md: "16px", base: "14px" }}>{selectedEvent?.overview}</Text>
             </VStack>
-            <VStack alignItems="flex-start" w={{ md: "50%", base: "90%" }}>
+            <VStack alignItems="flex-start" w={{ md: "50%", base: "90%" }} >
               <Heading>Məlumatlar</Heading>
-              <Text>{selectedEvent?.author}</Text>
-              <Text>{selectedEvent?.startTime} AM - {selectedEvent?.endTime} PM</Text>
-              <Text>{selectedEvent?.location}</Text>
+              <Text fontSize={{ md: "16px", base: "14px" }}>{selectedEvent?.author}</Text>
+              <Text fontSize={{ md: "16px", base: "14px" }}>{selectedEvent?.startTime} AM - {selectedEvent?.endTime} PM</Text>
+              <Text fontSize={{ md: "16px", base: "14px" }}>{selectedEvent?.location}</Text>
             </VStack>
           </Flex>
         </VStack>

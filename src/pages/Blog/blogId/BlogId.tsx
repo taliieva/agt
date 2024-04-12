@@ -71,7 +71,7 @@ const BlogId = () => {
             <Text fontWeight={700}>
               {selectedBlog?.author} | {selectedBlog?.category}
             </Text>
-            <Text fontSize={{ md: "18px", base: "14px" }}>
+            <Text fontSize={{ md: "16px", base: "14px" }}>
               {selectedBlog?.overview}
             </Text>
           </VStack>

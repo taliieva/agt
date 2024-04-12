@@ -11,17 +11,14 @@ import {
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-// import { faFacebookF } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
 const yearDate = new Date().getFullYear();
-
 
 const Footer = () => {
   return (
     <VStack
       bg="rgba(27, 39, 61, .95)"
-      // bgImage="/assets/footer-bg.jpg"
       color={"white"}
       alignItems="center"
       gap="40px"
@@ -46,7 +43,6 @@ const Footer = () => {
           w="80%"
           padding="10px 20px"
           height="55px"
-          // outline="none"
           fontSize="14px"
           border="1px rgba(255, 255, 255, .8)"
           _focus={{ bg: "white" }}
@@ -75,11 +71,7 @@ const Footer = () => {
         gap="50px"
         padding="10px"
       >
-        <Image
-          src="/assets/agi.png"
-          // width={{ lg: "200px", md: "100px", base: "100px" }}
-          w={"250px"}
-        />
+        <Image src="/assets/agi.png" w={"250px"} />
         <VStack alignItems="flex-start">
           <Text mt={0} fontWeight={600}>
             Venue Location
@@ -93,15 +85,24 @@ const Footer = () => {
           </Text>
           <Text>You should connect social area for Any update</Text>
           <HStack>
-            {/* <FontAwesomeIcon icon={faFacebookF} /> */}
-            {/* <Image src="/assets/facebook-f.svg"/> */}
-            <Box padding="15px 20px" bg="#999" borderRadius="50%" transition={"background-color 0.5s ease"} _hover={{bg:"#efa506", color:"white"}}>
-              <FontAwesomeIcon icon={faFacebookF as IconProp} fontSize="18px"/>
+            <Box
+              padding="15px 20px"
+              bg="#999"
+              borderRadius="50%"
+              transition={"background-color 0.5s ease"}
+              _hover={{ bg: "#efa506", color: "white" }}
+            >
+              <FontAwesomeIcon icon={faFacebookF as IconProp} fontSize="18px" />
             </Box>
-            <Box padding="15px 20px" bg="#999" borderRadius="50%" transition={"background-color 0.5s ease"}  _hover={{bg:"#efa506", color:"white"}}>
-              <FontAwesomeIcon icon={faInstagram as IconProp} fontSize="18px"/>
+            <Box
+              padding="15px 20px"
+              bg="#999"
+              borderRadius="50%"
+              transition={"background-color 0.5s ease"}
+              _hover={{ bg: "#efa506", color: "white" }}
+            >
+              <FontAwesomeIcon icon={faInstagram as IconProp} fontSize="18px" />
             </Box>
-            {/* <Image src="/assets/instagram-logo.png" w="35px"/> */}
           </HStack>
         </VStack>
       </Flex>
