@@ -7,11 +7,16 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { useAboutFirst } from "../../../hooks/useAbout.tsx";
 const AboutUs = () => {
+  const {aboutFirst, fetchUseAbout} = useAboutFirst();
+  useEffect(()=>{
+    fetchUseAbout()
+  },[])
   return (
     <VStack
       alignItems="center"
@@ -66,7 +71,8 @@ const AboutUs = () => {
             textTransform="uppercase"
             fontFamily="Poppins"
           >
-            Azərbaycan Gənclər İttifaqı
+            {aboutFirst?.title}
+            {/* Azərbaycan Gənclər İttifaqı */}
           </Heading>
           <Text
             fontSize={{ sm: "16px", base: "14px" }}
@@ -74,7 +80,8 @@ const AboutUs = () => {
             letterSpacing="1px"
             fontWeight={500}
           >
-            Niyə AGT?
+            {aboutFirst?.subTitle}
+            {/* Niyə AGT? */}
           </Text>
           <Text
            w={{lg:"90%", base:"100%"}}
@@ -84,16 +91,7 @@ const AboutUs = () => {
             fontFamily="Poppins"
             letterSpacing="1px"
           >
-            "Azərbaycan Gənclər İttifaqı" İctimai Birliyi 1994-cü ildən
-            fəaliyyət göstərən yerli qeyri-hökümət təşkilatıdır. Təşkilatın əsas
-            məqsədi Azərbaycanda gənclər siyasətini həyata keçirilməsi üçün
-            effektli mexanizmin yaradılması, gənclərin təşəbbüskarlıq və
-            yaradıcıllığının inkişaf etdirilməsi, gənclərin sosial vəziyyətinin
-            monitorinqi, əlil və valideyn himayəsindən məhrum olmuş uşaqların,
-            qaçqın və məcburi köçkün gənclərin, yeniyetmələrin və uşaqların
-            hüquqlarını müdafiəsi məqsədi ilə proqramların hazırlanması və
-            həmçinin gənclərin sosial, səhiyyə, təhsil, ekologiya, mədəniyyət və
-            digər sahələrdə maarifləndirilməsindən ibarətdir.
+           {aboutFirst?.description}
           </Text>
         </VStack>
       </Flex>

@@ -9,12 +9,15 @@ import {
   AccordionPanel,
   Box,
 } from "@chakra-ui/react";
-import React from "react";
-import data from "../../../data.json";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useEvent } from "../../../hooks/useEvent.tsx";
 const EventSection = () => {
-  const events = data.teams;
-
+  const { recentEvents, fetchRecentEvents } = useEvent();
+  useEffect(() => {
+    fetchRecentEvents();
+  }, []);
+  
   return (
     <VStack
       bgImage={"/assets/schedule-bg-pattern.png"}
@@ -33,7 +36,7 @@ const EventSection = () => {
         Tədbirlər
       </Heading>
 
-      {events.map((team, index) => (
+      {recentEvents.map((team, index) => (
         <Accordion
           defaultIndex={index === 0 ? [0] : []}
           allowMultiple
@@ -58,16 +61,13 @@ const EventSection = () => {
                 {/* <Image src={team.image} w="100px" borderRadius="50%" /> */}
                 <VStack w="100%" borderRadius="20px" alignItems="flex-start">
                   <Text
-
                     bg="rgba(239, 165, 6, .1)"
                     fontSize={{ lg: "16px", md: "14px", base: "12px" }}
                     fontWeight={700}
                     p="5px 10px"
                     borderRadius="20px"
                   >
-                    {team.startTime}{" "}
-                    <span style={{ color: "#efa506" }}>AM</span> -{team.endTime}{" "}
-                    <span style={{ color: "#efa506" }}>PM</span>
+                    {team?.startDate} -{team?.endDate}
                   </Text>
                   <Text
                     fontSize={{ lg: "25px", md: "20px", base: "16px" }}
@@ -76,9 +76,14 @@ const EventSection = () => {
                     textAlign="start"
                     fontFamily="Poppins"
                   >
-                    {team.name}
+                    {team?.title}
                   </Text>
-                  <Text fontSize={{base:"12px", lg:"14px"}} textAlign="start" color="#ec398b" fontFamily="Poppins">
+                  <Text
+                    fontSize={{ base: "12px", lg: "14px" }}
+                    textAlign="start"
+                    color="#ec398b"
+                    fontFamily="Poppins"
+                  >
                     <span style={{ color: "black" }}>By</span> {team.author}
                   </Text>
                 </VStack>
@@ -87,9 +92,11 @@ const EventSection = () => {
             <AccordionPanel pb={4}>
               <VStack
                 alignItems="flex-start"
-                fontSize={{md: "16px", sm: "14px", base: "12px" }}
+                fontSize={{ md: "16px", sm: "14px", base: "12px" }}
               >
-                <Text color="#585555" fontFamily="Poppins">{team.overview}</Text>
+                <Text color="#585555" fontFamily="Poppins">
+                  {team.description}
+                </Text>
                 <Text fontSize="14px" fontFamily="Poppins">
                   <span style={{ color: "#7F7BE2", fontWeight: 700 }}>
                     Location:{" "}
@@ -115,6 +122,7 @@ const EventSection = () => {
           _hover={{
             borderRadius: "15px",
           }}
+          mt="20px"
         >
           Daha çox
         </Box>

@@ -1,24 +1,26 @@
 import { Box, Flex, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import React, { useEffect } from "react";
-import data from "../../../data.json";
 import { Link, useParams } from "react-router-dom";
 import Layout from "../../../Layout/Layout.tsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { useBlog } from "../../../hooks/useBlog.tsx";
 const BlogId = () => {
   const { blogId } = useParams();
-  const blog = data.blogs;
-  const selectedBlog = blog.find((item) => String(item.id) === blogId);
+  console.log(blogId)
+  const {blogDetails, fetchBlogDetails} = useBlog()
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    fetchBlogDetails(blogId)
+  }, [blogId]);
   return (
-    <Layout>
+    <Layout>  
       <Box
         fontFamily="Poppins"
         mt={{ md: "90px", base: "50px" }}
         // bg="rgba(27, 39, 61, .95)"
         bgImage="/assets/banner-inner2.jpg"
+        bgSize="cover"
         display="flex"
         flexDirection="column"
         // alignItems="flex-start"
@@ -38,7 +40,7 @@ const BlogId = () => {
           <FontAwesomeIcon icon={faHouse} color="#ec398b" />
           <Link to="/">Əsas səhifə</Link>
           <Link to="/blog">/Xəbərlər</Link>
-          <Text color="#efa506">/ {selectedBlog?.content}</Text>
+          <Text color="#efa506">/ {blogDetails?.title}</Text>
         </HStack>
       </Box>
       <Flex
@@ -55,7 +57,7 @@ const BlogId = () => {
           borderRadius="20px 20px 0 0"
           background="rgba(0,0,0,0.1)"
         >
-          <Image src={selectedBlog?.imageSrc} borderRadius="20px" w="100%" />
+          <Image src="/assets/blog1.jpg"  borderRadius="20px" w="100%" />
           <VStack alignItems="flex-start" w="100%" p="10px 20px">
             <Text
               fontSize={{ lg: "18px", md: "16px", base: "12px" }}
@@ -65,14 +67,14 @@ const BlogId = () => {
                 color: "#554bb9",
               }}
             >
-              {selectedBlog?.content}
+              {blogDetails?.title}
             </Text>
-            <Text color="#6B6B6B">{selectedBlog?.date}</Text>
+            <Text color="#6B6B6B">{blogDetails?.createdDate}</Text>
             <Text fontWeight={700}>
-              {selectedBlog?.author} | {selectedBlog?.category}
+              {blogDetails?.author}
             </Text>
             <Text fontSize={{ md: "16px", base: "14px" }}>
-              {selectedBlog?.overview}
+              {blogDetails?.content}
             </Text>
           </VStack>
         </VStack>

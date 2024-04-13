@@ -1,8 +1,4 @@
 import {
-  Accordion,
-  AccordionButton,
-  AccordionItem,
-  AccordionPanel,
   Box,
   Flex,
   Grid,
@@ -11,14 +7,20 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import React from "react";
-import data from "../../../data.json";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useEvent } from "../../../hooks/useEvent.tsx";
 const OurEvents = () => {
-  const events = data.events;
-
+  const { allEvents, fetchAllEvents } = useEvent();
+  useEffect(() => {
+    fetchAllEvents();
+  }, []);
   return (
-    <VStack bg="white" p={{ md: "100px 20px", base: "80px 20px" }} fontFamily="Poppins">
+    <VStack
+      bg="white"
+      p={{ md: "100px 20px", base: "80px 20px" }}
+      fontFamily="Poppins"
+    >
       <Heading
         fontSize={{ base: "24px", sm: "30px", lg: "40px" }}
         fontWeight="700"
@@ -29,11 +31,11 @@ const OurEvents = () => {
       </Heading>
       <Grid
         gridTemplateColumns={{ lg: "repeat(3,1fr)", md: "repeat(2,1fr)" }}
-        w={{ lg: "90%", base: "90%", xl:"80%" }}
+        w={{ lg: "90%", base: "90%", xl: "80%" }}
         justifyContent="center"
-        gap={{xl:"50px", base:"20px"}}
+        gap={{ xl: "50px", base: "20px" }}
       >
-        {events.map((team, index) => (
+        {allEvents.map((team, index) => (
           <Link to={`/event/${team.id}`}>
             <Box
               key={index}
@@ -44,12 +46,13 @@ const OurEvents = () => {
               }}
             >
               <Image
-                src={team.imageUrl}
+                src="/assets/event6.jpg"
                 width="100%"
                 h="150px"
                 borderRadius="10px"
               />
               <Flex
+                padding="10px"
                 borderRadius="10px"
                 position={"absolute"}
                 top={0}
@@ -65,7 +68,7 @@ const OurEvents = () => {
                   opacity: 1,
                 }}
               >
-                <Text fontSize="16px">{team.name}</Text>
+                <Text fontSize="16px">{team.title}</Text>
               </Flex>
             </Box>
           </Link>

@@ -9,17 +9,17 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import data from "../../../data.json";
 import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { useEvent } from "../../../hooks/useEvent.tsx";
 const EventId = () => {
-  const event = data.teams;
   const { eventId } = useParams();
-  const selectedEvent = event.find((item) => String(item.id) === eventId);
+  const { eventDetails, fetchEventDetails } = useEvent();
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    fetchEventDetails(eventId);
+  }, [eventId]);
   return (
     <Layout>
       <Box
@@ -27,6 +27,7 @@ const EventId = () => {
         mt={{ md: "90px", base: "50px" }}
         // bg="rgba(27, 39, 61, .95)"
         bgImage="/assets/banner-inner2.jpg"
+        bgSize="cover"
         display="flex"
         flexDirection="column"
         // alignItems="flex-start"
@@ -47,7 +48,7 @@ const EventId = () => {
           <FontAwesomeIcon icon={faHouse} color="#ec398b" />
           <Link to="/">Əsas səhifə</Link>
           <Link to="/event">/Tədbirlər</Link>
-          <Text color="#efa506">/{selectedEvent?.name}</Text>
+          <Text color="#efa506">/{eventDetails?.title}</Text>
         </HStack>
       </Box>
       <Flex alignItems="center" justifyContent="center">
@@ -62,7 +63,7 @@ const EventId = () => {
           gap="30px"
         >
           <Image
-            src={selectedEvent?.image}
+            src="/assets/event27.jpg"
             w="100%"
             height="70vh"
             borderRadius="20px"
@@ -73,17 +74,29 @@ const EventId = () => {
             alignItems="flex-start"
             flexDirection={{ md: "row", base: "column" }}
             fontFamily="Poppins"
+            w="100%"
+            p="10px"
           >
             <VStack alignItems="flex-start" w={{ md: "50%", base: "90%" }}>
               <Heading>Tədbir haqqında</Heading>
-              <Text fontSize={{ md: "16px", base: "14px" }}>{selectedEvent?.name}</Text>
-              <Text fontSize={{ md: "16px", base: "14px" }}>{selectedEvent?.overview}</Text>
+              <Text fontSize={{ md: "16px", base: "14px" }}>
+                {eventDetails?.title}
+              </Text>
+              <Text fontSize={{ md: "16px", base: "14px" }}>
+                {eventDetails?.description}
+              </Text>
             </VStack>
-            <VStack alignItems="flex-start" w={{ md: "50%", base: "90%" }} >
+            <VStack alignItems="flex-start" w={{ md: "50%", base: "90%" }}>
               <Heading>Məlumatlar</Heading>
-              <Text fontSize={{ md: "16px", base: "14px" }}>{selectedEvent?.author}</Text>
-              <Text fontSize={{ md: "16px", base: "14px" }}>{selectedEvent?.startTime} AM - {selectedEvent?.endTime} PM</Text>
-              <Text fontSize={{ md: "16px", base: "14px" }}>{selectedEvent?.location}</Text>
+              <Text fontSize={{ md: "16px", base: "14px" }}>
+                {eventDetails?.author}
+              </Text>
+              <Text fontSize={{ md: "16px", base: "14px" }}>
+                {eventDetails?.startDate} - {eventDetails?.endDate}
+              </Text>
+              <Text fontSize={{ md: "16px", base: "14px" }}>
+                {eventDetails?.location}
+              </Text>
             </VStack>
           </Flex>
         </VStack>

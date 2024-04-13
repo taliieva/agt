@@ -8,13 +8,15 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import data from "../../../data.json";
 import "../../../App.css";
+import { useBlog } from "../../../hooks/useBlog.tsx";
 const BlogSection = () => {
-  const blogData = data.blogs.slice(0, 3);
-
+  const {recentBlogs, fetchRecentBlogs} = useBlog();
+  useEffect(()=>{
+    fetchRecentBlogs()
+  },[])
   return (
     <VStack
       p={{ md: "100px 20px", base: "80px 0" }}
@@ -44,7 +46,7 @@ const BlogSection = () => {
         gap={30}
         gridTemplateColumns={{ lg: "repeat(3,1fr)", md: "repeat(2,1fr)" }}
       >
-        {blogData.map((blogs, index) => (
+        {recentBlogs.map((blogs, index) => (
           <Flex
             className="parent"
             flexDirection="column"
@@ -57,16 +59,8 @@ const BlogSection = () => {
             boxShadow="1px 1px 1px 1px rgba(0, 0, 0, 0.1), -1px -1px 1px 1px rgba(0, 0, 0, 0.1)"
             gap="10px"
             transition="transform 1s ease"
-            // _hover={{
-            //   transform: "scale(1.1)",
-            //   boxShadow: "0px 5px 5px rgba(127, 123, 226, .8)",
-            // }}
+           
           >
-            {/* <Image
-              src={blogs.imageSrc}
-              w="100%"
-              
-            /> */}
             <Box
               w="100%"
               height={{md:"200px", base:"250px"}}
@@ -78,7 +72,7 @@ const BlogSection = () => {
                 className="child"
                 w="100%"
                 h="100%"
-                bgImage={blogs.imageSrc}
+                bgImage="/assets/blog1.jpg"
                 bgSize="cover"
                 bgRepeat="no-repeat"
                 transition="all 1.1s"
@@ -88,7 +82,7 @@ const BlogSection = () => {
               color="rgba(50, 51, 51, .8)"
               fontSize={{ lg: "14px", md: "12px", base: "14px" }}
             >
-              {blogs.date} | {blogs.author} | {blogs.category}
+              {blogs.createdDate} 
             </Text>
             <Text
               fontSize={{ lg: "18px", md: "16px", base: "18px" }}
@@ -98,7 +92,7 @@ const BlogSection = () => {
                 color: "#554bb9",
               }}
             >
-              {blogs.content}
+              {blogs?.title}
             </Text>
             <Box
               padding="10px"

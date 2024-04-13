@@ -22,6 +22,7 @@ const ContactPage = () => {
         mt={{ md: "90px", base: "50px" }}
         // bg="rgba(27, 39, 61, .95)"
         bgImage="/assets/banner-inner2.jpg"
+        bgSize="cover"
         display="flex"
         flexDirection="column"
         // alignItems="flex-start"

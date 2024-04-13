@@ -1,17 +1,21 @@
 import { Box, Button, Flex, Grid, HStack, Image, Text } from "@chakra-ui/react";
-import React from "react";
-import data from "../../../data.json";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import "../../../App.css";
+import { useBlog } from "../../../hooks/useBlog.tsx";
 const OurBlogs = () => {
-  const blogs = data.blogs;
+  const {allBlogs, fetchAllBlogs} = useBlog();
+  useEffect(()=>{
+    fetchAllBlogs();
+  },[])
   return (
     <Box mt={{ md: "90px", base: "50px" }} w="100%">
       <Box
         // bg="rgba(27, 39, 61, .95)"
         bgImage="/assets/banner-inner2.jpg"
+        bgSize="cover"
         display="flex"
         flexDirection="column"
         // alignItems="flex-start"
@@ -34,7 +38,7 @@ const OurBlogs = () => {
         gap={{ lg: "50px", base: "30px" }}
         p={{ md: "100px 50px", base: "50px 30px", lg: "100px" }}
       >
-        {blogs.map((blog, index) => (
+        {allBlogs.map((blog, index) => (
           <Flex
             className="parent"
             flexDirection="column"
@@ -61,7 +65,7 @@ const OurBlogs = () => {
                 className="child"
                 w="100%"
                 h="100%"
-                bgImage={blog?.imageSrc}
+                bgImage="/assets/blog1.jpg"
                 bgSize="cover"
                 bgRepeat="no-repeat"
                 transition="all 1.1s"
@@ -71,7 +75,7 @@ const OurBlogs = () => {
               color="rgba(50, 51, 51, .8)"
               fontSize={{ lg: "14px", md: "12px", base: "14px" }}
             >
-              {blog.date} | {blog.author} | {blog.category}
+              {blog?.createdDate} 
             </Text>
             <Text
               fontSize={{ lg: "18px", md: "16px", base: "18px" }}
@@ -81,7 +85,7 @@ const OurBlogs = () => {
                 color: "#554bb9",
               }}
             >
-              {blog.content}
+              {blog.title}
             </Text>
             <Box
               padding="10px"

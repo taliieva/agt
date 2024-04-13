@@ -42,7 +42,8 @@ const AboutEvents = () => {
             textTransform="uppercase"
             fontFamily="Poppins"
           >
-            Azərbaycan gənclər təşkilatı
+            {aboutFirst?.title}
+            {/* Azərbaycan gənclər təşkilatı */}
           </Heading>
           <Text
             fontSize={{ sm: "16px", base: "14px" }}
@@ -51,7 +52,7 @@ const AboutEvents = () => {
             letterSpacing="1px"
             fontWeight={500}
           >
-            Niyə AGT?
+            {aboutFirst?.subTitle}
           </Text>
           <Text
             w={{lg:"90%", base:"100%"}}
@@ -60,16 +61,7 @@ const AboutEvents = () => {
             color="rgba(50, 51, 51, .8)"
             fontFamily="Poppins"
           >
-            "Azərbaycan Gənclər İttifaqı" İctimai Birliyi 1994-cü ildən
-            fəaliyyət göstərən yerli qeyri-hökümət təşkilatıdır. Təşkilatın əsas
-            məqsədi Azərbaycanda gənclər siyasətini həyata keçirilməsi üçün
-            effektli mexanizmin yaradılması, gənclərin təşəbbüskarlıq və
-            yaradıcıllığının inkişaf etdirilməsi, gənclərin sosial vəziyyətinin
-            monitorinqi, əlil və valideyn himayəsindən məhrum olmuş uşaqların,
-            qaçqın və məcburi köçkün gənclərin, yeniyetmələrin və uşaqların
-            hüquqlarını müdafiəsi məqsədi ilə proqramların hazırlanması və
-            həmçinin gənclərin sosial, səhiyyə, təhsil, ekologiya, mədəniyyət və
-            digər sahələrdə maarifləndirilməsindən ibarətdir.
+            {aboutFirst?.description}
           </Text>
           <Link to="/about">
             <Box

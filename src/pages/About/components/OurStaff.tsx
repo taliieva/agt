@@ -1,15 +1,20 @@
-import { Box, Grid, Heading, Image, Text, VStack } from "@chakra-ui/react";
-import React from "react";
+import {
+  Box,
+  Grid,
+  Heading,
+  Image,
+  Text,
+  VStack,
+  useEditable,
+} from "@chakra-ui/react";
+import React, { useEffect } from "react";
+import { useTeams } from "../../../hooks/useTeams.tsx";
 
 const OurStaff = () => {
-  const photos = [
-    "/assets/team1.jpg",
-    "/assets/team2.jpg",
-    "/assets/team3.jpg",
-    "/assets/team4.jpg",
-    "/assets/team5.jpg",
-    "/assets/team6.jpg",
-  ];
+  const { teams, fetchTeams } = useTeams();
+  useEffect(() => {
+    fetchTeams();
+  }, []);
   return (
     <VStack
       gap="20px"
@@ -29,13 +34,14 @@ const OurStaff = () => {
       <Text color="rgba(50, 51, 51, .8)">Komanda üzvlərimiz</Text>
       <Grid
         // w="100%"
-        w={{ lg: "90%", base: "90%", xl:"80%" }}
+        w={{ lg: "90%", base: "90%", xl: "80%" }}
         gridTemplateColumns={{ lg: "repeat(3,1fr)", md: "repeat(2,1fr)" }}
         gap="50px"
         mt={20}
       >
-        {photos.map((photo, index) => (
+        {teams.map((team, index) => (
           <Box
+            key={index}
             position={"relative"}
             width="100%"
             display={"flex"}
@@ -48,7 +54,7 @@ const OurStaff = () => {
           >
             <Image
               key={index}
-              src={photo}
+              src="/assets/team1.jpg"
               // width={{ base: "200px", sm: "200px", lg: "200px", xl: "300px" }}
               w="100%"
               display={"block"}
@@ -72,12 +78,11 @@ const OurStaff = () => {
                 opacity: "1",
                 transitionDuration: "1s",
               }}
-              // backdropFilter="blur(3px)"
             >
               <Text fontSize="18px" color={"white"} fontWeight={600}>
-                Team {index + 1}
+                {team?.name} {team?.surname}
               </Text>
-              <Text color="white">About the team</Text>
+              <Text color="white">{team?.position}</Text>
             </VStack>
           </Box>
         ))}
