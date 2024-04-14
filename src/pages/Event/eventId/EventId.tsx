@@ -92,8 +92,35 @@ const EventId = () => {
                 {eventDetails?.author}
               </Text>
               <Text fontSize={{ md: "16px", base: "14px" }}>
-                {eventDetails?.startDate} - {eventDetails?.endDate}
+                {eventDetails?.startDate &&
+                  new Date(eventDetails.startDate).toLocaleTimeString("en-GB", {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  })}{" "}
+                {eventDetails?.startDate &&
+                  new Date(eventDetails.startDate)
+                    .toLocaleDateString("en-GB", {
+                      day: "2-digit",
+                      month: "2-digit",
+                      year: "numeric",
+                    })
+                    .replace(/\//g, "-")}
+                {" - "}
+                {eventDetails?.endDate &&
+                  new Date(eventDetails.endDate).toLocaleTimeString("en-GB", {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  })}{" "}
+                {eventDetails?.endDate &&
+                  new Date(eventDetails.endDate)
+                    .toLocaleDateString("en-GB", {
+                      day: "2-digit",
+                      month: "2-digit",
+                      year: "numeric",
+                    })
+                    .replace(/\//g, "-")}
               </Text>
+
               <Text fontSize={{ md: "16px", base: "14px" }}>
                 {eventDetails?.location}
               </Text>
