@@ -18,7 +18,7 @@ const AboutEvents = () => {
   }, []);
   return (
     <VStack
-      p={{ md: "100px 30px", base:"80px 5px" }}
+      p={{ md: "100px 30px", base:"80px 15px" }}
       gap={{ base: "20px", lg: "50px" }}
       fontFamily="Poppins"
     >
@@ -63,11 +63,12 @@ const AboutEvents = () => {
           >
             {aboutFirst?.description}
           </Text>
-          <Link to="/about">
+          
             <Box
+            alignSelf={{lg:"initial", base:"center"}}
               fontFamily="Oswald"
               p="10px 40px"
-              w="100%"
+              // w="40%"
               fontSize="20px"
               cursor="pointer"
               bg="#554bb9"
@@ -78,9 +79,11 @@ const AboutEvents = () => {
                 borderRadius: "15px",
               }}
             >
+              <Link to="/about">
               Daha çox
+              </Link>
             </Box>
-          </Link>
+          
         </VStack>
         <Image
         ml="30px"

@@ -36,7 +36,7 @@ const OurBlogs = () => {
         gridTemplateColumns={{ lg: "repeat(3,1fr)", md: "repeat(2,1fr)" }}
         w="100%"
         gap={{ lg: "50px", base: "30px" }}
-        p={{ md: "100px 50px", base: "50px 30px", lg: "100px" }}
+        p={{ md: "100px 50px", base: "80px 20px", lg: "100px" }}
       >
         {allBlogs.map((blog, index) => (
           <Flex

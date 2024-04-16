@@ -22,7 +22,7 @@ const MessageSection = () => {
       <VStack
         p={{ lg: "100px 100px", md: "100px 50px", base: "80px 20px" }}
         boxShadow="3px 4px 6px 4px rgba(0, 0, 0, 0.5)"
-        w={{lg:"80%", base:"90%"}}
+        w={{ lg: "80%", base: "90%" }}
         alignItems="center"
         justifyContent="center"
         borderRadius="30px"
@@ -39,56 +39,61 @@ const MessageSection = () => {
         >
           Aşağıdakı formanı doldurun, komandamız tezliklə geri dönüş edəcək.
         </Text>
-        <Grid
-          gridTemplateColumns="repeat(2,1fr)"
+        {/* <Grid
+          gridTemplateColumns={{ md: "repeat(2, 1fr)", base: "1fr" }}
           gap={{ md: "30px", sm: "20px", base: "10px" }}
           w="100%"
         >
           <Input
+            w="100%"
             p="15px"
             borderRadius="5px"
             border="1px solid black"
             placeholder="Ad"
             fontSize="14px"
             outline="none"
-            _hover={{border:"1px solid black"}}
+            _hover={{ border: "1px solid black" }}
             focusBorderColor="transparent"
-            _focus={{border:"1px solid black"}}
+            _focus={{ border: "1px solid black" }}
           />
           <Input
+            w="100%"
             p="15px"
             borderRadius="5px"
             border="1px solid black"
             placeholder="Soyad"
             fontSize="14px"
             outline="none"
-            _hover={{border:"1px solid black"}}
+            _hover={{ border: "1px solid black" }}
             focusBorderColor="transparent"
-            _focus={{border:"1px solid black"}}
+            _focus={{ border: "1px solid black" }}
           />
           <Input
+            w="100%"
             p="15px"
             borderRadius="5px"
             border="1px solid black"
             placeholder="Ünvan"
             fontSize="14px"
             outline="none"
-            _hover={{border:"1px solid black"}}
+            _hover={{ border: "1px solid black" }}
             focusBorderColor="transparent"
-            _focus={{border:"1px solid black"}}
+            _focus={{ border: "1px solid black" }}
           />
           <Input
+            w="100%"
             p="15px"
             borderRadius="5px"
             border="1px solid black"
             placeholder="Telefon"
             fontSize="14px"
             outline="none"
-            _hover={{border:"1px solid black"}}
+            _hover={{ border: "1px solid black" }}
             focusBorderColor="transparent"
-            _focus={{border:"1px solid black"}}
+            _focus={{ border: "1px solid black" }}
           />
           <Textarea
+            w="100%"
             gridColumn="1/3"
             p="15px"
             borderRadius="5px"
@@ -96,11 +101,83 @@ const MessageSection = () => {
             placeholder="Mesajınız"
             fontSize="14px"
             outline="none"
-            _hover={{border:"1px solid black"}}
+            _hover={{ border: "1px solid black" }}
             focusBorderColor="transparent"
-            _focus={{border:"1px solid black"}}
+            _focus={{ border: "1px solid black" }}
           />
+        </Grid> */}
+        <Grid
+          gridTemplateColumns={{ md: "repeat(2, 1fr)", base: "1fr" }}
+          gap={{ md: "30px", sm: "20px", base: "10px" }}
+          w="100%"
+        >
+          <Box gridColumn={{ md: "1/2", base: "1/-1" }}>
+            <Input
+              p="15px"
+              borderRadius="5px"
+              border="1px solid black"
+              placeholder="Ad"
+              fontSize="14px"
+              outline="none"
+              _hover={{ border: "1px solid black" }}
+              focusBorderColor="transparent"
+              _focus={{ border: "1px solid black" }}
+            />
+          </Box>
+          <Box gridColumn={{ md: "2/3", base: "1/-1" }}>
+            <Input
+              p="15px"
+              borderRadius="5px"
+              border="1px solid black"
+              placeholder="Soyad"
+              fontSize="14px"
+              outline="none"
+              _hover={{ border: "1px solid black" }}
+              focusBorderColor="transparent"
+              _focus={{ border: "1px solid black" }}
+            />
+          </Box>
+          <Box gridColumn={{ md: "1/2", base: "1/-1" }}>
+            <Input
+              p="15px"
+              borderRadius="5px"
+              border="1px solid black"
+              placeholder="Ünvan"
+              fontSize="14px"
+              outline="none"
+              _hover={{ border: "1px solid black" }}
+              focusBorderColor="transparent"
+              _focus={{ border: "1px solid black" }}
+            />
+          </Box>
+          <Box gridColumn={{ md: "2/3", base: "1/-1" }}>
+            <Input
+              p="15px"
+              borderRadius="5px"
+              border="1px solid black"
+              placeholder="Telefon"
+              fontSize="14px"
+              outline="none"
+              _hover={{ border: "1px solid black" }}
+              focusBorderColor="transparent"
+              _focus={{ border: "1px solid black" }}
+            />
+          </Box>
+          <Box gridColumn={{ md: "1/3", base: "1/-1" }}>
+            <Textarea
+              p="15px"
+              borderRadius="5px"
+              border="1px solid black"
+              placeholder="Mesajınız"
+              fontSize="14px"
+              outline="none"
+              _hover={{ border: "1px solid black" }}
+              focusBorderColor="transparent"
+              _focus={{ border: "1px solid black" }}
+            />
+          </Box>
         </Grid>
+
         <Button
           p="10px 30px"
           // w="20%"

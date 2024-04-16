@@ -17,7 +17,10 @@ const OurEvents = () => {
   }, []);
   return (
     <VStack
-      bg="white"
+      bgImage="/assets/speakers-bg-black.jpg"
+      bgAttachment="fixed"
+      bgSize="cover"
+      bgRepeat="no-repeat"
       p={{ md: "100px 20px", base: "80px 20px" }}
       fontFamily="Poppins"
     >
@@ -63,6 +66,7 @@ const OurEvents = () => {
                 h="100%"
                 background="rgba(0,0,0,0.4)"
                 opacity={0}
+                transition="all 1s ease"
                 color="white"
                 _hover={{
                   opacity: 1,

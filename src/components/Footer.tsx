@@ -55,7 +55,7 @@ const Footer = () => {
           bg="#efa506"
           border="none"
           color={"white"}
-          transition={"border-radius 0.5s ease"}
+          transition={"all 1s ease"}
           _hover={{ bg: "#ec398b", borderRadius: "15px" }}
         >
           <Text fontSize="18px" letterSpacing="1px">
@@ -89,7 +89,7 @@ const Footer = () => {
               padding="15px 20px"
               bg="#999"
               borderRadius="50%"
-              transition={"background-color 0.5s ease"}
+              transition={"all 0.5s ease"}
               _hover={{ bg: "#efa506", color: "white" }}
             >
               <FontAwesomeIcon icon={faFacebookF as IconProp} fontSize="18px" />
@@ -98,7 +98,7 @@ const Footer = () => {
               padding="15px 20px"
               bg="#999"
               borderRadius="50%"
-              transition={"background-color 0.5s ease"}
+              transition={"all 0.5s ease"}
               _hover={{ bg: "#efa506", color: "white" }}
             >
               <FontAwesomeIcon icon={faInstagram as IconProp} fontSize="18px" />

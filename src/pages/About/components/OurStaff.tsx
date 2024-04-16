@@ -18,20 +18,27 @@ const OurStaff = () => {
   return (
     <VStack
       gap="20px"
-      bg="rgba(50, 51, 51, 0.1)"
+      bgImage="/assets/speakers-bg-black.jpg"
+      bgAttachment="fixed"
+      bgSize="cover"
+      bgRepeat="no-repeat"
+      // bg="rgba(50, 51, 51, 0.1)"
       p={{ md: "100px 20px", base: "80px 20px" }}
       fontFamily="Poppins"
       w="100%"
     >
       <Heading
-        color="#1b273d"
+        color="white"
         fontSize={{ base: "24px", sm: "30px", lg: "40px" }}
         fontWeight={900}
         textTransform="uppercase"
       >
         Komandamızla tanış olun
       </Heading>
-      <Text color="rgba(50, 51, 51, .8)">Komanda üzvlərimiz</Text>
+      <Text 
+      // color="rgba(50, 51, 51, .8)"
+      color="white"
+      >Komanda üzvlərimiz</Text>
       <Grid
         // w="100%"
         w={{ lg: "90%", base: "90%", xl: "80%" }}

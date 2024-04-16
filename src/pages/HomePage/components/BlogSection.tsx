@@ -13,10 +13,10 @@ import { Link } from "react-router-dom";
 import "../../../App.css";
 import { useBlog } from "../../../hooks/useBlog.tsx";
 const BlogSection = () => {
-  const {recentBlogs, fetchRecentBlogs} = useBlog();
-  useEffect(()=>{
-    fetchRecentBlogs()
-  },[])
+  const { recentBlogs, fetchRecentBlogs } = useBlog();
+  useEffect(() => {
+    fetchRecentBlogs();
+  }, []);
   return (
     <VStack
       p={{ md: "100px 20px", base: "80px 0" }}
@@ -39,7 +39,7 @@ const BlogSection = () => {
       </Text>
       <Grid
         mt="50px"
-        w={{ lg: "80%", base: "90%" }}
+        w={{ md: "80%", base: "90%" }}
         flexDirection={{ sm: "row", base: "column" }}
         justifyContent="center"
         alignItems="center"
@@ -53,22 +53,22 @@ const BlogSection = () => {
             cursor="pointer"
             key={index}
             alignItems="flex-start"
+            // w={{ xl: "100%", md: "300px", sm: "500px", base: "350px" }}
             w="100%"
             p="15px"
             borderRadius="10px"
             boxShadow="1px 1px 1px 1px rgba(0, 0, 0, 0.1), -1px -1px 1px 1px rgba(0, 0, 0, 0.1)"
             gap="10px"
             transition="transform 1s ease"
-           
           >
             <Box
               w="100%"
-              height={{md:"200px", base:"250px"}}
+              height={{ md: "200px", base: "250px" }}
               overflow="hidden"
               position="relative"
               display="inline-block"
             >
-              <Box
+              {/* <Box
                 className="child"
                 w="100%"
                 h="100%"
@@ -76,13 +76,30 @@ const BlogSection = () => {
                 bgSize="cover"
                 bgRepeat="no-repeat"
                 transition="all 1.1s"
-              ></Box>
+              ></Box> */}
+              <Image
+                src="/assets/blog1.jpg"
+                className="child"
+                w="100%"
+                h="100%"
+                transition="all 1.1s"
+              />
             </Box>
             <Text
               color="rgba(50, 51, 51, .8)"
               fontSize={{ lg: "14px", md: "12px", base: "14px" }}
             >
-              {blogs.createdDate} 
+              {blogs.createdDate &&
+                `${new Date(blogs.createdDate).toLocaleTimeString("en-GB", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                })} ${new Date(blogs.createdDate)
+                  .toLocaleDateString("en-GB", {
+                    day: "2-digit",
+                    month: "2-digit",
+                    year: "numeric",
+                  })
+                  .replace(/\//g, "-")}`}
             </Text>
             <Text
               fontSize={{ lg: "18px", md: "16px", base: "18px" }}
