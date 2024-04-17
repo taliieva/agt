@@ -87,7 +87,7 @@ const AboutEvents = () => {
         </VStack>
         <Image
         ml="30px"
-        alignSelf="flex-start"
+        alignSelf="center"
           src="/assets/about-sp.jpg"
           w={{ base: "70%", lg: "30%" }}
           borderRadius="10px"

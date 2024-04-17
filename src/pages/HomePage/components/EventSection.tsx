@@ -57,7 +57,7 @@ const EventSection = () => {
             borderRadius="20px"
           >
             <VStack
-            cursor="pointer"
+              cursor="pointer"
               onClick={() => handleOpenMenu(index)}
               bg="white"
               alignItems="flex-start"

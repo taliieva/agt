@@ -63,7 +63,7 @@ const BlogSection = () => {
           >
             <Box
               w="100%"
-              height={{ md: "200px", base: "250px" }}
+              height={{ md: "220px", base: "250px" }}
               overflow="hidden"
               position="relative"
               display="inline-block"
@@ -88,18 +88,16 @@ const BlogSection = () => {
             <Text
               color="rgba(50, 51, 51, .8)"
               fontSize={{ lg: "14px", md: "12px", base: "14px" }}
+              fontFamily="Poppins"
             >
               {blogs.createdDate &&
-                `${new Date(blogs.createdDate).toLocaleTimeString("en-GB", {
-                  hour: "2-digit",
-                  minute: "2-digit",
-                })} ${new Date(blogs.createdDate)
+                `${new Date(blogs.createdDate)
                   .toLocaleDateString("en-GB", {
                     day: "2-digit",
                     month: "2-digit",
                     year: "numeric",
                   })
-                  .replace(/\//g, "-")}`}
+                  .replace(/\//g, "-")}`} <span style={{paddingLeft:"10px"}}>| by {blogs?.author}</span> 
             </Text>
             <Text
               fontSize={{ lg: "18px", md: "16px", base: "18px" }}

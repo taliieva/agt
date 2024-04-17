@@ -1,4 +1,4 @@
-import { Grid, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, Grid, Text, VStack } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import {
@@ -29,15 +29,16 @@ const SocialSection = () => {
     },
   ];
   return (
+    <Flex w="100%" alignItems="center" justifyContent="center">
     <Grid
       gridTemplateColumns={{ md: "repeat(3,1fr)", base: "repeat(1,1fr)" }}
       // flexDirection={{md:"row"}}
       alignItems="center"
       justifyItems="center"
-      width="100%"
+      width="95%"
       p={{ md: "100px", base: "80px 20px" }}
       justifyContent="center"
-      gap={{ lg: "50px", base: "20px" }}
+      gap={{ lg: "40px", base: "20px" }}
     >
       {contact.map((item, index) => (
         <VStack
@@ -65,6 +66,7 @@ const SocialSection = () => {
         </VStack>
       ))}
     </Grid>
+    </Flex>
   );
 };
 

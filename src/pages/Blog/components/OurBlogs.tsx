@@ -56,7 +56,7 @@ const OurBlogs = () => {
             {/* <Image src={blog.imageSrc} w="100%" /> */}
             <Box
               w="100%"
-              height={{ md: "200px", base: "250px" }}
+              height={{ md: "220px", base: "250px" }}
               overflow="hidden"
               position="relative"
               display="inline-block"

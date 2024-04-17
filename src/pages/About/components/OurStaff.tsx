@@ -80,7 +80,7 @@ const OurStaff = () => {
               alignItems="flex-start"
               p={10}
               opacity="0"
-              transition="0.6s"
+              transition="all 0.6s ease"
               _hover={{
                 opacity: "1",
                 transitionDuration: "1s",

@@ -65,7 +65,7 @@ const EventId = () => {
           <Image
             src="/assets/event27.jpg"
             w="100%"
-            height="70vh"
+            height={{lg:"70vh", md:"50vh", base:"40vh"}}
             borderRadius="20px"
           />
           <Flex

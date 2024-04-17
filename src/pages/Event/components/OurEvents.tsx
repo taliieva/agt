@@ -27,7 +27,7 @@ const OurEvents = () => {
       <Heading
         fontSize={{ base: "24px", sm: "30px", lg: "40px" }}
         fontWeight="700"
-        color="#1b273d"
+        color="#fff"
         mb="50px"
       >
         Tədbirlər
