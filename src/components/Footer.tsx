@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
+import { Link } from "react-router-dom";
 const yearDate = new Date().getFullYear();
 
 const Footer = () => {
@@ -47,7 +48,7 @@ const Footer = () => {
           border="1px rgba(255, 255, 255, .8)"
           _focus={{ bg: "white" }}
         />
-        <VStack
+        {/* <VStack
           width={{ md: "20%", base: "40%" }}
           alignItems="center"
           justifyContent="center"
@@ -61,7 +62,10 @@ const Footer = () => {
           <Text fontSize="18px" letterSpacing="1px">
             Subscribe
           </Text>
-        </VStack>
+        </VStack> */}
+        <Link style={{width:'25%', fontSize:'18px'}} className="lgx-btn lgx-submit" to='#'>
+        <Text>Subscribe</Text>
+        </Link>
       </HStack>
       <Flex
         flexDirection={{ md: "row", base: "column" }}

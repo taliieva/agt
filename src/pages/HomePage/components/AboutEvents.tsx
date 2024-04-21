@@ -64,7 +64,7 @@ const AboutEvents = () => {
             {aboutFirst?.description}
           </Text>
           
-            <Box
+            {/* <Box
             alignSelf={{lg:"initial", base:"center"}}
               fontFamily="Oswald"
               p="10px 40px"
@@ -82,7 +82,12 @@ const AboutEvents = () => {
               <Link to="/about">
               Daha çox
               </Link>
-            </Box>
+            </Box> */}
+            <Link className="lgx-btn " to="/about" >
+              <Text>
+              Daha çox
+              </Text>
+              </Link>
           
         </VStack>
         <Image

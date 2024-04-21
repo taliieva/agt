@@ -91,7 +91,7 @@ const EventSection = () => {
                 <span style={{ color: "black" }}>By</span> {team.author}
               </Text>
             </VStack>
-            {openIndex === index && (
+            {/* {openIndex === index && (
               <VStack
                 p="10px 15px"
                 alignItems="flex-start"
@@ -107,12 +107,31 @@ const EventSection = () => {
                   {team.location}
                 </Text>
               </VStack>
-            )}
+            )} */}
+              <VStack
+                p={openIndex === index ? "10px 15px" : '0px 15px'}
+                // p='10px 15px'
+                alignItems="flex-start"
+                fontSize={{ md: "16px", sm: "14px", base: "12px" }}
+                maxHeight={openIndex === index ? 'fit-content' : '0px' }
+                overflow={'hidden'}
+                transition={'all .3s ease-out'}
+              >
+                <Text color="#585555" fontFamily="Poppins">
+                  {team.description}
+                </Text>
+                <Text fontSize="14px" fontFamily="Poppins">
+                  <span style={{ color: "#7F7BE2", fontWeight: 700 }}>
+                    Location:{" "}
+                  </span>
+                  {team.location}
+                </Text>
+              </VStack>
           </Box>
         );
       })}
 
-      <Link to="/event">
+      {/* <Link to="/event">
         <Box
           fontFamily="Oswald"
           p="10px 40px"
@@ -130,6 +149,9 @@ const EventSection = () => {
         >
           Daha çox
         </Box>
+      </Link> */}
+      <Link className="lgx-btn" to="/event">
+      <Text>Daha çox</Text>
       </Link>
     </VStack>
   );

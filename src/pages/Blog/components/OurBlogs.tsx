@@ -87,20 +87,14 @@ const OurBlogs = () => {
             >
               {blog.title}
             </Text>
-            <Box
-              padding="10px"
-              border="none"
-              bg={"white"}
-              color="#7F7BE2"
-              cursor={"pointer"}
-              boxShadow="0px 4px 6px rgba(0, 0, 0, 0.3)"
-              fontSize={{ lg: "16px", base: "14px" }}
-              fontWeight={400}
-              transition="border-radius 0.5s ease"
-              _hover={{ bg: "white", borderRadius: "15px" }}
-            >
-              <Link to={`/blog/${blog.id}`}>Read more</Link>
-            </Box>
+            <Link style={{padding:'10px 20px'}} className="lgx-btn lgx-btn-white" to={`/blog/${blog.id}`}>
+              <Text 
+                  color="#7F7BE2"
+                  fontSize={{ lg: "12px", base: "12px" }}
+                  fontWeight={400}>
+                    READ MORE
+              </Text>
+            </Link>
           </Flex>
         ))}
       </Grid>

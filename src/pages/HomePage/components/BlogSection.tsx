@@ -109,7 +109,7 @@ const BlogSection = () => {
             >
               {blogs?.title}
             </Text>
-            <Box
+            {/* <Box
               padding="10px"
               border="none"
               bg={"white"}
@@ -122,12 +122,20 @@ const BlogSection = () => {
               _hover={{ bg: "white", borderRadius: "15px" }}
             >
               <Link to={`/blog/${blogs.id}`}>Read more</Link>
-            </Box>
+            </Box> */}
+            <Link style={{padding:'10px 20px'}} className="lgx-btn lgx-btn-white" to={`/blog/${blogs.id}`}>
+              <Text 
+                  color="#7F7BE2"
+                  fontSize={{ lg: "12px", base: "12px" }}
+                  fontWeight={400}>
+                    READ MORE
+              </Text>
+            </Link>
           </Flex>
         ))}
       </Grid>
 
-      <Link to="/blog">
+      {/* <Link to="/blog">
         <Box
           fontFamily="Oswald"
           p="10px 40px"
@@ -144,6 +152,10 @@ const BlogSection = () => {
         >
           Daha çox
         </Box>
+      </Link> */}
+
+      <Link className="lgx-btn" to="/blog">
+      <Text>Daha çox</Text>
       </Link>
     </VStack>
   );

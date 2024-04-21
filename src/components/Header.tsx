@@ -99,7 +99,10 @@ const Header = () => {
           >
             <Text _hover={{ color: "#fff", cursor: "pointer" }}>Xəbərlər</Text>
           </Link>
-          <Link to="/contact">
+          <Link className="lgx-btn lgx-btn-red" to="/contact">
+              <Text>Əlaqə</Text>
+          </Link>
+          {/* <Link to="/contact">
             <Box
               p={{ md: "10px 40px", base: "10px 20px" }}
               fontSize={{ md: "20px", base: "16px" }}
@@ -114,7 +117,7 @@ const Header = () => {
             >
               <Text>Əlaqə</Text>
             </Box>
-          </Link>
+          </Link> */}
         </Flex>
       </HStack>
     </Box>
