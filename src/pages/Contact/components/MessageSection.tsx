@@ -7,17 +7,18 @@ import {
   Text,
   Textarea,
   VStack,
+  Image
 } from "@chakra-ui/react";
 import React from "react";
 
 const MessageSection = () => {
   return (
     <Box
-      p="50px 0"
       w="100%"
       display="flex"
       alignItems="center"
       justifyContent="center"
+
     >
       <VStack
         p={{ lg: "100px 100px", md: "100px 50px", base: "80px 20px" }}
@@ -26,7 +27,13 @@ const MessageSection = () => {
         alignItems="center"
         justifyContent="center"
         borderRadius="30px"
+        mb='50px'
+        bgRepeat={'no-repeat'}
       >
+
+        <Image
+          src="https://zestudio.az/assets/images/new/paperplane.webp" position={'absolute'} right='150px' />
+
         <Heading
           color="rgba(27, 39, 61, .95)"
           fontSize={{ base: "24px", sm: "30px", lg: "40px" }}
@@ -113,67 +120,88 @@ const MessageSection = () => {
         >
           <Box gridColumn={{ md: "1/2", base: "1/-1" }}>
             <Input
+              height="50px"
+              padding="5px 20px"
+              color="var(--body-text-purple)"
+              border="2px solid #34586e"
+              borderRadius="12px"
+              fontWeight="500"
+              background="#ffffff"
               p="15px"
-              borderRadius="5px"
-              border="1px solid black"
               placeholder="Ad"
               fontSize="14px"
               outline="none"
-              _hover={{ border: "1px solid black" }}
-              focusBorderColor="transparent"
-              _focus={{ border: "1px solid black" }}
+              _hover={{ border: "2px solid #34586e" }}
+              _focus={{ border: "2px solid #34586e" }}
             />
           </Box>
           <Box gridColumn={{ md: "2/3", base: "1/-1" }}>
             <Input
+              height="50px"
+              padding="5px 20px"
+              color="var(--body-text-purple)"
+              border="2px solid #34586e"
+              borderRadius="12px"
+              fontWeight="500"
+              background="#ffffff"
               p="15px"
-              borderRadius="5px"
-              border="1px solid black"
               placeholder="Soyad"
               fontSize="14px"
               outline="none"
-              _hover={{ border: "1px solid black" }}
-              focusBorderColor="transparent"
-              _focus={{ border: "1px solid black" }}
+              _hover={{ border: "2px solid #34586e" }}
+              _focus={{ border: "2px solid #34586e" }}
             />
           </Box>
           <Box gridColumn={{ md: "1/2", base: "1/-1" }}>
             <Input
+              height="50px"
+              padding="5px 20px"
+              color="var(--body-text-purple)"
+              border="2px solid #34586e"
+              borderRadius="12px"
+              fontWeight="500"
+              background="#ffffff"
               p="15px"
-              borderRadius="5px"
-              border="1px solid black"
-              placeholder="Ünvan"
+              placeholder="Email"
               fontSize="14px"
               outline="none"
-              _hover={{ border: "1px solid black" }}
-              focusBorderColor="transparent"
-              _focus={{ border: "1px solid black" }}
+              _hover={{ border: "2px solid #34586e" }}
+              _focus={{ border: "2px solid #34586e" }}
             />
           </Box>
           <Box gridColumn={{ md: "2/3", base: "1/-1" }}>
             <Input
+              height="50px"
+              padding="5px 20px"
+              color="var(--body-text-purple)"
+              border="2px solid #34586e"
+              borderRadius="12px"
+              fontWeight="500"
+              background="#ffffff"
               p="15px"
-              borderRadius="5px"
-              border="1px solid black"
               placeholder="Telefon"
               fontSize="14px"
               outline="none"
-              _hover={{ border: "1px solid black" }}
-              focusBorderColor="transparent"
-              _focus={{ border: "1px solid black" }}
+              _hover={{ border: "2px solid #34586e" }}
+              _focus={{ border: "2px solid #34586e" }}
             />
           </Box>
           <Box gridColumn={{ md: "1/3", base: "1/-1" }}>
             <Textarea
+
+              height="120px"
+              padding="5px 20px"
+              color="var(--body-text-purple)"
+              border="2px solid #34586e"
+              borderRadius="12px"
+              fontWeight="500"
+              background="#ffffff"
               p="15px"
-              borderRadius="5px"
-              border="1px solid black"
               placeholder="Mesajınız"
               fontSize="14px"
               outline="none"
-              _hover={{ border: "1px solid black" }}
-              focusBorderColor="transparent"
-              _focus={{ border: "1px solid black" }}
+              _hover={{ border: "2px solid #34586e" }}
+              _focus={{ border: "2px solid #34586e" }}
             />
           </Box>
         </Grid>
@@ -190,12 +218,14 @@ const MessageSection = () => {
           color="white"
           fontSize="16px"
           cursor="pointer"
-          // variant='solid'
+        // variant='solid'
         >
           Göndər
         </Button>
       </VStack>
+
     </Box>
+
   );
 };
 

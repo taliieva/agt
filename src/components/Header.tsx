@@ -48,7 +48,7 @@ const Header = () => {
         justifyContent="space-between"
       >
         <Link to="/">
-          <Image src="/assets/agi.png" width={{ md: "150px", base: "100px" }} />
+          <Image src="/assets/agi.png" width={{ md: "64px", base: "35px" }} />
         </Link>
         <Box
           display={{ md: "none", base: "block" }}

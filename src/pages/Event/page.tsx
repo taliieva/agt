@@ -11,7 +11,8 @@ const EventPage = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Layout>
+    <Layout
+    >
       <Box
         fontFamily="Poppins"
         mt={{ md: "90px", base: "50px" }}

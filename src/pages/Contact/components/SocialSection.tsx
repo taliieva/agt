@@ -50,7 +50,7 @@ const SocialSection = () => {
           
           boxShadow="0px 4px 6px rgba(0, 0, 0, 0.5)"
           transition={"box-shadow 0.5s ease"}
-          _hover={{ boxShadow: "0px 10px 10px rgba(127, 123, 226, .95)" }}
+          _hover={{ boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px' }}
           p={{ lg: "50px 0", md: "30px 0", base: "20px 0" }}
           borderRadius="10px"
         >
@@ -62,7 +62,7 @@ const SocialSection = () => {
           >
             {item.label}
           </Text>
-          <Text fontSize={{ lg: "18px", base: "14px" }}>{item.value}</Text>
+          <Text  fontSize={{ lg: "18px", base: "14px" }}>{item.value}</Text>
         </VStack>
       ))}
     </Grid>

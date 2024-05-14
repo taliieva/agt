@@ -4,7 +4,10 @@ import {
   Flex,
   Heading,
   Image,
+  List,
+  ListItem,
   Text,
+  UnorderedList,
   VStack,
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
@@ -18,7 +21,10 @@ const AboutEvents = () => {
   }, []);
   return (
     <VStack
-      p={{ md: "100px 30px", base:"80px 15px" }}
+      bgRepeat="no-repeat"
+      bgAttachment="fixed"
+      bgImage="/assets/speakers-bg-black.jpg"
+      p={{ md: "100px 30px", base: "80px 15px" }}
       gap={{ base: "20px", lg: "50px" }}
       fontFamily="Poppins"
     >
@@ -30,14 +36,15 @@ const AboutEvents = () => {
       >
         <VStack
           // w={{ base: "80%"}}
-          w={{xl:"50%", base:"100%"}}
+          w={{ xl: "50%", base: "100%" }}
           alignItems="flex-start"
           gap="20px"
         >
           <Heading
             fontSize={{ base: "30px", sm: "35px", xl: "40px" }}
             // fontSize="40px"
-            color="#1b273d"
+            // color="#1b273d"
+            color="white"
             fontWeight={900}
             textTransform="uppercase"
             fontFamily="Poppins"
@@ -55,16 +62,17 @@ const AboutEvents = () => {
             {aboutFirst?.subTitle}
           </Text>
           <Text
-            w={{lg:"90%", base:"100%"}}
+            w={{ lg: "90%", base: "100%" }}
             fontSize={{ base: "12px", xl: "14px" }}
             letterSpacing="1px"
-            color="rgba(50, 51, 51, .8)"
+            // color="rgba(50, 51, 51, .8)"
+            color="white"
             fontFamily="Poppins"
           >
             {aboutFirst?.description}
           </Text>
-          
-            {/* <Box
+
+          {/* <Box
             alignSelf={{lg:"initial", base:"center"}}
               fontFamily="Oswald"
               p="10px 40px"
@@ -83,21 +91,48 @@ const AboutEvents = () => {
               Daha çox
               </Link>
             </Box> */}
-            <Link className="lgx-btn " to="/about" >
-              <Text>
-              Daha çox
-              </Text>
-              </Link>
-          
+          <Link className="lgx-btn " to="/about">
+            <Text>Daha çox</Text>
+          </Link>
         </VStack>
-        <Image
+        {/* <Image
         ml="30px"
         alignSelf="center"
           src="/assets/about-sp.jpg"
           w={{ base: "70%", lg: "30%" }}
           borderRadius="10px"
           height="100%"
-        />
+        /> */}
+        <Box
+          width="30%"
+          padding="10px 30px"
+          borderRadius={15}
+          bg="#554bb9"
+          height="100%"
+          color="white"
+          boxShadow={"0 0 10px #554bb9"}
+        >
+          <UnorderedList>
+            <ListItem padding="10px" textDecoration="underline">
+              <Link to="https://www.youtube.com">Youtube</Link>
+            </ListItem>
+            <ListItem padding="10px" textDecoration="underline">
+              <Link to="https://www.youtube.com">Youtube</Link>
+            </ListItem>
+            <ListItem padding="10px" textDecoration="underline">
+              <Link to="https://www.youtube.com">Youtube</Link>
+            </ListItem>
+            <ListItem padding="10px" textDecoration="underline">
+              <Link to="https://www.youtube.com">Youtube</Link>
+            </ListItem>
+            <ListItem padding="10px" textDecoration="underline">
+              <Link to="https://www.youtube.com">Youtube</Link>
+            </ListItem>
+            <ListItem padding="10px" textDecoration="underline">
+              <Link to="https://www.youtube.com">Youtube</Link>
+            </ListItem>
+          </UnorderedList>
+        </Box>
       </Flex>
     </VStack>
   );
