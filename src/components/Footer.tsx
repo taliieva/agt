@@ -62,7 +62,7 @@ const Footer = () => {
             Subscribe
           </Text>
         </VStack> */}
-        <Link style={{ width: '24%', fontSize: '16px', padding:'5px' }} className="lgx-btn lgx-btn2 lgx-submit" to='#'>
+        <Link style={{ width: '24%', fontSize: '16px', padding:'15px' }} className="lgx-btn lgx-btn2 lgx-submit" to='#'>
           <Text>Subscribe</Text>
         </Link>
       </HStack>
