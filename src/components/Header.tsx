@@ -31,7 +31,7 @@ const Header = () => {
     <Box
       fontFamily="Oswald"
       w="100%"
-      height={{ md: "90px", base: "50px" }}
+      height={{ md: "90px", base: "50px", "2xl": "10%" }}
       position="fixed"
       display="flex"
       justifyContent="center"
@@ -100,24 +100,8 @@ const Header = () => {
             <Text _hover={{ color: "#fff", cursor: "pointer" }}>Xəbərlər</Text>
           </Link>
           <Link className="lgx-btn lgx-btn-red" to="/contact">
-              <Text>Əlaqə</Text>
+            <Text>Əlaqə</Text>
           </Link>
-          {/* <Link to="/contact">
-            <Box
-              p={{ md: "10px 40px", base: "10px 20px" }}
-              fontSize={{ md: "20px", base: "16px" }}
-              cursor="pointer"
-              bg="#ec398b"
-              color="white"
-              border="none"
-              transition="border-radius 0.5s ease"
-              _hover={{
-                borderRadius: "15px",
-              }}
-            >
-              <Text>Əlaqə</Text>
-            </Box>
-          </Link> */}
         </Flex>
       </HStack>
     </Box>

@@ -63,20 +63,11 @@ const BlogSection = () => {
           >
             <Box
               w="100%"
-              height={{ md: "220px", base: "250px" }}
+              height={{ md: "220px", base: "250px", '2000px':'300px' }}
               overflow="hidden"
               position="relative"
               display="inline-block"
             >
-              {/* <Box
-                className="child"
-                w="100%"
-                h="100%"
-                bgImage="/assets/blog1.jpg"
-                bgSize="cover"
-                bgRepeat="no-repeat"
-                transition="all 1.1s"
-              ></Box> */}
               <Image
                 src="/assets/blog1.jpg"
                 className="child"
@@ -109,20 +100,6 @@ const BlogSection = () => {
             >
               {blogs?.title}
             </Text>
-            {/* <Box
-              padding="10px"
-              border="none"
-              bg={"white"}
-              color="#7F7BE2"
-              cursor={"pointer"}
-              boxShadow="0px 4px 6px rgba(0, 0, 0, 0.3)"
-              fontSize={{ lg: "16px", base: "14px" }}
-              fontWeight={400}
-              transition="border-radius 0.5s ease"
-              _hover={{ bg: "white", borderRadius: "15px" }}
-            >
-              <Link to={`/blog/${blogs.id}`}>Read more</Link>
-            </Box> */}
             <Link style={{padding:'10px 20px'}} className="lgx-btn lgx-btn-white" to={`/blog/${blogs.id}`}>
               <Text 
                   color="#7F7BE2"

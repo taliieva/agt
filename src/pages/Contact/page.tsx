@@ -19,7 +19,8 @@ const ContactPage = () => {
       </Box> */}
       <Box
         fontFamily="Poppins"
-        mt={{ md: "90px", base: "50px" }}
+        // mt={{ md: "90px", base: "50px" }}
+        mt='4.5%'
         // bg="rgba(27, 39, 61, .95)"
         bgImage="/assets/banner-inner2.jpg"
         bgSize="cover"

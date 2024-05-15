@@ -22,7 +22,6 @@ const OurStaff = () => {
       bgAttachment="fixed"
       bgSize="cover"
       bgRepeat="no-repeat"
-      // bg="rgba(50, 51, 51, 0.1)"
       p={{ md: "100px 20px", base: "80px 20px" }}
       fontFamily="Poppins"
       w="100%"
@@ -35,12 +34,8 @@ const OurStaff = () => {
       >
         Komandamızla tanış olun
       </Heading>
-      <Text 
-      // color="rgba(50, 51, 51, .8)"
-      color="white"
-      >Komanda üzvlərimiz</Text>
+      <Text color="white">Komanda üzvlərimiz</Text>
       <Grid
-        // w="100%"
         w={{ lg: "90%", base: "90%", xl: "80%" }}
         gridTemplateColumns={{ lg: "repeat(3,1fr)", md: "repeat(2,1fr)" }}
         gap="50px"
@@ -62,7 +57,6 @@ const OurStaff = () => {
             <Image
               key={index}
               src="/assets/team1.jpg"
-              // width={{ base: "200px", sm: "200px", lg: "200px", xl: "300px" }}
               w="100%"
               display={"block"}
               borderRadius="10px"

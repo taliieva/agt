@@ -27,6 +27,8 @@ const AboutEvents = () => {
       p={{ md: "100px 30px", base: "80px 15px" }}
       gap={{ base: "20px", lg: "50px" }}
       fontFamily="Poppins"
+      w="100%"
+      bgSize="100%"
     >
       <Flex
         flexDirection={{ base: "column", lg: "row" }}
@@ -53,7 +55,7 @@ const AboutEvents = () => {
             {/* Azərbaycan gənclər təşkilatı */}
           </Heading>
           <Text
-            fontSize={{ sm: "16px", base: "14px" }}
+            fontSize={{ sm: "16px", base: "14px"}}
             color="#ec398b"
             fontFamily="Oswald"
             letterSpacing="1px"

@@ -11,7 +11,10 @@ const OurBlogs = () => {
     fetchAllBlogs();
   },[])
   return (
-    <Box mt={{ md: "90px", base: "50px" }} w="100%">
+    <Box 
+    // mt={{ md: "90px", base: "50px" }} 
+    mt={"4.5%"}
+    w="100%">
       <Box
         // bg="rgba(27, 39, 61, .95)"
         bgImage="/assets/banner-inner2.jpg"

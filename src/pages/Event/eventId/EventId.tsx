@@ -26,13 +26,12 @@ const EventId = () => {
       >
         <Box
           fontFamily="Poppins"
-          mt={{ md: "90px", base: "50px" }}
-          // bg="rgba(27, 39, 61, .95)"
+          // mt={{ md: "90px", base: "50px" }}
+          mt={'4.5%'}
           bgImage="/assets/banner-inner2.jpg"
           bgSize="cover"
           display="flex"
           flexDirection="column"
-          // alignItems="flex-start"
           justifyContent="flex-start"
           p={{ lg: "100px 150px", base: "80px 30px" }}
           w="100%"
@@ -45,7 +44,6 @@ const EventId = () => {
             fontWeight={700}
             fontSize={{ lg: "20px", md: "14px", base: "12px" }}
             alignItems="flex-start"
-          // justifyContent="flex-start"
           >
             <FontAwesomeIcon icon={faHouse} color="#ec398b" />
             <Link to="/">Əsas səhifə</Link>
@@ -55,6 +53,7 @@ const EventId = () => {
         </Box>
         <Flex
           bgRepeat="no-repeat"
+          bgSize="100%"
           bgAttachment="fixed"
           bgImage="/assets/speakers-bg-black.jpg"
           alignItems="center" justifyContent="center">
@@ -132,11 +131,9 @@ const EventId = () => {
               </VStack>
 
             </Flex>
-            {/* <Link className="lgx-btn " to="/about" >
-              <Text>
-                Daha çox
-              </Text>
-            </Link> */}
+            <Link className="lgx-btn lgx-btn-red" style={{fontSize:"18px"}} to={`${eventDetails?.googleFormLink}`} target="_blank">
+              <Text>Forma keçid edin</Text>
+          </Link>
           </VStack>
         </Flex>
 

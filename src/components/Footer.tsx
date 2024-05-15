@@ -47,22 +47,11 @@ const Footer = () => {
           fontSize="14px"
           _focus={{ bg: "white" }}
         />
-        {/* <VStack
-          width={{ md: "20%", base: "40%" }}
-          alignItems="center"
-          justifyContent="center"
-          height="55px"
-          bg="#efa506"
-          border="none"
-          color={"white"}
-          transition={"all 1s ease"}
-          _hover={{ bg: "#ec398b", borderRadius: "15px" }}
+        <Link
+          style={{ width: "24%", fontSize: "16px", padding: "15px" }}
+          className="lgx-btn lgx-btn2 lgx-submit"
+          to="#"
         >
-          <Text fontSize="18px" letterSpacing="1px">
-            Subscribe
-          </Text>
-        </VStack> */}
-        <Link style={{ width: '24%', fontSize: '16px', padding:'15px' }} className="lgx-btn lgx-btn2 lgx-submit" to='#'>
           <Text>Subscribe</Text>
         </Link>
       </HStack>
